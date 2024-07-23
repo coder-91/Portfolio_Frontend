@@ -1,5 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +5,29 @@
 }
 
 :root {
-  font-size: 12px;
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  padding: 0 50px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6 {
