@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+@mixin headline($color) {
+  font-family: 'Baloo', sans-serif;
+  font-weight: 100;
+  font-size: rem(52);
+  line-height: 62px;
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin text($font-size, $font-color: black) {
+  font-size: $font-size;
+  color: $font-color;
+  line-height: 28px;
+}
+
+
+@mixin flex($justify-content, $align-items, $flex-direction: null) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  @if $flex-direction != null {
+    flex-direction: $flex-direction;
+  }
+}
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function. Only numbers.';
+  }
+}
