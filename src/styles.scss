@@ -1,8 +1,82 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+$custom-primary: (
+  50 : #ebf1ff,
+  100 : #cddbff,
+  200 : #acc4ff,
+  300 : #8bacff,
+  400 : #729aff,
+  500 : #5988ff,
+  600 : #5180ff,
+  700 : #4875ff,
+  800 : #3e6bff,
+  900 : #2e58ff,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #dae0ff,
+  A700 : #c0ccff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$custom-primary: mat.define-palette($custom-primary, 500);
+$custom-accent: (
+  50 : #f1f5ff,
+  100 : #dce6ff,
+  200 : #c5d5ff,
+  300 : #adc4ff,
+  400 : #9cb7ff,
+  500 : #8aaaff,
+  600 : #82a3ff,
+  700 : #7799ff,
+  800 : #6d90ff,
+  900 : #5a7fff,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #fefeff,
+  A700 : #e5eaff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$custom-accent: mat.define-palette($custom-accent, A200, A100, A400);
+$custom-warn: (50: #ffe0e0, 100: #ffb3b3, 200: #ff8080, 300: #ff4d4d, 400: #ff2626, 500: #ff0000, 600: #ff0000, 700: #ff0000, 800: #ff0000, 900: #ff0000, A100: #ffffff, A200: #fff2f2, A400: #ffbfbf, A700: #ffa6a6, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #ffffff, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000,));
+$custom-warn: mat.define-palette($custom-warn, 400);
+$Portfolio_Frontend-theme: mat.define-light-theme((color: (primary: $custom-primary, accent: $custom-accent, warn: $custom-warn,), typography: mat.define-typography-config(), density: 0));
+@include mat.all-component-themes($Portfolio_Frontend-theme);
+
+
 @import 'theme';
 @import 'styles/reset';
 
 
 body {
   font-family: 'Montserrat', sans-serif;
-  padding: 0 50px;
 }
