@@ -9,5 +9,5 @@ import {HeroSectionComponent} from "./components/hero-section/hero-section.compo
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Portfolio';
+  title = 'Veysel Karaali | Fullstack Developer';
 }
