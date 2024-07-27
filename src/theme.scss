@@ -6,6 +6,11 @@
   --warn-color: #E61C40;
   --success-color: #70E61C;
   --disabled-color: #888888;
+
+  --text-color: #000;
+  --bkg-color: #fff;
+  --btn-txt-color: var(--primary-color);
+  --btn-bg-color: #fff;
 }
 
 .dark-theme {
@@ -16,4 +21,9 @@
   --warn-color: #FF4F5E;
   --success-color: #8FFF7A;
   --disabled-color: #555555;
+
+  --text-color: #fff;
+  --bkg-color: #16161E;
+  --btn-txt-color: var(--dark-color);
+  --btn-bg-color: var(--light-color);;
 }
