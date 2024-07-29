@@ -77,6 +77,57 @@ $Portfolio_Frontend-theme: mat.define-light-theme((color: (primary: $custom-prim
 @import 'styles/reset';
 
 
+// For Debugging Purposes
+/*
+* {
+  background: rgb(0 100 0 / 0.1) !important;
+  outline: 1px solid limegreen !important;
+}
+*/
+
 body {
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+h1 {
+  font-size: max(2rem, min(48px, calc(24px + 0.8vw)));
+  line-height: max(2.5rem, min(56px, calc(30px + 1vw)));
+}
+
+h2 {
+  font-size: max(1.5rem, min(40px, calc(20px + 0.7vw)));
+  line-height: max(2rem, min(48px, calc(24px + 0.8vw)));
+}
+
+h3 {
+  font-size: max(1.3rem, min(32px, calc(18px + 0.6vw)));
+  line-height: max(1.8rem, min(40px, calc(22px + 0.7vw)));
+}
+
+h4 {
+  font-size: max(1rem, min(28px, calc(16px + 0.5vw)));
+  line-height: max(1.6rem, min(32px, calc(20px + 0.6vw)));
+}
+
+h5 {
+  font-size: max(0.8rem, min(24px, calc(14px + 0.4vw)));
+  line-height: max(1.4rem, min(28px, calc(18px + 0.5vw)));
+}
+
+h6 {
+  font-size: max(0.7rem, min(20px, calc(12px + 0.3vw)));
+  line-height: max(1.2rem, min(24px, calc(16px + 0.4vw)));
+}
+
+p {
+  font-size: max(14px, min(18px, calc(16px + 0.3vw)));
+  line-height: max(1.4rem, min(1.8rem, calc(1.6rem + 0.4vw)));
 }
