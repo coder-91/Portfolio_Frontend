@@ -1,5 +1,7 @@
 {
   "aboutMe": "About Me",
   "skills": "Skills",
-  "projects": "Projects"
+  "projects": "Projects",
+  "logoLight": "assets/logo_light_en_1.svg",
+  "logoDark": "assets/logo_dark_en_1.svg"
 }

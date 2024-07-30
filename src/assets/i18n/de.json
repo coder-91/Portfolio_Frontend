@@ -1,5 +1,7 @@
 {
   "aboutMe": "Über mich",
   "skills": "Skills",
-  "projects": "Projekte"
+  "projects": "Projekte",
+  "logoLight": "assets/logo_light_de_1.svg",
+  "logoDark": "assets/logo_dark_de_1.svg"
 }
