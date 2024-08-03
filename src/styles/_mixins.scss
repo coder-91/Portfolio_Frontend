@@ -1,34 +1,28 @@
-@use 'sass:math';
+@import './typography';
 
-@mixin headline($color) {
-  font-family: 'Baloo', sans-serif;
-  font-weight: 100;
-  font-size: rem(52);
-  line-height: 62px;
-  color: $color;
-  text-transform: uppercase;
-}
-
-@mixin text($font-size, $font-color: black) {
-  font-size: $font-size;
-  color: $font-color;
-  line-height: 28px;
-}
-
-
-@mixin flex($justify-content, $align-items, $flex-direction: null) {
+@mixin flex-basic($flex-direction: row, $justify-content: flex-start, $align-items: stretch) {
   display: flex;
+  flex-direction: $flex-direction;
   justify-content: $justify-content;
   align-items: $align-items;
-  @if $flex-direction != null {
-    flex-direction: $flex-direction;
-  }
 }
 
-@function rem($pixel) {
-  @if math.is-unitless($pixel) {
-    @return math.div($pixel, 16) + rem;
-  } @else {
-    @error 'Don\'t use units when using the rem() function. Only numbers.';
-  }
+@mixin flex-with-gap($flex-direction: row, $justify-content: flex-start, $align-items: stretch, $gap: 0 0) {
+  @include flex-basic($flex-direction, $justify-content, $align-items);
+  gap: $gap;
+}
+
+@mixin flex-wrap-with-gap($flex-direction: row, $justify-content: flex-start, $align-items: stretch, $gap: 0, $flex-wrap: nowrap) {
+  @include flex-with-gap($flex-direction, $justify-content, $align-items, $gap);
+  flex-wrap: $flex-wrap;
+}
+
+@mixin color-scheme($background-color: #ffffff, $text-color: #000000) {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+@mixin headline($color) {
+  font-family: var(--font-headline);
+  color: $color;
 }

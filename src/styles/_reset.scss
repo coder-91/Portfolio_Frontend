@@ -8,25 +8,13 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 input,
 button,
 textarea,
-select {
+select,
+a {
   font: inherit;
-}
-
-button, input, textarea, select, a {
   all: unset;
-}
-
-button, a {
-  cursor: pointer;
 }
 
 p, h1, h2, h3, h4, h5, h6 {

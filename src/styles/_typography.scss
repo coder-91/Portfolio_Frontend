@@ -1,0 +1,89 @@
+@import './functions';
+@import './breakpoints';
+
+$font-size-h1-small: rem(24);
+$font-size-h1-medium: rem(30);
+$font-size-h1-large: rem(36);
+$font-size-h1-extra-large: rem(42);
+
+$font-size-h2-small: rem(20);
+$font-size-h2-medium: rem(26);
+$font-size-h2-large: rem(32);
+$font-size-h2-extra-large: rem(38);
+
+$font-size-h3-small: rem(18);
+$font-size-h3-medium: rem(22);
+$font-size-h3-large: rem(26);
+$font-size-h3-extra-large: rem(30);
+
+$font-size-p-small: rem(14);
+$font-size-p-medium: rem(16);
+$font-size-p-large: rem(18);
+$font-size-p-extra-large: rem(20);
+
+:root {
+  --font-size-base: 1rem;
+  --font-headline: 'Baloo', sans-serif;
+  --font-primary: 'Montserrat', sans-serif;
+  --font-button: 'Poppins', sans-serif;
+}
+
+@include small-screen {
+  h1 {
+    font-size: $font-size-h1-small;
+  }
+  h2 {
+    font-size: $font-size-h2-small;
+  }
+  h3 {
+    font-size: $font-size-h3-small;
+  }
+  p {
+    font-size: $font-size-p-small;
+  }
+}
+
+@include medium-screen {
+  h1 {
+    font-size: $font-size-h1-medium;
+  }
+  h2 {
+    font-size: $font-size-h2-medium;
+  }
+  h3 {
+    font-size: $font-size-h3-medium;
+  }
+  p {
+    font-size: $font-size-p-medium;
+  }
+}
+
+@include large-screen {
+  h1 {
+    font-size: $font-size-h1-large;
+  }
+  h2 {
+    font-size: $font-size-h2-large;
+  }
+  h3 {
+    font-size: $font-size-h3-large;
+  }
+  p {
+    font-size: $font-size-p-large;
+  }
+}
+
+@include extra-large-screen {
+  h1 {
+    font-size: $font-size-h1-extra-large;
+  }
+  h2 {
+    font-size: $font-size-h2-extra-large;
+  }
+  h3 {
+    font-size: $font-size-h3-extra-large;
+  }
+  p {
+    font-size: $font-size-p-extra-large;
+  }
+}
