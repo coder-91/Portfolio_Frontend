@@ -1,0 +1,46 @@
+@import '../../../styles/__main';
+
+nav {
+  @include flex-basic(row, space-between, center);
+  @include color-scheme(var(--nav-bg-col), var(--nav-text-col));
+
+  a {
+    border-bottom: 2px solid transparent;
+  }
+
+  .left-container a:hover {
+    font-weight: 700;
+  }
+
+  .nav-active {
+    border-bottom: 2px solid var(--nav-text-col);
+  }
+
+  .left-container, .right-container {
+    @include flex-with-gap(row, flex-start, center, 0 rem(30));
+  }
+}
+
+@include small-screen {
+  nav {
+    font-size: rem(16);
+  }
+}
+
+@include medium-screen {
+  nav {
+    font-size: rem(18);
+  }
+}
+
+@include large-screen {
+  nav {
+    font-size: rem(20);
+  }
+}
+
+@include extra-large-screen {
+  nav {
+    font-size: rem(22);
+  }
+}

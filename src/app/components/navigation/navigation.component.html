@@ -1,0 +1,15 @@
+<nav>
+  <div class="left-container">
+    <app-logo [currentTheme]="currentTheme"></app-logo>
+    <a [routerLink]="['/about-me']" [routerLinkActive]="['nav-active']">{{ 'aboutMe' | translate }}</a>
+    <a [routerLink]="['/skills']" [routerLinkActive]="['nav-active']">{{ 'skills' | translate }}</a>
+    <a [routerLink]="['/projects']" [routerLinkActive]="['nav-active']">{{ 'projects' | translate }}</a>
+  </div>
+
+  <div class="right-container">
+    <app-theme-switcher [currentTheme]="currentTheme"></app-theme-switcher>
+    <app-language-switcher></app-language-switcher>
+  </div>
+</nav>
+
+
