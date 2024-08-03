@@ -1,0 +1,10 @@
+@import '../../../../styles/__main';
+
+.btn {
+  font-size: rem(23);
+  font-family: var(--font-button);
+  border: var(--btn-border);
+  color: var(--btn-text-col);
+  border-radius: 10px;
+  padding: 15px 30px;
+}
