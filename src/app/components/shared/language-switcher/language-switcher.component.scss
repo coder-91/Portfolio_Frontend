@@ -1,0 +1,28 @@
+@import '../../../../styles/__main';
+
+
+.language-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: rem(23);
+  color: rgb(55, 65, 81);
+
+  .language {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    gap: 0 10px;
+  }
+
+  .language:not(:last-child) {
+    border-right: 1px solid #aaa;
+  }
+
+  img {
+    width: 36px;
+    height: auto;
+  }
+}

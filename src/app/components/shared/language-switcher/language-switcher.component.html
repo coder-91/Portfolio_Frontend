@@ -1,0 +1,8 @@
+<div class="language-container">
+  @for (language of Object.values(LANGUAGES); track language.code) {
+    <div (click)="onChangeLanguage(language)" class="language">
+      <img class="flag" src="assets/flags/{{language.code}}.svg" alt="">
+      <div>{{language.languageShort}}</div>
+    </div>
+  }
+</div>
