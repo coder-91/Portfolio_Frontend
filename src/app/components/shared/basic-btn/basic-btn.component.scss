@@ -1,7 +1,7 @@
 @import '../../../../styles/__main';
 
-.btn {
-  font-size: rem(23);
+a {
+  display: inline-block;
   font-family: var(--font-button);
   border: var(--btn-border);
   color: var(--btn-text-col);
