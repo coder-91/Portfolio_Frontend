@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ThemeService} from "../../../services/themeService/theme.service";
+import {ThemeService} from "../../../../services/themeService/theme.service";
 import {TranslateService} from "@ngx-translate/core";
-import {Theme} from "../../../models/theme";
+import {Theme} from "../../../../models/theme";
 
 @Component({
   selector: 'app-logo',

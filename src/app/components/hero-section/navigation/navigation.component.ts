@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {Theme} from "../../models/theme";
+import {Theme} from "../../../models/theme";
 import {TranslateModule} from "@ngx-translate/core";
-import {ThemeSwitcherComponent} from "../shared/theme-switcher/theme-switcher.component";
-import {LogoComponent} from "../shared/logo/logo.component";
-import {LanguageSwitcherComponent} from "../shared/language-switcher/language-switcher.component";
-import {ThemeService} from "../../services/themeService/theme.service";
+import {ThemeSwitcherComponent} from "./theme-switcher/theme-switcher.component";
+import {LogoComponent} from "./logo/logo.component";
+import {ThemeService} from "../../../services/themeService/theme.service";
+import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.component";
 
 @Component({
   selector: 'app-navigation',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {LANGUAGES} from "../../../consts/const";
-import {Language} from "../../../models/language";
+import {LANGUAGES} from "../../../../consts/const";
+import {Language} from "../../../../models/language";
 import {TranslateService} from "@ngx-translate/core";
 
 @Component({

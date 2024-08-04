@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
-import {Theme} from '../../../models/theme';
-import {ThemeService} from "../../../services/themeService/theme.service";
+import {Theme} from '../../../../models/theme';
+import {ThemeService} from "../../../../services/themeService/theme.service";
 
 @Component({
   selector: 'app-theme-switcher',
