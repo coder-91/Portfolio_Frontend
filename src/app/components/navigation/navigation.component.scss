@@ -1,11 +1,13 @@
 @import '../../../styles/__main';
 
+$border-bottom: 2px solid;
+
 nav {
   @include flex-basic(row, space-between, center);
   @include color-scheme(var(--nav-bg-col), var(--nav-text-col));
 
   a {
-    border-bottom: 2px solid transparent;
+    border-bottom: $border-bottom transparent;
   }
 
   .left-container a:hover {
@@ -13,7 +15,7 @@ nav {
   }
 
   .nav-active {
-    border-bottom: 2px solid var(--nav-text-col);
+    border-bottom: $border-bottom var(--nav-text-col);
   }
 
   .left-container, .right-container {
@@ -21,26 +23,4 @@ nav {
   }
 }
 
-@include small-screen {
-  nav {
-    font-size: rem(16);
-  }
-}
 
-@include medium-screen {
-  nav {
-    font-size: rem(18);
-  }
-}
-
-@include large-screen {
-  nav {
-    font-size: rem(20);
-  }
-}
-
-@include extra-large-screen {
-  nav {
-    font-size: rem(22);
-  }
-}
