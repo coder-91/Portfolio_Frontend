@@ -21,6 +21,11 @@ $font-size-p-medium: rem(16);
 $font-size-p-large: rem(18);
 $font-size-p-extra-large: rem(20);
 
+$font-size-a-button-small: rem(16);
+$font-size-a-button-medium: rem(18);
+$font-size-a-button-large: rem(20);
+$font-size-a-button-extra-large: rem(22);
+
 :root {
   --font-size-base: 1rem;
   --font-headline: 'Baloo', sans-serif;
@@ -41,6 +46,9 @@ $font-size-p-extra-large: rem(20);
   p {
     font-size: $font-size-p-small;
   }
+  a, button {
+    font-size: $font-size-a-button-small;
+  }
 }
 
 @include medium-screen {
@@ -55,6 +63,9 @@ $font-size-p-extra-large: rem(20);
   }
   p {
     font-size: $font-size-p-medium;
+  }
+  a, button {
+    font-size: $font-size-a-button-medium;
   }
 }
 
@@ -71,6 +82,9 @@ $font-size-p-extra-large: rem(20);
   p {
     font-size: $font-size-p-large;
   }
+  a, button {
+    font-size: $font-size-a-button-large;
+  }
 }
 
 @include extra-large-screen {
@@ -85,5 +99,8 @@ $font-size-p-extra-large: rem(20);
   }
   p {
     font-size: $font-size-p-extra-large;
+  }
+  a, button {
+    font-size: $font-size-a-button-extra-large;
   }
 }
