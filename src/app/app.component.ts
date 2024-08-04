@@ -1,13 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {NavigationComponent} from "./components/navigation/navigation.component";
 import {HeroSectionComponent} from "./components/hero-section/hero-section.component";
 import {Theme} from "./models/theme";
 import {ThemeService} from "./services/themeService/theme.service";
-import {HeroContentComponent} from "./components/hero-section/hero-content/hero-content.component";
+import {AboutMeComponent} from "./components/about-me/about-me.component";
+import {SkillsComponent} from "./components/skills/skills.component";
+import {ProjectsComponent} from "./components/projects/projects.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeroSectionComponent, NavigationComponent, HeroContentComponent],
+  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
