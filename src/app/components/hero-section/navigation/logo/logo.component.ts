@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ThemeService} from "../../../../services/themeService/theme.service";
+import {Component, Input} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {Theme} from "../../../../models/theme";
 
@@ -10,14 +9,8 @@ import {Theme} from "../../../../models/theme";
   templateUrl: './logo.component.html',
   styleUrl: './logo.component.scss'
 })
-export class LogoComponent implements OnInit {
+export class LogoComponent {
   protected readonly Theme = Theme;
   @Input() currentTheme: Theme
-  constructor(private themeService: ThemeService, public translateService: TranslateService) {
-
-  }
-
-  public ngOnInit() {
-  }
-
+  constructor(public translateService: TranslateService) {}
 }
