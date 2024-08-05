@@ -1,26 +1,57 @@
+@import '../../../../../styles/_main';
+
+$container-bg-col-theme-light: rgba(0, 0, 0, 0.07);
+$container-bg-col-theme-dark: rgba(255, 255, 255, 0.11);
+$color-shadow-1: rgba(0, 34, 255, 0.08);
+$color-shadow-2: rgba(0, 11, 80, 0.12);
+$toggle-btn-width: 30px;
+$border-radius: 9999px;
+$transition-duration: 0.2s;
+$transition-ease: ease-in-out;
+
+
 .toggle-container {
-  background-color: rgba(0, 0, 0, .07);
+  background-color: $container-bg-col-theme-light;
   padding: 4px;
   position: relative;
-  border-radius: 9999px;
+  border-radius: $border-radius;
   align-items: center;
   cursor: pointer;
   display: flex;
-  transition: background-color .2s ease-in-out;
-}
+  transition: background-color $transition-duration $transition-ease;
 
-.toggle-container.active {
-  background-color: rgba(255, 255, 255, 0.11);
-}
+  &.active {
+    background-color: $container-bg-col-theme-dark;
+  }
 
-.toggle-container button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 20;
-  position: relative;
-  width: 36px;
-  height: 36px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    position: relative;
+    width: $toggle-btn-width;
+    height: $toggle-btn-width;
+  }
+
+  &:after {
+    transition: transform $transition-duration $transition-ease;
+    will-change: transform;
+    width: $toggle-btn-width;
+    height: calc(100% - 8px);
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    display: block;
+    border-radius: $border-radius;
+    content: "";
+    background-color: #fff;
+    box-shadow: 0 2px 8px 0 $color-shadow-1, 0 2px 8px 0 $color-shadow-2;
+  }
+
+  &.active:after {
+    transform: translateX($toggle-btn-width);
+  }
 }
 
 .transition-colors {
@@ -29,42 +60,46 @@
   transition-duration: 150ms;
 }
 
-.toggle-container-button:first-child {
-  margin-right: 4px;
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+@mixin responsive-toggle-container($size) {
+  .toggle-container {
+    padding: 3px;
+    border-radius: $border-radius;
+
+    button {
+      width: $size;
+      height: $size;
+    }
+
+    &:after {
+      width: $size;
+      height: calc(100% - 6px);
+      left: 3px;
+      top: 3px;
+    }
+
+    &.active:after {
+      transform: translateX($size);
+    }
+  }
+
+  img {
+    width: calc($size / 1.5);
+    height: auto;
+  }
 }
 
-mat-icon{
-  color: rgba(55, 65, 81, 1);
+@include small-screen {
+  @include responsive-toggle-container(24px);
 }
 
-.toggle-container:after {
-  transition: transform .2s ease-in-out;
-  will-change: transform;
-  width: 36px;
-  height: calc(100% - 8px);
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  display: block;
-  border-radius: 9999px;
-  content: "";
-  background-color: #fff;
-  box-shadow: 0 2px 8px 0 rgba(0, 34, 255, .08), 0 2px 8px 0 rgba(0, 11, 80, .12);
+@include medium-screen {
+  @include responsive-toggle-container(24px);
 }
 
-.toggle-container.active:after {
-  transform: translateX(36px);
+@include large-screen {
+  @include responsive-toggle-container(24px);
 }
 
-.toggle-container.active .sun-btn mat-icon {
-  color: rgba(255, 255, 255, 0.60);
-  fill: rgba(55, 65, 81, 1);;
-}
-
-.toggle-container.active .moon-btn mat-icon {
-  color: rgba(55, 65, 81, 1);
-
+@include extra-large-screen {
+  @include responsive-toggle-container(30px);
 }
