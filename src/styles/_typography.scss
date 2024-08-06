@@ -33,6 +33,10 @@ $font-size-a-button-extra-large: rem(22);
   --font-button: 'Poppins', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+}
+
 @include small-screen {
   h1 {
     font-size: $font-size-h1-small;
