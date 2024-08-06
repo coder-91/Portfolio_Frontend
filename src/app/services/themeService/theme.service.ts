@@ -6,21 +6,14 @@ import {BehaviorSubject, Observable} from "rxjs";
   providedIn: 'root'
 })
 export class ThemeService {
-  private _theme$: BehaviorSubject<Theme> = new BehaviorSubject<Theme>(Theme.DEFAULT);
-  //private currentTheme:Theme = Theme.DEFAULT;
+  private _currentTheme$: BehaviorSubject<Theme> = new BehaviorSubject<Theme>(Theme.DEFAULT);
 
-  public get theme$(): Observable<Theme> {
-    return this._theme$.asObservable();
-  }
-
-  getCurrentTheme() {
-    return this._theme$.getValue();
-    //return this.currentTheme;
+  public get currentTheme$(): Observable<Theme> {
+    return this._currentTheme$.asObservable();
   }
 
   setTheme(theme: Theme) {
-    //this.currentTheme = theme;
-    this._theme$.next(theme);
+    this._currentTheme$.next(theme);
     document.body.className = theme;
   }
 }

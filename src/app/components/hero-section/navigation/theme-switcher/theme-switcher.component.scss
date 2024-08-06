@@ -4,7 +4,7 @@ $container-bg-col-theme-light: rgba(0, 0, 0, 0.07);
 $container-bg-col-theme-dark: rgba(255, 255, 255, 0.11);
 $color-shadow-1: rgba(0, 34, 255, 0.08);
 $color-shadow-2: rgba(0, 11, 80, 0.12);
-$toggle-btn-width: 30px;
+$toggle-btn-width: 24px;
 $border-radius: 9999px;
 $transition-duration: 0.2s;
 $transition-ease: ease-in-out;
@@ -101,5 +101,5 @@ $transition-ease: ease-in-out;
 }
 
 @include extra-large-screen {
-  @include responsive-toggle-container(30px);
+  @include responsive-toggle-container(24px);
 }
