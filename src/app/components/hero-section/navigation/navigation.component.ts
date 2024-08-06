@@ -19,7 +19,7 @@ export class NavigationComponent implements OnInit{
 
   constructor(private themeService: ThemeService) {}
   ngOnInit(): void {
-    this.themeService.theme$.subscribe(theme => {
+    this.themeService.currentTheme$.subscribe(theme => {
       this.currentTheme = theme;
     })
   }
