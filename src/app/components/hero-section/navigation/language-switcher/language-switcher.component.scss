@@ -1,36 +1,31 @@
 @import '../../../../../styles/_main';
 
-$border: 1px solid rgba(0, 0, 0, 0.07);
+$font-size: rem(16);
 
 .language-container {
   display: flex;
   align-items: center;
-  border: $border;
-  border-radius: 5px;
-  font-size: rem(16);
+  font-size: $font-size;
   color: var(--secondary-text-col);
 
   .language {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 3px;
-    gap: 0 3px;
-    border: 2px solid transparent;
+
+    & > div {
+      margin: 0 2px;
+    }
 
     &.active {
-      background-color: #374151;
-      color: #fff;
+      color: var(--primary-text-col);
       font-weight: bold;
     }
-  }
 
-  .language:not(:last-child) {
-    border-right: $border;
-  }
-
-  img {
-    width: 15px;
-    height: auto;
+    &:not(:last-child) .divider {
+      width: 2px;
+      height: $font-size;
+      background-color: var(--primary-text-col);
+    }
   }
 }

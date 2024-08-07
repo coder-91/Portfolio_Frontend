@@ -11,7 +11,7 @@ $transition-ease: ease-in-out;
 
 
 .toggle-container {
-  background-color: $container-bg-col-theme-light;
+  background-color: var(--settings-bg-col);
   padding: 4px;
   position: relative;
   border-radius: $border-radius;
@@ -20,8 +20,8 @@ $transition-ease: ease-in-out;
   display: flex;
   transition: background-color $transition-duration $transition-ease;
 
-  &.active {
-    background-color: $container-bg-col-theme-dark;
+  &.default-theme {
+    background-color: var(--settings-bg-col);;
   }
 
   button {
@@ -49,8 +49,12 @@ $transition-ease: ease-in-out;
     box-shadow: 0 2px 8px 0 $color-shadow-1, 0 2px 8px 0 $color-shadow-2;
   }
 
-  &.active:after {
+  &.default-theme:after {
     transform: translateX($toggle-btn-width);
+  }
+
+  &.light-theme:after {
+    transform: translateX(0);
   }
 }
 

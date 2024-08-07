@@ -1,0 +1,28 @@
+@import '../../../styles/__main';
+
+section {
+  background: linear-gradient(to right, #5A88FF, #1856F4);
+  color: var(--primary-text-col);
+
+  h1 {
+    margin-bottom: $margin-large;
+    text-align: center;
+  }
+
+  .skill-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+
+    app-skill {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@include small-screen(){
+  .skill-list {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+}

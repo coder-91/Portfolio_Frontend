@@ -1,24 +1,34 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Theme} from '../../../../models/theme';
 import {ThemeService} from "../../../../services/themeService/theme.service";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-theme-switcher',
   standalone: true,
-  imports: [],
+  imports: [
+    NgClass
+  ],
   templateUrl: './theme-switcher.component.html',
   styleUrl: './theme-switcher.component.scss'
 })
-export class ThemeSwitcherComponent {
+export class ThemeSwitcherComponent implements OnInit {
   protected readonly Theme = Theme;
   @Input() currentTheme: Theme;
-  isDarkTheme = false;
+  isLightTheme:boolean;
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {
 
-  public toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    const newTheme: Theme = this.currentTheme === Theme.DEFAULT ? Theme.DARK_THEME : Theme.DEFAULT;
-    this.themeService.setTheme(newTheme);
+  }
+
+  ngOnInit(): void {
+    this.isLightTheme = !!this.currentTheme;
+  }
+
+
+  public onChangeTheme() {
+    this.isLightTheme = !this.isLightTheme;
+    const newTheme: Theme = this.currentTheme === Theme.DEFAULT ? Theme.LIGHT_THEME : Theme.DEFAULT;
+    this.themeService.changeTheme(newTheme);
   }
 }

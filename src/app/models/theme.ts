@@ -1,12 +1,4 @@
 export enum Theme {
   DEFAULT = "default",
-  DARK_THEME = "dark-theme"
+  LIGHT_THEME = "light-theme"
 }
-
-/*
-export interface Theme {
-  key: string;
-  value: string;
-}
-
- */

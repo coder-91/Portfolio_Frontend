@@ -6,6 +6,7 @@
 @import './typography';
 
 $side-padding: 0 rem(20);
+$padding-section: rem(40) rem(30);
 
 html,
 body {
@@ -29,8 +30,10 @@ button, a {
   cursor: pointer;
 }
 
-.section,
-section,
 nav {
   padding: $side-padding;
+}
+
+section {
+  padding: $padding-section;
 }

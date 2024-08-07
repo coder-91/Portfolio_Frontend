@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LANGUAGES} from "../../../../consts/const";
 import {Language} from "../../../../models/language";
-import {TranslateService} from "@ngx-translate/core";
 import {LanguageService} from "../../../../services/languageService/language.service";
 import {NgClass} from "@angular/common";
 
@@ -19,7 +18,7 @@ export class LanguageSwitcherComponent implements OnInit {
   protected readonly Object = Object;
   selectedLanguage: Language = LANGUAGES['GB_EN'];
 
-  constructor(public translateService: TranslateService, private languageService: LanguageService) {}
+  constructor(private languageService: LanguageService) {}
 
   ngOnInit(): void {
     this.languageService.currentLanguage$.subscribe((selectedLanguage)=> {
@@ -28,7 +27,6 @@ export class LanguageSwitcherComponent implements OnInit {
   }
 
   public onChangeLanguage(language: Language) {
-    this.languageService.setCurrentLanguage(language);
-    this.translateService.use(language.code)
+    this.languageService.changeLanguage(language)
   }
 }

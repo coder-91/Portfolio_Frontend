@@ -6,14 +6,37 @@ import {BehaviorSubject, Observable} from "rxjs";
   providedIn: 'root'
 })
 export class ThemeService {
-  private _currentTheme$: BehaviorSubject<Theme> = new BehaviorSubject<Theme>(Theme.DEFAULT);
+  private _currentTheme$: BehaviorSubject<Theme>;
+
+  constructor() {
+    const savedTheme:Theme = this.loadThemeFromLocalStorage() || Theme.DEFAULT;
+    this._currentTheme$ = new BehaviorSubject<Theme>(savedTheme);
+    document.body.className = savedTheme;
+  }
 
   public get currentTheme$(): Observable<Theme> {
     return this._currentTheme$.asObservable();
   }
 
-  setTheme(theme: Theme) {
+  public changeTheme(newTheme: Theme) {
+    this.setCurrentTheme(newTheme);
+    document.body.className = newTheme;
+    this.saveThemeToLocalStorage(newTheme);
+  }
+
+  public setCurrentTheme(theme: Theme) {
     this._currentTheme$.next(theme);
-    document.body.className = theme;
+  }
+
+  private loadThemeFromLocalStorage(): Theme | null {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme && Object.values(Theme).includes(storedTheme as Theme)) {
+      return storedTheme as Theme;
+    }
+    return Theme.DEFAULT;
+  }
+
+  private saveThemeToLocalStorage(theme: Theme): void {
+    localStorage.setItem('theme', theme);
   }
 }

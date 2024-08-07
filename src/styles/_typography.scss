@@ -21,16 +21,20 @@ $font-size-p-medium: rem(16);
 $font-size-p-large: rem(18);
 $font-size-p-extra-large: rem(20);
 
-$font-size-a-button-small: rem(16);
-$font-size-a-button-medium: rem(18);
-$font-size-a-button-large: rem(20);
-$font-size-a-button-extra-large: rem(22);
+$font-size-a-button-small: rem(14);
+$font-size-a-button-medium: rem(16);
+$font-size-a-button-large: rem(18);
+$font-size-a-button-extra-large: rem(20);
+
+$margin-small: rem(8);
+$margin-medium: rem(16);
+$margin-large: rem(24);
+$margin-extra-large: rem(32);
 
 :root {
   --font-size-base: 1rem;
-  --font-headline: 'Baloo', sans-serif;
-  --font-primary: 'Montserrat', sans-serif;
-  --font-button: 'Poppins', sans-serif;
+  --font-headline: 'Lato', sans-serif;
+  --font-primary: 'Lato', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {

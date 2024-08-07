@@ -1,0 +1,16 @@
+@import '../../../../styles/_main';
+
+.skill-container {
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+p {
+  margin-top: 8px;
+  line-height: 1.2;
+  max-width: 200px;
+  word-wrap: break-word;
+}

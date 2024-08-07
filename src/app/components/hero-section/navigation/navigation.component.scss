@@ -1,26 +1,19 @@
 @import '../../../../styles/_main';
 
-$border-bottom: 2px solid;
-
 nav {
   @include flex-basic(row, space-between, center);
-  @include color-scheme(var(--nav-bg-col), var(--nav-text-col));
+  @include color-scheme(var(--primary-bg-col), var(--secondary-text-col));
 
   a {
-    border-bottom: $border-bottom transparent;
+    border-bottom: 2px solid transparent;
   }
-
-  .left-container a:hover {
-    font-weight: 700;
-  }
-
   .nav-active {
-    border-bottom: $border-bottom var(--nav-text-col);
+    color: var(--primary-text-col);
+    border-bottom: 2px solid var(--primary-text-col);
   }
 
-  .left-container, .right-container {
+  .left-container,
+  .right-container {
     @include flex-with-gap(row, flex-start, center, 0 rem(30));
   }
 }
-
-

@@ -1,12 +1,12 @@
 import {Language} from "../models/language";
 
 export const LANGUAGES: { [key: string]: Language } = {
-  GB_EN: {
-    code: 'gb',
+  en: {
+    code: 'en',
     languageShort: 'EN',
     language: 'English'
   },
-  DE_DE: {
+  de: {
     code: 'de',
     languageShort: 'DE',
     language: 'Deutsch',

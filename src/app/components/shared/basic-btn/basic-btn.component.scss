@@ -2,8 +2,8 @@
 
 a {
   display: inline-block;
-  border: var(--btn-border);
-  color: var(--btn-text-col);
-  border-radius: 10px;
+  border: 2px solid var(--highlight-text-color);
+  color: var(--highlight-text-color);
+  border-radius: 5px;
   padding: 5px 7px;
 }
