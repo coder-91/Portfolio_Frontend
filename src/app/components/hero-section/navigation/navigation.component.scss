@@ -3,6 +3,8 @@
 nav {
   @include flex-basic(row, space-between, center);
   @include color-scheme(var(--primary-bg-col), var(--secondary-text-col));
+  padding-top: rem(10);
+  padding-bottom: rem(10);
 
   a {
     border-bottom: 2px solid transparent;

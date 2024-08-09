@@ -13,18 +13,14 @@ section {
   align-content: center;
 }
 
-.text {
+h1 {
+  text-align: unset;
+}
+
+.left-container {
   @include flex-wrap-with-gap(column, center, flex-start, 0, wrap);
   align-content: center;
   color: var(--primary-text-col);
-}
-
-h1 {
-  margin-bottom: $margin-medium;
-}
-
-.name {
-  color: var(--highlight-text-color)
 }
 
 img {

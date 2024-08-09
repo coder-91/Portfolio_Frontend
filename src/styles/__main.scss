@@ -8,6 +8,10 @@
 $side-padding: 0 rem(20);
 $padding-section: rem(40) rem(30);
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -36,4 +40,12 @@ nav {
 
 section {
   padding: $padding-section;
+}
+
+.highlight {
+  color: var(--highlight-col)
+}
+
+.highlight-bg {
+  background-color: var(--highlight-col)
 }

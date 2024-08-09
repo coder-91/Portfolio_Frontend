@@ -21,6 +21,11 @@ $font-size-p-medium: rem(16);
 $font-size-p-large: rem(18);
 $font-size-p-extra-large: rem(20);
 
+$line-height-p-small: rem(20);
+$line-height-p-medium: rem(24);
+$line-height-p-large: rem(28);
+$line-height-p-extra-large: rem(32);
+
 $font-size-a-button-small: rem(14);
 $font-size-a-button-medium: rem(16);
 $font-size-a-button-large: rem(18);
@@ -31,6 +36,11 @@ $margin-medium: rem(16);
 $margin-large: rem(24);
 $margin-extra-large: rem(32);
 
+$margin-p-small: rem(15);
+$margin-p-medium: rem(20);
+$margin-p-large: rem(25);
+$margin-p-extra-large: rem(30);
+
 :root {
   --font-size-base: 1rem;
   --font-headline: 'Lato', sans-serif;
@@ -39,21 +49,32 @@ $margin-extra-large: rem(32);
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headline);
+  text-align: center;
 }
 
 @include small-screen {
   h1 {
     font-size: $font-size-h1-small;
+    margin-bottom: $margin-small;
   }
+
   h2 {
     font-size: $font-size-h2-small;
   }
+
   h3 {
     font-size: $font-size-h3-small;
   }
+
   p {
     font-size: $font-size-p-small;
+    line-height: $line-height-p-small;
   }
+
+  p:not(:last-of-type) {
+    margin-bottom: $margin-p-small;
+  }
+
   a, button {
     font-size: $font-size-a-button-small;
   }
@@ -62,16 +83,26 @@ h1, h2, h3, h4, h5, h6 {
 @include medium-screen {
   h1 {
     font-size: $font-size-h1-medium;
+    margin-bottom: $margin-medium;
   }
+
   h2 {
     font-size: $font-size-h2-medium;
   }
+
   h3 {
     font-size: $font-size-h3-medium;
   }
+
   p {
     font-size: $font-size-p-medium;
+    line-height: $line-height-p-medium;
   }
+
+  p:not(:last-of-type) {
+    margin-bottom: $margin-p-medium;
+  }
+
   a, button {
     font-size: $font-size-a-button-medium;
   }
@@ -80,16 +111,26 @@ h1, h2, h3, h4, h5, h6 {
 @include large-screen {
   h1 {
     font-size: $font-size-h1-large;
+    margin-bottom: $margin-large;
   }
+
   h2 {
     font-size: $font-size-h2-large;
   }
+
   h3 {
     font-size: $font-size-h3-large;
   }
+
   p {
     font-size: $font-size-p-large;
+    line-height: $line-height-p-large;
   }
+
+  p:not(:last-of-type) {
+    margin-bottom: $margin-p-large;
+  }
+
   a, button {
     font-size: $font-size-a-button-large;
   }
@@ -98,16 +139,26 @@ h1, h2, h3, h4, h5, h6 {
 @include extra-large-screen {
   h1 {
     font-size: $font-size-h1-extra-large;
+    margin-bottom: $margin-extra-large;
   }
+
   h2 {
     font-size: $font-size-h2-extra-large;
   }
+
   h3 {
     font-size: $font-size-h3-extra-large;
   }
+
   p {
     font-size: $font-size-p-extra-large;
+    line-height: $line-height-p-extra-large;
   }
+
+  p:not(:last-of-type) {
+    margin-bottom: $margin-p-extra-large;
+  }
+
   a, button {
     font-size: $font-size-a-button-extra-large;
   }

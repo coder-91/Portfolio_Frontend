@@ -6,6 +6,7 @@ import {ThemeSwitcherComponent} from "./theme-switcher/theme-switcher.component"
 import {LogoComponent} from "./logo/logo.component";
 import {ThemeService} from "../../../services/themeService/theme.service";
 import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.component";
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-navigation',
@@ -17,10 +18,14 @@ import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.c
 export class NavigationComponent implements OnInit{
   currentTheme: Theme
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService, private viewportScroller: ViewportScroller) {}
   ngOnInit(): void {
     this.themeService.currentTheme$.subscribe(theme => {
       this.currentTheme = theme;
     })
+  }
+
+  public scrollToSection(sectionId: string): void {
+    this.viewportScroller.scrollToAnchor(sectionId);
   }
 }
