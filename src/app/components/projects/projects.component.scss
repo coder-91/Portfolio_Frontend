@@ -1,0 +1,11 @@
+@import '../../../styles/_main';
+
+section {
+  background-color: var(--primary-bg-col);
+  color: var(--primary-text-col)
+}
+
+app-project {
+  display: block;
+  margin-bottom: $margin-extra-large;
+}

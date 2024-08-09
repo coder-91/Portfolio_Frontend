@@ -42,6 +42,10 @@ section {
   padding: $padding-section;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .highlight {
   color: var(--highlight-col)
 }

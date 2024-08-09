@@ -11,5 +11,6 @@ import {TranslateModule} from "@ngx-translate/core";
   styleUrl: './basic-btn.component.scss'
 })
 export class BasicBtnComponent {
+  @Input() hrefIcon: string = '';
   @Input() href: string = '';
 }

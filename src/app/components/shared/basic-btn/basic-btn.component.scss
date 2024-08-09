@@ -1,9 +1,17 @@
 @import '../../../../styles/__main';
 
-a {
-  display: inline-block;
+.button-container {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
   border: 2px solid var(--highlight-col);
   color: var(--highlight-col);
   border-radius: 5px;
   padding: 5px 7px;
 }
+
+img {
+  height: rem(20);
+}
+
+

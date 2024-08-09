@@ -1,0 +1,23 @@
+@import '../../../../styles/_main';
+
+.project-container {
+  display: flex;
+  align-items: flex-end;
+  column-gap: rem(20);
+}
+
+.project-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.left-container {
+  max-width: 50%;
+}
+
+.btn-container {
+  display: flex;
+  column-gap: rem(10);
+}
+
+
+
