@@ -2,13 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {HeroSectionComponent} from "./components/hero-section/hero-section.component";
 import {Theme} from "./models/theme";
 import {ThemeService} from "./services/themeService/theme.service";
-import {AboutMeComponent} from "./components/about-me/about-me.component";
-import {SkillsComponent} from "./components/skills/skills.component";
-import {ProjectsComponent} from "./components/projects/projects.component";
+import {AboutMeSectionComponent} from "./components/about-me-section/about-me-section.component";
+import {SkillsSectionComponent} from "./components/skills-section/skills-section.component";
+import {ProjectsSectionComponent} from "./components/projects-section/projects-section.component";
+import {ContactSectionComponent} from "./components/contact-section/contact-section.component";
+import {FooterComponent} from "./components/footer/footer.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, ProjectsComponent],
+  imports: [HeroSectionComponent, AboutMeSectionComponent, SkillsSectionComponent, ProjectsSectionComponent, ContactSectionComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

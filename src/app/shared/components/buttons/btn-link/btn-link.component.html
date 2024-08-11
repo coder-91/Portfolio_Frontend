@@ -1,9 +1,8 @@
-<div class="button-container pointer">
+<div class="btn-container">
   @if (hrefIcon) {
     <img [src]="'./assets/icons/' + hrefIcon" alt="">
   }
-  <a [href]="href" target="_blank">
+  <a [href]="href" [attr.target]="openInNewTab ? '_blank' : '_self'">
     <ng-content></ng-content>
   </a>
 </div>
-

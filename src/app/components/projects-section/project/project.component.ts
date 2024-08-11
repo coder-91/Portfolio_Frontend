@@ -1,11 +1,11 @@
 import {Component, Input} from '@angular/core';
-import {BasicBtnComponent} from "../basic-btn/basic-btn.component";
+import {BtnLinkComponent} from "../../../shared/components/buttons/btn-link/btn-link.component";
 
 @Component({
   selector: 'app-project',
   standalone: true,
     imports: [
-        BasicBtnComponent
+        BtnLinkComponent
     ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'

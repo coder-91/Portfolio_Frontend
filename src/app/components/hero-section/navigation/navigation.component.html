@@ -1,9 +1,10 @@
 <nav>
   <div class="left-container">
     <app-logo [currentTheme]="currentTheme"></app-logo>
-    <a (click)="scrollToSection('about-me')" [routerLink]="['/about-me']" [routerLinkActive]="['nav-active']">{{ 'aboutMe' | translate }}</a>
-    <a (click)="scrollToSection('skills')" [routerLink]="['/skills']" [routerLinkActive]="['nav-active']">{{ 'skills' | translate }}</a>
-    <a (click)="scrollToSection('projects')" [routerLink]="['/projects']" [routerLinkActive]="['nav-active']">{{ 'projects' | translate }}</a>
+    <a (click)="scrollToSection('about-me-section')" [routerLink]="['/about-me']" [routerLinkActive]="['nav-active']">{{ 'aboutMe' | translate }}</a>
+    <a (click)="scrollToSection('skills-section')" [routerLink]="['/skills']" [routerLinkActive]="['nav-active']">{{ 'skills' | translate }}</a>
+    <a (click)="scrollToSection('projects-section')" [routerLink]="['/projects']" [routerLinkActive]="['nav-active']">{{ 'projects' | translate }}</a>
+    <a (click)="scrollToSection('contact-section')" [routerLink]="['/contact']" [routerLinkActive]="['nav-active']">{{ 'contact' | translate }}</a>
   </div>
 
   <div class="right-container">

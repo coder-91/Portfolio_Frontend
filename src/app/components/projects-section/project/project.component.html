@@ -1,0 +1,32 @@
+<div class="project-container" [class.reverse]="!isImageFirst">
+  <div class="left-container">
+    <img [src]="'./assets/projects/' + hrefProjectImage" alt="">
+  </div>
+
+  <div class="right-container">
+    <h2>{{ title }}</h2>
+    <p>{{ technologies.join(' | ') }}</p>
+    <p>{{description}}</p>
+    <div class="btn-container-project">
+      <app-btn-link
+        href="{{hrefLiveTest}}"
+        [openInNewTab]="true">
+        Live Test
+      </app-btn-link>
+
+      <app-btn-link
+        hrefIcon="github.svg"
+        href="{{hrefFrontend}}"
+        [openInNewTab]="true">
+        Frontend
+      </app-btn-link>
+
+      <app-btn-link
+        hrefIcon="github.svg"
+        href="{{hrefBackend}}"
+        [openInNewTab]="true">
+        Backend
+      </app-btn-link>
+    </div>
+  </div>
+</div>

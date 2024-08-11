@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {Theme} from "../../../models/theme";
 import {ThemeService} from "../../../services/themeService/theme.service";
-import {BasicBtnComponent} from "../../shared/basic-btn/basic-btn.component";
+import {BtnLinkComponent} from "../../../shared/components/buttons/btn-link/btn-link.component";
 
 @Component({
   selector: 'app-hero-content',
   standalone: true,
   imports: [
-    BasicBtnComponent
+    BtnLinkComponent
   ],
   templateUrl: './hero-content.component.html',
   styleUrl: './hero-content.component.scss'
