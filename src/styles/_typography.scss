@@ -45,6 +45,7 @@ $margin-p-extra-large: rem(30);
   --font-size-base: 1rem;
   --font-headline: 'Lato', sans-serif;
   --font-primary: 'Lato', sans-serif;
+  --current-font-size-p: #{$font-size-p-small};
 }
 
 h1 {
@@ -56,6 +57,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @include small-screen {
+  :root {
+    --current-font-size-p: #{$font-size-p-small};
+  }
+
   h1 {
     font-size: $font-size-h1-small;
     margin-bottom: $margin-small;
@@ -81,6 +86,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @include medium-screen {
+  :root {
+    --current-font-size-p: #{$font-size-p-medium};
+  }
+
   h1 {
     font-size: $font-size-h1-medium;
     margin-bottom: $margin-medium;
@@ -106,6 +115,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @include large-screen {
+  :root {
+    --current-font-size-p: #{$font-size-p-large};
+  }
+
   h1 {
     font-size: $font-size-h1-large;
     margin-bottom: $margin-large;
@@ -131,6 +144,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @include extra-large-screen {
+  :root {
+    --current-font-size-p: #{$font-size-p-extra-large};
+  }
+
   h1 {
     font-size: $font-size-h1-extra-large;
     margin-bottom: $margin-extra-large;
