@@ -1,0 +1,13 @@
+<section id="contact-section">
+  <h1>Contact</h1>
+  <h2>Want to discuss a new project?</h2>
+  <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+
+  <form [formGroup]="contactForm" autocomplete="off">
+    <app-input [form]="contactForm" [id]="'name'" [type]="'text'" [label]="'Name'"></app-input>
+    <app-input [form]="contactForm" [id]="'email'" [type]="'email'" [label]="'Email'"></app-input>
+    <app-textarea></app-textarea>
+    <app-checkbox></app-checkbox>
+    <app-btn-basic [type]="'submit'">Send</app-btn-basic>
+  </form>
+</section>

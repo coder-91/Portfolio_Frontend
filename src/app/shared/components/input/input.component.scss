@@ -1,0 +1,61 @@
+@import '../../../../styles/_main';
+
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary-text-col);
+  border-radius: 5px;
+  font-size: rem(16);
+  background-color: var(--primary-bg-col);
+  color: var(--primary-text-col);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.floating-label label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: var(--disabled-col);
+  font-size: rem(16);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  background-color: var(--primary-bg-col);
+  padding: 0 5px;
+}
+
+.floating-label input:focus {
+  border-color: var(--highlight-col);
+  box-shadow: 0 0 5px var(--highlight-col);
+  outline: none;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  left: 10px;
+  font-size: rem(12);
+  color: var(--highlight-col);
+  z-index: 100;
+}
+
+.floating-label input:-webkit-autofill {
+  background-color: var(--primary-bg-col) !important;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0 1000px var(--primary-bg-col) inset !important;
+  box-shadow: 0 0 0 1000px var(--primary-bg-col) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.error-list {
+  display: flex;
+  align-items: center;
+  height: rem(16);
+  color: var(--warn-col);
+  font-size: rem(14);
+  margin-top: 5px;
+}
