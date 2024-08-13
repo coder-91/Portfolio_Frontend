@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
-import {Theme} from "../../../../models/theme";
+import {Theme} from "../../../models/theme";
 
 @Component({
   selector: 'app-logo',
