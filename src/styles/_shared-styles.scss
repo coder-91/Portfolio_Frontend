@@ -1,3 +1,5 @@
+@import './functions';
+
 .btn-container {
   display: flex;
   align-items: center;
@@ -7,4 +9,13 @@
   border-radius: 5px;
   padding: 5px 7px;
   cursor: pointer;
+}
+
+.error-list {
+  display: flex;
+  align-items: center;
+  height: rem(16);
+  color: var(--warn-col);
+  font-size: rem(14);
+  margin-top: 5px;
 }

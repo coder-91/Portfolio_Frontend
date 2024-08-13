@@ -4,3 +4,52 @@ section {
   background-color: var(--secondary-bg-col);
   color: var(--primary-text-col);
 }
+
+h1, h2, p {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-auto-flow: row;
+}
+
+app-input:nth-child(1),
+app-input:nth-child(2) {
+  grid-column: span 2;
+}
+
+app-textarea {
+  grid-column: 1 / span 2;
+}
+
+app-checkbox-privacy-policy {
+  grid-column: 1 / span 2;
+}
+
+
+button {
+  grid-column: 1 / span 2;
+  justify-self: start;
+  flex: 0 0 auto;
+}
+
+.disabled {
+  background-color: var(--secondary-bg-col);
+  color: var(--disabled-col);
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+  border: 2px solid var(--disabled-col)
+}
+
+@include large-screen {
+  app-input:nth-child(1),
+  app-input:nth-child(2) {
+    grid-column: span 1;
+  }
+}
+
+

@@ -1,0 +1,26 @@
+@import '../../../../styles/_main';
+
+.textarea-container {
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  color: var(--primary-text-col);
+  border-radius: 5px;
+  border: 1px solid var(--primary-text-col);
+  padding: 12px;
+  font-size: rem(16);
+  resize: none;
+}
+
+textarea::placeholder {
+  color: var(--secondary-text-col);
+}
+
+textarea:focus {
+  border-color: var(--highlight-col);
+  box-shadow: 0 0 5px var(--highlight-col);
+  outline: none;
+}

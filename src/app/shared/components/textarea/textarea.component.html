@@ -1,1 +1,11 @@
-<p>textarea works!</p>
+<div class="textarea-container">
+  <textarea [formControl]="control" placeholder="Your message..."></textarea>
+  <div class="error-list">
+    @if(control?.touched && control?.invalid) {
+      @switch (true) {
+        @case (control?.hasError('required'))
+          { This field is required }
+      }
+    }
+  </div>
+</div>

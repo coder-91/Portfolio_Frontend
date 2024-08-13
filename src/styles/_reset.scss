@@ -4,10 +4,6 @@
   text-decoration: none;
 }
 
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
 input,
 button,
 textarea,
@@ -15,6 +11,15 @@ select,
 a {
   font: inherit;
   all: unset;
+}
+
+*, *::after, *::before,
+input,
+button,
+textarea,
+select,
+a {
+  box-sizing: border-box;
 }
 
 p, h1, h2, h3, h4, h5, h6 {

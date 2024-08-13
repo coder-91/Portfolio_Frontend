@@ -2,7 +2,6 @@
 
 .floating-label {
   position: relative;
-  margin-bottom: 20px;
 }
 
 .floating-label input {
@@ -18,7 +17,7 @@
 
 .floating-label label {
   position: absolute;
-  top: 12px;
+  top: rem(10);
   left: 12px;
   color: var(--disabled-col);
   font-size: rem(16);
@@ -49,13 +48,4 @@
   -webkit-box-shadow: 0 0 0 1000px var(--primary-bg-col) inset !important;
   box-shadow: 0 0 0 1000px var(--primary-bg-col) inset !important;
   transition: background-color 5000s ease-in-out 0s;
-}
-
-.error-list {
-  display: flex;
-  align-items: center;
-  height: rem(16);
-  color: var(--warn-col);
-  font-size: rem(14);
-  margin-top: 5px;
 }
