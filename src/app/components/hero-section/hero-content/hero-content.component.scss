@@ -2,8 +2,8 @@
 
 :host, section {
   height: 100%;
-  background-color: var(--primary-bg-col);
-  color: var(--secondary-text-col);
+  background-color: var(--col-primary-bg);
+  color: var(--col-secondary-text);
 }
 
 section {
@@ -20,7 +20,7 @@ h1 {
 .left-container {
   @include flex-wrap-with-gap(column, center, flex-start, 0, wrap);
   align-content: center;
-  color: var(--primary-text-col);
+  color: var(--col-primary-text);
 }
 
 img {

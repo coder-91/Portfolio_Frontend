@@ -6,7 +6,7 @@ $font-size: rem(16);
   display: flex;
   align-items: center;
   font-size: $font-size;
-  color: var(--secondary-text-col);
+  color: var(--col-secondary-text);
 
   .language {
     display: flex;
@@ -18,14 +18,14 @@ $font-size: rem(16);
     }
 
     &.active {
-      color: var(--primary-text-col);
+      color: var(--col-primary-text);
       font-weight: bold;
     }
 
     &:not(:last-child) .divider {
       width: 2px;
       height: $font-size;
-      background-color: var(--primary-text-col);
+      background-color: var(--col-primary-text);
     }
   }
 }

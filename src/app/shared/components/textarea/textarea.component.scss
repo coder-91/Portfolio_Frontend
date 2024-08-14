@@ -7,20 +7,20 @@
 textarea {
   width: 100%;
   height: 150px;
-  color: var(--primary-text-col);
+  color: var(--col-primary-text);
   border-radius: 5px;
-  border: 1px solid var(--primary-text-col);
+  border: 1px solid var(--col-primary-text);
   padding: 12px;
   font-size: rem(16);
   resize: none;
 }
 
 textarea::placeholder {
-  color: var(--secondary-text-col);
+  color: var(--col-secondary-text);
 }
 
 textarea:focus {
-  border-color: var(--highlight-col);
-  box-shadow: 0 0 5px var(--highlight-col);
+  border-color: var(--col-highlight);
+  box-shadow: 0 0 5px var(--col-highlight);
   outline: none;
 }

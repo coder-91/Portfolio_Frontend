@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   column-gap: 5px;
-  border: 2px solid var(--highlight-col);
-  color: var(--highlight-col);
+  border: 2px solid var(--col-highlight);
+  color: var(--col-highlight);
   border-radius: 5px;
   padding: 5px 7px;
   cursor: pointer;
@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   height: rem(16);
-  color: var(--warn-col);
+  color: var(--col-warn);
   font-size: rem(14);
   margin-top: 5px;
 }

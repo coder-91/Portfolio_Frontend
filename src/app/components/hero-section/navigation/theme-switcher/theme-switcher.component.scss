@@ -11,7 +11,7 @@ $transition-ease: ease-in-out;
 
 
 .toggle-container {
-  background-color: var(--accent-col);
+  background-color: var(--col-accent);
   padding: 4px;
   position: relative;
   border-radius: $border-radius;
@@ -21,7 +21,7 @@ $transition-ease: ease-in-out;
   transition: background-color $transition-duration $transition-ease;
 
   &.default-theme {
-    background-color: var(--accent-col);
+    background-color: var(--col-accent);
   }
 
   button {

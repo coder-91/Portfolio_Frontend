@@ -1,8 +1,8 @@
 @import '../../../styles/_main';
 
 section {
-  background-color: var(--primary-bg-col);
-  color: var(--primary-text-col);
+  background-color: var(--col-primary-bg);
+  color: var(--col-primary-text);
 }
 
 h1, h2, p {
@@ -37,12 +37,12 @@ button {
 }
 
 .disabled {
-  background-color: var(--secondary-bg-col);
-  color: var(--disabled-col);
+  background-color: var(--col-secondary-bg);
+  color: var(--col-disabled);
   cursor: not-allowed;
   opacity: 0.6;
   pointer-events: none;
-  border: 2px solid var(--disabled-col)
+  border: 2px solid var(--col-disabled)
 }
 
 @include large-screen {

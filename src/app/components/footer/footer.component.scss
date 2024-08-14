@@ -1,8 +1,8 @@
 @import '../../../styles/_main';
 
 footer {
-  background-color: var(--secondary-bg-col);
-  color: var(--primary-text-col);
+  background-color: var(--col-secondary-bg);
+  color: var(--col-primary-text);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;

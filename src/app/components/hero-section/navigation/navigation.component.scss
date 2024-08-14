@@ -2,7 +2,7 @@
 
 nav {
   @include flex-basic(row, space-between, center);
-  @include color-scheme(var(--primary-bg-col), var(--secondary-text-col));
+  @include color-scheme(var(--col-primary-bg), var(--col-secondary-text));
   padding-top: rem(10);
   padding-bottom: rem(10);
 
@@ -10,8 +10,8 @@ nav {
     border-bottom: 2px solid transparent;
   }
   .nav-active {
-    color: var(--primary-text-col);
-    border-bottom: 2px solid var(--primary-text-col);
+    color: var(--col-primary-text);
+    border-bottom: 2px solid var(--col-primary-text);
   }
 
   .left-container,

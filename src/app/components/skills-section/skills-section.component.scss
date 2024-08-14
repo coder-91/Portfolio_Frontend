@@ -1,8 +1,8 @@
 @import '../../../styles/__main';
 
 section {
-  background-color: var(--primary-bg-col);
-  color: var(--primary-text-col);
+  background-color: var(--col-primary-bg);
+  color: var(--col-primary-text);
 
   .skill-list {
     display: grid;
