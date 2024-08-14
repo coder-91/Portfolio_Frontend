@@ -1,23 +1,75 @@
 @import '../../../../styles/_main';
 
 .project-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  //grid-template-rows: auto;
+  grid-template-areas:
+    "project-image"
+    "project";
+  row-gap: $margin-large;
   align-items: flex-end;
-  column-gap: rem(20);
 }
 
-.project-container.reverse {
-  flex-direction: row-reverse;
+img {
+  grid-area: project-image;
+  justify-self: center;
+  width: 100%;
 }
 
-.left-container {
-  max-width: 50%;
+.project {
+  grid-area: project;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-container-project {
   display: flex;
-  column-gap: rem(10);
+  flex-direction: column;
+  row-gap: rem(15);
+  width: 100%;
 }
 
 
+@include medium-screen {
 
+  .btn-container-project {
+    flex-direction: row;
+    gap: 0 rem(15);
+    width: auto;
+    align-self: flex-start;
+  }
+
+  img {
+    max-width: rem(600);
+  }
+}
+
+@include xl-screen {
+  .project-container {
+    grid-template-rows: auto;
+    column-gap: $margin-3xl;
+  }
+
+  .project-container-image-left {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "project-image project";
+
+    img {
+      justify-self: flex-start;
+    }
+  }
+
+  .project-container-image-right {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "project project-image";
+
+    img {
+      justify-self: flex-end;
+    }
+  }
+
+  img {
+    align-self: flex-end;
+  }
+}

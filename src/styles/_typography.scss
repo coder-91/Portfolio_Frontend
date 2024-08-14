@@ -4,43 +4,55 @@
 $font-size-h1-small: rem(24);
 $font-size-h1-medium: rem(30);
 $font-size-h1-large: rem(36);
-$font-size-h1-extra-large: rem(42);
+$font-size-h1-xl: rem(42);
 
 $font-size-h2-small: rem(20);
 $font-size-h2-medium: rem(26);
 $font-size-h2-large: rem(32);
-$font-size-h2-extra-large: rem(38);
+$font-size-h2-xl: rem(38);
 
 $font-size-h3-small: rem(18);
 $font-size-h3-medium: rem(22);
 $font-size-h3-large: rem(26);
-$font-size-h3-extra-large: rem(30);
+$font-size-h3-xl: rem(30);
 
 $font-size-p-small: rem(14);
 $font-size-p-medium: rem(16);
 $font-size-p-large: rem(18);
-$font-size-p-extra-large: rem(20);
+$font-size-p-xl: rem(20);
 
 $line-height-p-small: rem(20);
 $line-height-p-medium: rem(24);
 $line-height-p-large: rem(28);
-$line-height-p-extra-large: rem(32);
+$line-height-p-xl: rem(32);
 
 $font-size-a-button-small: rem(14);
 $font-size-a-button-medium: rem(16);
 $font-size-a-button-large: rem(18);
-$font-size-a-button-extra-large: rem(20);
+$font-size-a-button-xl: rem(20);
 
 $margin-small: rem(8);
 $margin-medium: rem(16);
 $margin-large: rem(24);
-$margin-extra-large: rem(32);
-$margin-xxl: rem(100);
+$margin-xl: rem(32);
+$margin-xxl: rem(50);
+$margin-3xl: rem(75);
+$margin-4xl: rem(100);
+
+$margin-h1-small: rem(48);
+$margin-h1-medium: rem(56);
+$margin-h1-large: rem(64);
+$margin-h1-xl: rem(72);
+
+$margin-h2-small: rem(16);
+$margin-h2-medium: rem(32);
+$margin-h2-large: rem(40);
+$margin-h2-xl: rem(48);
 
 $margin-p-small: rem(15);
 $margin-p-medium: rem(20);
 $margin-p-large: rem(25);
-$margin-p-extra-large: rem(30);
+$margin-p-xl: rem(30);
 
 :root {
   --font-size-base: 1rem;
@@ -62,16 +74,18 @@ h1, h2, h3, h4, h5, h6 {
     --current-font-size-p: #{$font-size-p-small};
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h3, h4, h5, h6 {
     margin-bottom: $margin-small;
   }
 
   h1 {
     font-size: $font-size-h1-small;
+    margin-bottom: $margin-h1-small;
   }
 
   h2 {
     font-size: $font-size-h2-small;
+    margin-bottom: $margin-h2-small;
   }
 
   h3 {
@@ -94,16 +108,18 @@ h1, h2, h3, h4, h5, h6 {
     --current-font-size-p: #{$font-size-p-medium};
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h3, h4, h5, h6 {
     margin-bottom: $margin-medium;
   }
 
   h1 {
     font-size: $font-size-h1-medium;
+    margin-bottom: $margin-h1-medium;
   }
 
   h2 {
     font-size: $font-size-h2-medium;
+    margin-bottom: $margin-h2-medium;
   }
 
   h3 {
@@ -126,16 +142,18 @@ h1, h2, h3, h4, h5, h6 {
     --current-font-size-p: #{$font-size-p-large};
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h3, h4, h5, h6 {
     margin-bottom: $margin-large;
   }
 
   h1 {
     font-size: $font-size-h1-large;
+    margin-bottom: $margin-h1-large;
   }
 
   h2 {
     font-size: $font-size-h2-large;
+    margin-bottom: $margin-h2-large;
   }
 
   h3 {
@@ -153,34 +171,36 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@include extra-large-screen {
+@include xl-screen {
   :root {
-    --current-font-size-p: #{$font-size-p-extra-large};
+    --current-font-size-p: #{$font-size-p-xl};
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: $margin-extra-large;
+  h3, h4, h5, h6 {
+    margin-bottom: $margin-xl;
   }
 
   h1 {
-    font-size: $font-size-h1-extra-large;
+    font-size: $font-size-h1-xl;
+    margin-bottom: $margin-h1-xl;
   }
 
   h2 {
-    font-size: $font-size-h2-extra-large;
+    font-size: $font-size-h2-xl;
+    margin-bottom: $margin-h2-xl;
   }
 
   h3 {
-    font-size: $font-size-h3-extra-large;
+    font-size: $font-size-h3-xl;
   }
 
   p {
-    font-size: $font-size-p-extra-large;
-    line-height: $line-height-p-extra-large;
-    margin-bottom: $margin-p-extra-large;
+    font-size: $font-size-p-xl;
+    line-height: $line-height-p-xl;
+    margin-bottom: $margin-p-xl;
   }
 
   a, button {
-    font-size: $font-size-a-button-extra-large;
+    font-size: $font-size-a-button-xl;
   }
 }

@@ -21,7 +21,7 @@ $large-screen-max: 1024px;
   }
 }
 
-@mixin extra-large-screen {
+@mixin xl-screen {
   @media (min-width: $large-screen-max + 1px) {
     @content;
   }

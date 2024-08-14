@@ -10,5 +10,11 @@ app-project {
 }
 
 app-project:not(:last-child) {
-  margin-bottom: $margin-xxl;
+  margin-bottom: $margin-3xl;
+}
+
+@include medium-screen {
+  app-project:not(:last-child) {
+    margin-bottom: $margin-4xl;
+  }
 }

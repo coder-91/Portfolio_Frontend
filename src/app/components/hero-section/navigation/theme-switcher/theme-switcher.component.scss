@@ -104,6 +104,6 @@ $transition-ease: ease-in-out;
   @include responsive-toggle-container(24px);
 }
 
-@include extra-large-screen {
+@include xl-screen {
   @include responsive-toggle-container(24px);
 }
