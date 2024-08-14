@@ -3,30 +3,31 @@
 :host, section {
   height: 100%;
   background-color: var(--col-primary-bg);
-  color: var(--col-secondary-text);
 }
 
 section {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: rem(60);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   align-content: center;
 }
 
 h1 {
-  text-align: unset;
+  margin-bottom: $margin-medium;
 }
 
-.left-container {
-  @include flex-wrap-with-gap(column, center, flex-start, 0, wrap);
-  align-content: center;
+.headline-container {
+  display: grid;
+  place-content: flex-start center;
   color: var(--col-primary-text);
 }
 
 img {
   width: 100%;
   max-width: rem(300);
-  min-width: rem(200);
   height: auto;
+  position: absolute;
+  bottom: 0;
+  justify-self: center;
 }
 
