@@ -4,3 +4,7 @@ section {
   background-color: var(--secondary-bg-col);
   color: var(--primary-text-col)
 }
+
+p:last-child {
+  margin-bottom: 0;
+}

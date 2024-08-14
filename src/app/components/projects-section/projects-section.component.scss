@@ -1,11 +1,14 @@
 @import '../../../styles/_main';
 
 section {
-  background-color: var(--primary-bg-col);
+  background-color: var(--secondary-bg-col);
   color: var(--primary-text-col)
 }
 
 app-project {
   display: block;
-  margin-bottom: $margin-extra-large;
+}
+
+app-project:not(:last-child) {
+  margin-bottom: $margin-xxl;
 }
