@@ -1,8 +1,7 @@
 <section>
   <div class="left-container">
     <h1>I'm <span class="highlight">Veysel Karaali</span><br>Fullstack Developer</h1>
-    <app-btn-link href="#contact-section">Contact Me</app-btn-link>
+    <a class="btn-container" (click)="scrollToSection('contact-section')" [routerLink]="['/contact']" [routerLinkActive]="['nav-active']">Contact Me</a>
   </div>
   <img [src]="currentTheme === Theme.DEFAULT ? './assets/me/me_dark.png' : './assets/me/me_light.png'" alt="">
 </section>
-
