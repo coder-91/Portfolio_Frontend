@@ -1,0 +1,53 @@
+@import '../../../styles/_main';
+
+footer {
+  background-color: var(--primary-bg-col);
+  color: var(--primary-text-col);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logo"
+    "copyright"
+    "icon"
+    "imprint";
+  justify-items: center;
+  row-gap: rem(20);
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    font-size: rem(14);
+  }
+}
+
+app-logo {
+  grid-area: logo;
+}
+
+.copyright {
+  grid-area: copyright;
+}
+
+.icon-container {
+  grid-area: icon;
+  display: flex;
+  column-gap: rem(10);
+}
+
+.imprint {
+  grid-area: imprint;
+  justify-self: center;
+}
+
+@include large-screen {
+  footer {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "logo copyright icon"
+      ". imprint .";
+    align-items: center;
+  }
+}
