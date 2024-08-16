@@ -1,5 +1,6 @@
+@import '../../../../styles/_functions';
+
 img {
-  width: auto;
-  min-width: 50px;
-  height: 100px;
+  height: auto;
+  min-width: rem(50);
 }

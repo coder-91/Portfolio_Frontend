@@ -1,1 +1,2 @@
-<img [src]="currentTheme === Theme.DEFAULT ? (translateService.instant('logoDark')) : (translateService.instant('logoLight'))" alt="">
+<img [src]="getLogo() | translate" [width]="width" alt="">
+

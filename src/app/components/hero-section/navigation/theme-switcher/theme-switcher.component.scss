@@ -20,7 +20,7 @@ $transition-ease: ease-in-out;
   display: flex;
   transition: background-color $transition-duration $transition-ease;
 
-  &.default-theme {
+  &.dark {
     background-color: var(--col-accent);
   }
 
@@ -49,11 +49,11 @@ $transition-ease: ease-in-out;
     box-shadow: 0 2px 8px 0 $color-shadow-1, 0 2px 8px 0 $color-shadow-2;
   }
 
-  &.default-theme:after {
+  &.dark:after {
     transform: translateX($toggle-btn-width);
   }
 
-  &.light-theme:after {
+  &.light:after {
     transform: translateX(0);
   }
 }

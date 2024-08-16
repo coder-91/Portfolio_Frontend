@@ -1,13 +1,13 @@
 <div class="toggle-container"
      [ngClass]="{
-       'default-theme': currentTheme === Theme.DEFAULT,
-       'light-theme': currentTheme === Theme.LIGHT_THEME
+       'dark': currentTheme === Theme.DARK_THEME,
+       'light': currentTheme === Theme.LIGHT_THEME
      }" (click)="onChangeTheme()">
   <button type="button" class="transition-colors sun-btn">
-      <img [src]="currentTheme === Theme.DEFAULT ? './assets/icons/light_2.svg' : './assets/icons/light_1.svg'" alt="">
+      <img [src]="currentTheme === Theme.DARK_THEME ? './assets/icons/light_2.svg' : './assets/icons/light_1.svg'" alt="">
   </button>
 
   <button type="button" class="transition-colors moon-btn">
-    <img [src]="currentTheme === Theme.DEFAULT ? './assets/icons/dark_2.svg' : './assets/icons/dark_1.svg'" alt="">
+    <img [src]="currentTheme === Theme.DARK_THEME ? './assets/icons/dark_2.svg' : './assets/icons/dark_1.svg'" alt="">
   </button>
 </div>

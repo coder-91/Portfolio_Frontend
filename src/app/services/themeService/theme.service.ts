@@ -9,7 +9,7 @@ export class ThemeService {
   private _currentTheme$: BehaviorSubject<Theme>;
 
   constructor() {
-    const savedTheme:Theme = this.loadThemeFromLocalStorage() || Theme.DEFAULT;
+    const savedTheme:Theme = this.loadThemeFromLocalStorage() || Theme.DARK_THEME;
     this._currentTheme$ = new BehaviorSubject<Theme>(savedTheme);
     document.body.className = savedTheme;
   }
@@ -33,7 +33,7 @@ export class ThemeService {
     if (storedTheme && Object.values(Theme).includes(storedTheme as Theme)) {
       return storedTheme as Theme;
     }
-    return Theme.DEFAULT;
+    return Theme.DARK_THEME;
   }
 
   private saveThemeToLocalStorage(theme: Theme): void {
