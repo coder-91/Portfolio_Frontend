@@ -1,0 +1,7 @@
+<div class="menu-list" [ngClass]="{'active': isMobileMenuActive}">
+  <a (click)="handleNavigation('hero-section')" [routerLink]="['/home']" [routerLinkActive]="['nav-active']">{{ 'home' | translate }}</a>
+  <a (click)="handleNavigation('about-me-section')" [routerLink]="['/about-me']" [routerLinkActive]="['nav-active']">{{ 'aboutMe' | translate }}</a>
+  <a (click)="handleNavigation('skills-section')" [routerLink]="['/skills']" [routerLinkActive]="['nav-active']">{{ 'skills' | translate }}</a>
+  <a (click)="handleNavigation('projects-section')" [routerLink]="['/projects']" [routerLinkActive]="['nav-active']">{{ 'projects' | translate }}</a>
+  <a (click)="handleNavigation('contact-section')" [routerLink]="['/contact']" [routerLinkActive]="['nav-active']">{{ 'contact' | translate }}</a>
+</div>

@@ -1,15 +1,14 @@
 <nav #menu>
   <div class="nav-bar">
     <app-logo [currentTheme]="currentTheme" [version]="'v1'" [width]="'50'"></app-logo>
+    <app-menu-list class="menu-desktop"></app-menu-list>
     <app-theme-switcher [currentTheme]="currentTheme"></app-theme-switcher>
     <app-language-switcher></app-language-switcher>
     <app-nav-mobile-icon [isMobileMenuActive]="isMobileMenuActive" (click)="toggleMobileMenu()"></app-nav-mobile-icon>
   </div>
 
-  <div class="menu-item-list" [ngClass]="{'active': isMobileMenuActive}">
-      <a (click)="scrollToSection('about-me-section'); closeMobileMenu()" [routerLink]="['/about-me']" [routerLinkActive]="['nav-active']">{{ 'aboutMe' | translate }}</a>
-      <a (click)="scrollToSection('skills-section'); closeMobileMenu()" [routerLink]="['/skills']" [routerLinkActive]="['nav-active']">{{ 'skills' | translate }}</a>
-      <a (click)="scrollToSection('projects-section'); closeMobileMenu()" [routerLink]="['/projects']" [routerLinkActive]="['nav-active']">{{ 'projects' | translate }}</a>
-      <a (click)="scrollToSection('contact-section'); closeMobileMenu()" [routerLink]="['/contact']" [routerLinkActive]="['nav-active']">{{ 'contact' | translate }}</a>
-  </div>
+  <app-menu-list class="menu-mobile"
+    [isMobileMenuActive]="isMobileMenuActive"
+    [closeMobileMenu]="closeMobileMenu.bind(this)">
+  </app-menu-list>
 </nav>

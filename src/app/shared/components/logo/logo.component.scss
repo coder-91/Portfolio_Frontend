@@ -1,6 +1,12 @@
-@import '../../../../styles/_functions';
+@import '../../../../styles/_main';
 
 img {
   height: auto;
   min-width: rem(50);
+}
+
+@include large-screen {
+  img {
+    width: rem(75);
+  }
 }
