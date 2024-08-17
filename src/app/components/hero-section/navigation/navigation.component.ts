@@ -20,6 +20,7 @@ export class NavigationComponent implements OnInit{
   currentTheme: Theme;
   isMobileMenuActive = false;
   @ViewChild('menu') menu: ElementRef;
+  @ViewChild('navbar') navbar: ElementRef;
 
   constructor(private themeService: ThemeService) {}
 
@@ -35,6 +36,10 @@ export class NavigationComponent implements OnInit{
 
   public closeMobileMenu() {
     this.isMobileMenuActive = false;
+  }
+
+  public getNavbarHeight(): number {
+    return this.navbar.nativeElement.offsetHeight;
   }
 
   @HostListener('document:click', ['$event'])

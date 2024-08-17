@@ -27,8 +27,4 @@ export class HeroContentComponent implements OnInit {
       this.currentTheme = currentTheme;
     })
   }
-
-  public scrollToSection(sectionId: string): void {
-    this.viewportScroller.scrollToAnchor(sectionId);
-  }
 }
