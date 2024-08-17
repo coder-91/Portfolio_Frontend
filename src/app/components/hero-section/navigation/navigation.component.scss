@@ -57,6 +57,12 @@ nav {
   left: 0;
 }
 
-@include medium-screen {
+@include small-screen {
+  .nav-bar {
+    column-gap: rem(20);
+  }
 
+  app-logo {
+    margin-right: auto;
+  }
 }

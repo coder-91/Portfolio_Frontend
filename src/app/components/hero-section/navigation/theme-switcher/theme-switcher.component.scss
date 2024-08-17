@@ -21,7 +21,7 @@ $transition-ease: ease-in-out;
   transition: background-color $transition-duration $transition-ease;
 
   &.dark {
-    background-color: var(--col-accent);
+    background-color: var(--col-primary-bg);;
   }
 
   button {
@@ -92,18 +92,10 @@ $transition-ease: ease-in-out;
   }
 }
 
+@include xs-screen {
+  @include responsive-toggle-container(24px);
+}
+
 @include small-screen {
-  @include responsive-toggle-container(24px);
-}
-
-@include medium-screen {
-  @include responsive-toggle-container(24px);
-}
-
-@include large-screen {
-  @include responsive-toggle-container(24px);
-}
-
-@include xl-screen {
   @include responsive-toggle-container(24px);
 }
