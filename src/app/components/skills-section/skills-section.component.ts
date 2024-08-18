@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Theme} from "../../models/theme";
 import {SkillComponent} from "./skill/skill.component";
 

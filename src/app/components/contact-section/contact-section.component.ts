@@ -18,7 +18,7 @@ import {NgClass} from "@angular/common";
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'
 })
-export class ContactSectionComponent implements OnInit{
+export class ContactSectionComponent implements OnInit {
   contactForm: FormGroup = new FormGroup({});
 
   constructor(private fb: FormBuilder) {}

@@ -1,4 +1,17 @@
+@import '../styles/_main';
+
 :host {
+  position: relative;
   display: block;
   height: 100%;
+}
+
+app-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: rem(65);
+  background-color: var(--col-accent);
 }

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Theme} from '../../../../models/theme';
-import {ThemeService} from "../../../../services/themeService/theme.service";
+import {Theme} from '../../../models/theme';
+import {ThemeService} from "../../../services/themeService/theme.service";
 import {NgClass} from "@angular/common";
 
 @Component({
@@ -17,14 +17,11 @@ export class ThemeSwitcherComponent implements OnInit {
   @Input() currentTheme: Theme;
   isLightTheme:boolean;
 
-  constructor(private themeService: ThemeService) {
-
-  }
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {
     this.isLightTheme = !!this.currentTheme;
   }
-
 
   public onChangeTheme() {
     this.isLightTheme = !this.isLightTheme;

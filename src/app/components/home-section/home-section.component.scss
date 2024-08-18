@@ -1,4 +1,9 @@
-@import '../../../../styles/_main';
+@import '../../../styles/_main';
+
+:host {
+  height: 100%;
+  background-color: var(--col-primary-bg);
+}
 
 :host, section {
   height: 100%;
@@ -23,11 +28,10 @@ h1 {
 }
 
 img {
-  height: 70%;
-  max-height: rem(600);
-  width: auto;
+  width: 100%;
+  max-width: rem(450);
+  height: auto;
   position: absolute;
   bottom: 0;
   justify-self: center;
 }
-

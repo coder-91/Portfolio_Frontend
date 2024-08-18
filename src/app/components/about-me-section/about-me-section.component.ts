@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-about-me-section',
@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './about-me-section.component.html',
   styleUrl: './about-me-section.component.scss'
 })
-export class AboutMeSectionComponent {
-
-}
+export class AboutMeSectionComponent  {}

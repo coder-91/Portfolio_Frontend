@@ -1,13 +1,4 @@
-@import '../../../../styles/_main';
-
-:host {
-  position: fixed;
-  top: 0;
-  left:0;
-  right:0;
-  z-index: 100;
-  height: $nav-height;
-}
+@import '../../../styles/_main';
 
 nav {
   @include color-scheme(var(--col-primary-bg), var(--col-secondary-text));
@@ -20,7 +11,7 @@ nav {
   justify-content: center;
 }
 
-.nav-bar {
+.navbar {
   @include flex-basic(row, space-between, center);
 }
 
@@ -28,12 +19,19 @@ nav {
   display: none;
 }
 
-.menu-mobile {
-  display: block;
+app-menu-list {
+  position: fixed;
+  right: -100%;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+app-menu-list.active {
+  right: 0;
 }
 
 @include small-screen {
-  .nav-bar {
+  .navbar {
     column-gap: rem(20);
   }
 
@@ -56,7 +54,11 @@ nav {
   }
 
   app-logo {
-    margin-right: 0;
+    margin-right: rem(30);
+  }
+
+  app-menu-list {
+    position: unset;
   }
 
   app-theme-switcher {

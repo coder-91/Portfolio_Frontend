@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {LANGUAGES} from "../../../../consts/const";
-import {Language} from "../../../../models/language";
-import {LanguageService} from "../../../../services/languageService/language.service";
+import {LANGUAGES} from "../../../consts/const";
+import {Language} from "../../../models/language";
+import {LanguageService} from "../../../services/languageService/language.service";
 import {NgClass} from "@angular/common";
 
 @Component({

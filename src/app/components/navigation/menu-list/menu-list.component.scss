@@ -1,16 +1,10 @@
-@import '../../../../../styles/_main';
+@import '../../../../styles/_main';
 
 .menu-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--col-accent);
-  transition: all 0.25s;
-  position: fixed;
-  top: $nav-height;
-  left: 100%;
-  width: 100%;
-  z-index: 100;
 
   a {
     display: inline-block;
@@ -27,12 +21,8 @@
   }
 }
 
-.nav-active {
+.menu-list .nav-active {
   color: var(--col-highlight)
-}
-
-.menu-list.active {
-  left: 0;
 }
 
 @include large-screen {
