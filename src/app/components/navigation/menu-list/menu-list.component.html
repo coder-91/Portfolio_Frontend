@@ -3,7 +3,7 @@
     <a
       (click)="handleNavigation(menuItem.sectionId)"
       [routerLink]="[menuItem.path]">
-      {{ menuItem.label | translate }}
+      <span [ngClass]="{ 'mobile': isMobileMenuActive }">{{ menuItem.label | translate }}</span>
     </a>
   }
 </div>
