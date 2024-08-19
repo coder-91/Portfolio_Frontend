@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {LogoComponent} from "../../shared/components/logo/logo.component";
-import {Theme} from "../../models/theme";
-import {ThemeService} from "../../services/themeService/theme.service";
+import {LogoComponent} from "../../../shared/components/logo/logo.component";
+import {Theme} from "../../../models/theme";
+import {ThemeService} from "../../../services/themeService/theme.service";
 
 @Component({
   selector: 'app-footer',

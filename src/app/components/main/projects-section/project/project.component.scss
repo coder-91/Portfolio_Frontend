@@ -1,9 +1,8 @@
-@import '../../../../styles/_main';
+@import '../../../../../styles/_main';
 
 .project-container {
   display: grid;
   grid-template-columns: 1fr;
-  //grid-template-rows: auto;
   grid-template-areas:
     "project-image"
     "project";
@@ -30,9 +29,7 @@ img {
   width: 100%;
 }
 
-
 @include medium-screen {
-
   .btn-container-project {
     flex-direction: row;
     gap: 0 rem(15);

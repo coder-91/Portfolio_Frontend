@@ -2,8 +2,7 @@
   @for(menuItem of menuItems; track menuItem) {
     <a
       (click)="handleNavigation(menuItem.sectionId)"
-      [routerLink]="[menuItem.path]"
-      [routerLinkActive]="['nav-active']">
+      [routerLink]="[menuItem.path]">
       {{ menuItem.label | translate }}
     </a>
   }

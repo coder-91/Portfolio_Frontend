@@ -20,11 +20,11 @@ export class MenuListComponent {
   @Input() closeMobileMenu: () => void;
 
   menuItems = [
-    { sectionId: 'homeSection', path: '/home', label: 'home' },
-    { sectionId: 'aboutMeSection', path: '/about-me', label: 'aboutMe' },
-    { sectionId: 'skillsSection', path: '/skills', label: 'skills' },
-    { sectionId: 'projectsSection', path: '/projects', label: 'projects' },
-    { sectionId: 'contactSection', path: '/contact', label: 'contact' }
+    { sectionId: 'home', path: '/home', label: 'home' },
+    { sectionId: 'about-me', path: '/about-me', label: 'aboutMe' },
+    { sectionId: 'skills', path: '/skills', label: 'skills' },
+    { sectionId: 'projects', path: '/projects', label: 'projects' },
+    { sectionId: 'contact', path: '/contact', label: 'contact' }
   ];
 
   constructor(private scrollService: ScrollService) {}
