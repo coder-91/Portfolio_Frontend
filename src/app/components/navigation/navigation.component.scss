@@ -10,6 +10,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 0 4px 10px var(--col-shadow);
+  border-radius: rem(5);
 }
 
 .navbar {
