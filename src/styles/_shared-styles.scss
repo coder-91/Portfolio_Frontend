@@ -6,16 +6,19 @@
   align-items: center;
   column-gap: 5px;
   border: 2px solid var(--col-highlight);
-  color: var(--col-primary-text);
   border-radius: 5px;
   height: rem(35);
   padding: 5px 7px;
   cursor: pointer;
-  transition: color 0.4s ease;
+  color: var(--col-highlight);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3),
+  -2px -2px 4px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
 }
 
 .btn-container:hover {
-  color: var(--col-highlight);
+  color: var(--col-primary-text);
+  background-color: var(--col-highlight);
 }
 
 .error-list {

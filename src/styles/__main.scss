@@ -62,6 +62,14 @@ nav {
   }
 }
 
+@include small-screen {
+  section,
+  nav,
+  footer {
+    padding: $padding-section-tb $padding-section-lr-s;
+  }
+}
+
 @include medium-screen {
   section,
   nav,
