@@ -1,36 +1,43 @@
 @import './functions';
 @import './breakpoints';
 
+$font-size-h1-xs: rem(24);
 $font-size-h1-small: rem(24);
 $font-size-h1-medium: rem(30);
 $font-size-h1-large: rem(36);
 $font-size-h1-xl: rem(42);
 
+$font-size-h2-xs: rem(20);
 $font-size-h2-small: rem(20);
 $font-size-h2-medium: rem(26);
 $font-size-h2-large: rem(32);
 $font-size-h2-xl: rem(38);
 
+$font-size-h3-xs: rem(18);
 $font-size-h3-small: rem(18);
 $font-size-h3-medium: rem(22);
 $font-size-h3-large: rem(26);
 $font-size-h3-xl: rem(30);
 
+$font-size-p-xs: rem(14);
 $font-size-p-small: rem(14);
 $font-size-p-medium: rem(16);
 $font-size-p-large: rem(18);
 $font-size-p-xl: rem(20);
 
+$line-height-p-xs: rem(20);
 $line-height-p-small: rem(20);
 $line-height-p-medium: rem(24);
 $line-height-p-large: rem(28);
 $line-height-p-xl: rem(32);
 
+$font-size-a-button-xs: rem(14);
 $font-size-a-button-small: rem(14);
 $font-size-a-button-medium: rem(16);
 $font-size-a-button-large: rem(18);
 $font-size-a-button-xl: rem(20);
 
+$margin-xs: rem(8);
 $margin-small: rem(8);
 $margin-medium: rem(16);
 $margin-large: rem(24);
@@ -39,16 +46,19 @@ $margin-xxl: rem(50);
 $margin-3xl: rem(75);
 $margin-4xl: rem(100);
 
+$margin-h1-xs: rem(48);
 $margin-h1-small: rem(48);
 $margin-h1-medium: rem(56);
 $margin-h1-large: rem(64);
 $margin-h1-xl: rem(72);
 
+$margin-h2-xs: rem(16);
 $margin-h2-small: rem(16);
 $margin-h2-medium: rem(32);
 $margin-h2-large: rem(40);
 $margin-h2-xl: rem(48);
 
+$margin-p-xs: rem(15);
 $margin-p-small: rem(15);
 $margin-p-medium: rem(20);
 $margin-p-large: rem(25);
@@ -67,6 +77,40 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headline);
+}
+
+@include xs-screen {
+  :root {
+    --current-font-size-p: #{$font-size-p-xs};
+  }
+
+  h3, h4, h5, h6 {
+    margin-bottom: $margin-xs;
+  }
+
+  h1 {
+    font-size: $font-size-h1-xs;
+    margin-bottom: $margin-h1-xs;
+  }
+
+  h2 {
+    font-size: $font-size-h2-xs;
+    margin-bottom: $margin-h2-xs;
+  }
+
+  h3 {
+    font-size: $font-size-h3-xs;
+  }
+
+  p {
+    font-size: $font-size-p-xs;
+    line-height: $line-height-p-xs;
+    margin-bottom: $margin-p-xs;
+  }
+
+  a, button {
+    font-size: $font-size-a-button-xs;
+  }
 }
 
 @include small-screen {
