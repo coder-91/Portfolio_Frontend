@@ -1,20 +1,22 @@
 <section id="contact">
-  <h1>Contact</h1>
-  <h2>Want to discuss a new project?</h2>
-  <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+  <div class="contact-inner max-width">
+    <h1>Contact</h1>
+    <h2>Want to discuss a new project?</h2>
+    <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
 
-  <form [formGroup]="contactForm" autocomplete="off">
-    <app-input [form]="contactForm" [id]="'name'" [type]="'text'" [label]="'Name'"></app-input>
-    <app-input [form]="contactForm" [id]="'email'" [type]="'email'" [label]="'Email'"></app-input>
-    <app-textarea [form]="contactForm" [id]="'message'"></app-textarea>
-    <app-checkbox-privacy-policy [form]="contactForm" [id]="'privacyPolicy'"></app-checkbox-privacy-policy>
-    <button
-      type="submit"
-      class="btn"
-      [ngClass]="{'disabled': !contactForm.valid}"
-      [disabled]="!contactForm.valid"
-      (click)="onSubmit()">
-      Send Message
-    </button>
-  </form>
+    <form [formGroup]="contactForm" autocomplete="off">
+      <app-input [form]="contactForm" [id]="'name'" [type]="'text'" [label]="'Name'"></app-input>
+      <app-input [form]="contactForm" [id]="'email'" [type]="'email'" [label]="'Email'"></app-input>
+      <app-textarea [form]="contactForm" [id]="'message'"></app-textarea>
+      <app-checkbox-privacy-policy [form]="contactForm" [id]="'privacyPolicy'"></app-checkbox-privacy-policy>
+      <button
+        type="submit"
+        class="btn"
+        [ngClass]="{'disabled': !contactForm.valid}"
+        [disabled]="!contactForm.valid"
+        (click)="onSubmit()">
+        Send Message
+      </button>
+    </form>
+  </div>
 </section>
