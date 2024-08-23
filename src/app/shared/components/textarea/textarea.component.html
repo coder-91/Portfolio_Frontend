@@ -1,6 +1,6 @@
 <div class="textarea-container">
   <textarea [formControl]="control" placeholder="Your message..."></textarea>
-  <div class="error-list">
+  <div class="control-error">
     @if(control?.touched && control?.invalid) {
       @switch (true) {
         @case (control?.hasError('required'))

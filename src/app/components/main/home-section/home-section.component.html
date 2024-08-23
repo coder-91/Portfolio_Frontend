@@ -1,7 +1,14 @@
 <section id="home">
-  <div class="headline-container">
-    <h1>Hello! I am <span class="highlight">Veysel</span></h1>
-    <h1>Fullstack Developer</h1>
+  <div class="img-container">
+    <img class="" src="assets/background/intro.jpg" alt="">
   </div>
-  <img [src]="currentTheme === Theme.DARK_THEME ? './assets/me/me_dark.png' : './assets/me/me_light.png'" alt="">
+
+  <div class="intro-container">
+    <h1 class="highlight">Veysel Karaali</h1>
+    <h2>I'm a Fullstack Developer</h2>
+    <div class="btn-container">
+      <a class="btn">More about me</a>
+      <a [href]="'#projects'" class="btn" target="_self">View my work</a>
+    </div>
+  </div>
 </section>

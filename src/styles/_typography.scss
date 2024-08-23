@@ -54,9 +54,9 @@ $margin-h1-xl: rem(72);
 
 $margin-h2-xs: rem(16);
 $margin-h2-small: rem(16);
-$margin-h2-medium: rem(32);
-$margin-h2-large: rem(40);
-$margin-h2-xl: rem(48);
+$margin-h2-medium: rem(24);
+$margin-h2-large: rem(32);
+$margin-h2-xl: rem(40);
 
 $margin-p-xs: rem(15);
 $margin-p-small: rem(15);
@@ -64,10 +64,13 @@ $margin-p-medium: rem(20);
 $margin-p-large: rem(25);
 $margin-p-xl: rem(30);
 
+$letter-spacing-s: 0.75px;
+$letter-spacing-m: 2px;
+
 :root {
   --font-size-base: 1rem;
-  --font-headline: 'Lato', sans-serif;
-  --font-primary: 'Lato', sans-serif;
+  --font-headline: 'Poppins', sans-serif;
+  --font-primary: 'Poppins', sans-serif;
   --current-font-size-p: #{$font-size-p-small};
 }
 
@@ -77,6 +80,11 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headline);
+  letter-spacing: $letter-spacing-m;
+}
+
+p, a, button, div, span {
+  letter-spacing: $letter-spacing-s;
 }
 
 @include xs-screen {

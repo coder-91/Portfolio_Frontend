@@ -6,9 +6,10 @@
 @import './theme';
 @import './typography';
 
+$nav-height: rem(65);
 $side-padding: 0 rem(20);
 $padding-section-lr-s: rem(15);
-$padding-section-tb: rem(65);
+$padding-section-tb: rem(40);
 $padding-section-lr: rem(30);
 
 html {
@@ -28,7 +29,6 @@ body {
 
 img,
 picture {
-  max-width: 100%;
   display: block;
   line-height: 0;
 }

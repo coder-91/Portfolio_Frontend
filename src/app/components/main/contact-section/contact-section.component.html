@@ -10,7 +10,7 @@
     <app-checkbox-privacy-policy [form]="contactForm" [id]="'privacyPolicy'"></app-checkbox-privacy-policy>
     <button
       type="submit"
-      class="btn-container"
+      class="btn"
       [ngClass]="{'disabled': !contactForm.valid}"
       [disabled]="!contactForm.valid"
       (click)="onSubmit()">

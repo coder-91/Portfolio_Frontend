@@ -2,7 +2,7 @@
   <input [formControl]="control" [type]="type" [id]="id" [name]="label" placeholder=""/>
   <label [for]="id">{{ label }}</label>
 
-  <div class="error-list">
+  <span class="control-error">
     @if(control?.touched && control?.invalid) {
       @switch (true) {
         @case (control?.hasError('required'))
@@ -11,5 +11,5 @@
           { Please enter a valid email }
       }
     }
-  </div>
+  </span>
 </div>
