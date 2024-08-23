@@ -16,6 +16,7 @@ nav {
 
 .navbar {
   @include flex-basic(row, space-between, center);
+  width: 100%;
 }
 
 .menu-desktop {

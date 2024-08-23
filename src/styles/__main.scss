@@ -53,6 +53,11 @@ nav {
   background-color: var(--col-highlight)
 }
 
+.max-width {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 
 @include xs-screen {
   section,
