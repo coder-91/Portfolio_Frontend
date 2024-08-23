@@ -3,6 +3,9 @@
 footer {
   background-color: var(--col-secondary-bg);
   color: var(--col-primary-text);
+}
+
+.inner-footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -43,7 +46,7 @@ app-logo {
 }
 
 @include large-screen {
-  footer {
+  .inner-footer {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
       "logo copyright icon"

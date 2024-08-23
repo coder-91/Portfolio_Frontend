@@ -1,12 +1,14 @@
 <footer>
-  <app-logo [currentTheme]="currentTheme" [version]="'v2'" [width]="'100'"></app-logo>
-  <p class="copyright">&copy; Veysel Karaali {{ currentYear }}</p>
+  <div class="inner-footer max-width">
+    <app-logo [currentTheme]="currentTheme" [version]="'v2'" [width]="'100'"></app-logo>
+    <p class="copyright">&copy; Veysel Karaali {{ currentYear }}</p>
 
-  <div class="icon-container">
-    <a href="https://github.com/coder-91" target="_blank"><img [src]="'./assets/icons/github.svg'" alt=""></a>
-    <a href="mailto:veysel-karaali@outlook.de" target="_blank"><img [src]="'./assets/icons/email.svg'" alt=""></a>
-    <a href="https://www.linkedin.com/in/veysel-karaali-4206a124b/" target="_blank"><img [src]="'./assets/icons/linkedin.svg'" alt=""></a>
+    <div class="icon-container">
+      <a href="https://github.com/coder-91" target="_blank"><img [src]="'./assets/icons/github.svg'" alt=""></a>
+      <a href="mailto:veysel-karaali@outlook.de" target="_blank"><img [src]="'./assets/icons/email.svg'" alt=""></a>
+      <a href="https://www.linkedin.com/in/veysel-karaali-4206a124b/" target="_blank"><img [src]="'./assets/icons/linkedin.svg'" alt=""></a>
+    </div>
+
+    <a class="imprint" href="#">Imprint</a>
   </div>
-
-  <a class="imprint" href="#">Imprint</a>
 </footer>
