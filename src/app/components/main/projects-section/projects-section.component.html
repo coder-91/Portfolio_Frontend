@@ -1,16 +1,18 @@
 <section id="projects">
-  <h1>My Projects</h1>
+  <div class="inner-project max-width">
+    <h1>My Projects</h1>
 
-  @for (project of projects; track project) {
-    <app-project
-      [isImageFirst]="isImageFirst($index)"
-      [hrefProjectImage]="project.hrefProjectImage"
-      [title]="project.title"
-      [technologies]="project.technologies"
-      [description]="project.description"
-      [hrefLiveTest]="project.hrefLiveTest"
-      [hrefFrontend]="project.hrefFrontend"
-      [hrefBackend]="project.hrefBackend">
-    </app-project>
-  }
+    @for (project of projects; track project) {
+      <app-project
+        [isImageFirst]="isImageFirst($index)"
+        [hrefProjectImage]="project.hrefProjectImage"
+        [title]="project.title"
+        [technologies]="project.technologies"
+        [description]="project.description"
+        [hrefLiveTest]="project.hrefLiveTest"
+        [hrefFrontend]="project.hrefFrontend"
+        [hrefBackend]="project.hrefBackend">
+      </app-project>
+    }
+  </div>
 </section>
