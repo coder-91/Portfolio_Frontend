@@ -20,7 +20,6 @@ $font-size: rem(16);
 
     &.active {
       color: var(--col-primary-text);
-      font-weight: bold;
     }
 
     &:not(:last-child) .divider {

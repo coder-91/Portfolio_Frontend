@@ -1,22 +1,21 @@
 @import '../../../styles/_main';
 
 nav {
-  @include color-scheme(var(--col-primary-bg), var(--col-secondary-text));
-  padding-top: rem(10);
-  padding-bottom: rem(10);
   height: 100%;
-  background-color: var(--col-accent);
+  background-color: var(--col-primary-bg);
   color: var(--col-primary-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 4px 10px var(--col-shadow);
-  border-radius: rem(5);
 }
 
 .navbar {
   @include flex-basic(row, space-between, center);
   width: 100%;
+  box-shadow: 0 4px 10px var(--col-shadow);
+  border-radius: rem(5);
+  height: 100%;
+  background-color: var(--col-accent);
 }
 
 .menu-desktop {

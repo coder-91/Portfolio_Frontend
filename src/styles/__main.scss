@@ -37,10 +37,6 @@ button, a {
   cursor: pointer;
 }
 
-nav {
-  padding: $side-padding;
-}
-
 .pointer {
   cursor: pointer;
 }
@@ -61,7 +57,7 @@ nav {
 
 @include xs-screen {
   section,
-  nav,
+  #navbar,
   footer {
     padding: $padding-section-tb $padding-section-lr-s;
   }
@@ -69,7 +65,7 @@ nav {
 
 @include small-screen {
   section,
-  nav,
+  #navbar,
   footer {
     padding: $padding-section-tb $padding-section-lr-s;
   }
@@ -77,7 +73,7 @@ nav {
 
 @include medium-screen {
   section,
-  nav,
+  #navbar,
   footer {
     padding: $padding-section-tb $padding-section-lr;
   }
