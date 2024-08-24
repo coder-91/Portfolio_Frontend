@@ -1,11 +1,41 @@
 {
-  "home": "Home",
-  "aboutMe": "About",
-  "skills": "Skills",
-  "projects": "Projects",
-  "contact": "Contact",
-  "logo_v1_light": "assets/logos/logo_v1_light.svg",
-  "logo_v1_dark": "assets/logos/logo_v1_dark.svg",
-  "logo_v2_light": "assets/logos/logo_v2_light_en.svg",
-  "logo_v2_dark": "assets/logos/logo_v2_dark_en.svg"
+  "general": {
+    "logo_v1_light": "assets/logos/logo_v1_light.svg",
+    "logo_v1_dark": "assets/logos/logo_v1_dark.svg",
+    "logo_v2_light": "assets/logos/logo_v2_light_en.svg",
+    "logo_v2_dark": "assets/logos/logo_v2_dark_en.svg"
+  },
+  "nav": {
+    "home": "Home",
+    "about-me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "logo_v1_light": "assets/logos/logo_v1_light.svg",
+    "logo_v1_dark": "assets/logos/logo_v1_dark.svg"
+  },
+  "home": {
+    "headline": ""
+  },
+  "about-me": {
+    "headline": "About"
+  },
+  "skills": {
+    "headline": "My Skills"
+  },
+  "projects": {
+    "headline": "My Projects"
+  },
+  "contact": {
+    "headline": "Contact"
+  },
+  "footer": {
+    "headline": ""
+  },
+  "imprint": {
+    "headline": "Imprint"
+  },
+  "privacy-policy": {
+    "headline": "Data Policy"
+  }
 }

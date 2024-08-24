@@ -1,9 +1,7 @@
 <div class="menu-list">
   @for(menuItem of menuItems; track menuItem) {
-    <a
-      (click)="handleNavigation(menuItem.sectionId)"
-      [routerLink]="[menuItem.path]">
-      <span [ngClass]="{ 'mobile': isMobileMenuActive }">{{ menuItem.label | translate }}</span>
+    <a (click)="handleNavigation(menuItem.id)">
+      <span [ngClass]="{ 'mobile': isMobileMenuActive }">{{ 'nav.' + menuItem.id | translate }}</span>
     </a>
   }
 </div>

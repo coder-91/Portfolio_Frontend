@@ -19,20 +19,20 @@ export class MenuListComponent {
   @Input() isMobileMenuActive: boolean;
   @Input() closeMobileMenu: () => void;
 
-  menuItems = [
-    { sectionId: 'home', path: '/home', label: 'home' },
-    { sectionId: 'about-me', path: '/about-me', label: 'aboutMe' },
-    { sectionId: 'skills', path: '/skills', label: 'skills' },
-    { sectionId: 'projects', path: '/projects', label: 'projects' },
-    { sectionId: 'contact', path: '/contact', label: 'contact' }
-  ];
-
   constructor(private scrollService: ScrollService) {}
 
-  public handleNavigation(sectionId: string): void {
+  menuItems = [
+    { id: 'home', path: '/home'},
+    { id: 'about-me', path: '/about-me' },
+    { id: 'skills', path: '/skills' },
+    { id: 'projects', path: '/projects' },
+    { id: 'contact', path: '/contact' }
+  ];
+
+  public handleNavigation(anchor: string): void {
     if (this.isMobileMenuActive) {
       this.closeMobileMenu();
     }
-    this.scrollService.scrollToSection(sectionId)
+    this.scrollService.scrollToAnchor(anchor);
   }
 }

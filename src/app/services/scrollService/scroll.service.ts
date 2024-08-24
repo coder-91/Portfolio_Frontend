@@ -9,12 +9,10 @@ export class ScrollService {
 
   constructor(private navigationService: NavigationService, private viewportScroller: ViewportScroller) {}
 
-  public scrollToSection(sectionId: string): void {
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-      const navHeight = this.navigationService.navHeight;
-      const yPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
-      window.scrollTo({ top: yPosition, behavior: 'smooth' });
-    }
+  public scrollToAnchor(anchor: string) {
+    const scrollOffset = this.navigationService.navHeight;
+    this.viewportScroller.setHistoryScrollRestoration('auto');
+    this.viewportScroller.setOffset([0, scrollOffset]);
+    this.viewportScroller.scrollToAnchor(anchor);
   }
 }

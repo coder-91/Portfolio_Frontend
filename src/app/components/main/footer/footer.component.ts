@@ -2,13 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {LogoComponent} from "../../../shared/components/logo/logo.component";
 import {Theme} from "../../../models/theme";
 import {ThemeService} from "../../../services/themeService/theme.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-    imports: [
-        LogoComponent
-    ],
+  imports: [
+    LogoComponent,
+    RouterLink
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

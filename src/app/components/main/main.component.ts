@@ -5,6 +5,7 @@ import {SkillsSectionComponent} from "./skills-section/skills-section.component"
 import {ProjectsSectionComponent} from "./projects-section/projects-section.component";
 import {ContactSectionComponent} from "./contact-section/contact-section.component";
 import {FooterComponent} from "./footer/footer.component";
+import {ImprintComponent} from "./imprint/imprint.component";
 
 @Component({
   selector: 'app-main',
@@ -15,7 +16,8 @@ import {FooterComponent} from "./footer/footer.component";
     SkillsSectionComponent,
     ProjectsSectionComponent,
     ContactSectionComponent,
-    FooterComponent
+    FooterComponent,
+    ImprintComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

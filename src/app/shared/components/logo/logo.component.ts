@@ -20,6 +20,6 @@ export class LogoComponent {
   @Input() width: string = "100";
 
   public getLogo(): string {
-    return `logo_${this.version}_${this.currentTheme}`;
+    return `general.logo_${this.version}_${this.currentTheme}`;
   }
 }
