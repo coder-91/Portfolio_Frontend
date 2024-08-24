@@ -57,24 +57,33 @@ button, a {
 
 @include xs-screen {
   section,
-  #navbar,
   footer {
     padding: $padding-section-tb $padding-section-lr-s;
+  }
+
+  #navbar {
+    padding: 0 $padding-section-lr-s;
   }
 }
 
 @include small-screen {
   section,
-  #navbar,
   footer {
     padding: $padding-section-tb $padding-section-lr-s;
+  }
+
+  #navbar {
+    padding: 0 $padding-section-lr-s;
   }
 }
 
 @include medium-screen {
   section,
-  #navbar,
   footer {
     padding: $padding-section-tb $padding-section-lr;
+  }
+
+  #navbar {
+    padding: 0 $padding-section-lr;
   }
 }
