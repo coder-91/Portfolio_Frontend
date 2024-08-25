@@ -5,7 +5,7 @@ img {
   min-width: rem(50);
 }
 
-@include large-screen {
+@include l-screen {
   img {
     width: rem(75);
   }

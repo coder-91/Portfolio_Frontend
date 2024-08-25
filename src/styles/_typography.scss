@@ -1,101 +1,82 @@
 @import './functions';
 @import './breakpoints';
 
-$font-size-h1-xs: rem(24);
-$font-size-h1-small: rem(24);
-$font-size-h1-medium: rem(30);
-$font-size-h1-large: rem(36);
-$font-size-h1-xl: rem(42);
+$font-size-h1-xs: rem(20);
+$font-size-h1-s: rem(22);
+$font-size-h1-m: rem(24);
+$font-size-h1-l: rem(26);
+$font-size-h1-xl: rem(28);
+$font-size-h1-xxl: rem(30);
 
-$font-size-h2-xs: rem(20);
-$font-size-h2-small: rem(20);
-$font-size-h2-medium: rem(26);
-$font-size-h2-large: rem(32);
-$font-size-h2-xl: rem(38);
+$font-size-h2-xs: rem(18);
+$font-size-h2-s: rem(20);
+$font-size-h2-m: rem(22);
+$font-size-h2-l: rem(24);
+$font-size-h2-xl: rem(26);
+$font-size-h2-xxl: rem(28);
 
-$font-size-h3-xs: rem(18);
-$font-size-h3-small: rem(18);
-$font-size-h3-medium: rem(22);
-$font-size-h3-large: rem(26);
-$font-size-h3-xl: rem(30);
+$font-size-h3-xs: rem(16);
+$font-size-h3-s: rem(18);
+$font-size-h3-m: rem(20);
+$font-size-h3-l: rem(22);
+$font-size-h3-xl: rem(24);
+$font-size-h3-xxl: rem(26);
 
-$font-size-p-xs: rem(14);
-$font-size-p-small: rem(14);
-$font-size-p-medium: rem(16);
-$font-size-p-large: rem(18);
-$font-size-p-xl: rem(20);
+$font-size-xs: rem(14);
+$font-size-s: rem(16);
+$font-size-m: rem(18);
+$font-size-l: rem(20);
+$font-size-xl: rem(22);
+$font-size-xxl: rem(24);
 
-$line-height-p-xs: rem(20);
-$line-height-p-small: rem(20);
-$line-height-p-medium: rem(24);
-$line-height-p-large: rem(28);
-$line-height-p-xl: rem(32);
+$line-height-xs: 1.3;
+$line-height-s: 1.3;
+$line-height-m: 1.3;
+$line-height-l: 1.35;
+$line-height-xl: 1.35;
+$line-height-xxl: 1.35;
 
-$font-size-a-button-xs: rem(14);
-$font-size-a-button-small: rem(14);
-$font-size-a-button-medium: rem(16);
-$font-size-a-button-large: rem(18);
-$font-size-a-button-xl: rem(20);
+$margin-h1-xs: rem(14);
+$margin-h1-s: rem(16);
+$margin-h1-m: rem(18);
+$margin-h1-l: rem(20);
+$margin-h1-xl: rem(22);
+$margin-h1-xxl: rem(24);
 
-$margin-xs: rem(8);
-$margin-small: rem(8);
-$margin-medium: rem(16);
-$margin-large: rem(24);
-$margin-xl: rem(32);
-$margin-xxl: rem(50);
-$margin-3xl: rem(75);
-$margin-4xl: rem(100);
+$margin-h2-xs: rem(12);
+$margin-h2-s: rem(14);
+$margin-h2-m: rem(16);
+$margin-h2-l: rem(18);
+$margin-h2-xl: rem(20);
+$margin-h2-xxl: rem(22);
 
-$margin-h1-xs: rem(48);
-$margin-h1-small: rem(48);
-$margin-h1-medium: rem(56);
-$margin-h1-large: rem(64);
-$margin-h1-xl: rem(72);
+$margin-h3-xs: rem(10);
+$margin-h3-s: rem(12);
+$margin-h3-m: rem(14);
+$margin-h3-l: rem(16);
+$margin-h3-xl: rem(18);
+$margin-h3-xxl: rem(20);
 
-$margin-h2-xs: rem(16);
-$margin-h2-small: rem(16);
-$margin-h2-medium: rem(24);
-$margin-h2-large: rem(32);
-$margin-h2-xl: rem(40);
+$margin-p-xs: rem(10);
+$margin-p-s: rem(12);
+$margin-p-m: rem(14);
+$margin-p-l: rem(16);
+$margin-p-xl: rem(18);
+$margin-p-xxl: rem(20);
 
-$margin-p-xs: rem(15);
-$margin-p-small: rem(15);
-$margin-p-medium: rem(20);
-$margin-p-large: rem(25);
-$margin-p-xl: rem(30);
-
-$letter-spacing-s: 0.75px;
-$letter-spacing-m: 2px;
+$gap-xs: rem(15);
+$gap-s: rem(30);
+$gap-m: rem(45);
+$gap-l: rem(60);
+$gap-xl: rem(75);
+$gap-xxl: rem(90);
 
 :root {
   --font-size-base: 1rem;
-  --font-headline: 'Poppins', sans-serif;
-  --font-primary: 'Poppins', sans-serif;
-  --current-font-size-p: #{$font-size-p-small};
-}
-
-h1 {
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-headline);
-  letter-spacing: $letter-spacing-m;
-}
-
-p, a, button, div, span {
-  letter-spacing: $letter-spacing-s;
+  --font-family: 'Karla', sans-serif;
 }
 
 @include xs-screen {
-  :root {
-    --current-font-size-p: #{$font-size-p-xs};
-  }
-
-  h3, h4, h5, h6 {
-    margin-bottom: $margin-xs;
-  }
-
   h1 {
     font-size: $font-size-h1-xs;
     margin-bottom: $margin-h1-xs;
@@ -108,130 +89,98 @@ p, a, button, div, span {
 
   h3 {
     font-size: $font-size-h3-xs;
+    margin-bottom: $margin-h3-xs;
+  }
+
+  p, div, span, a, button {
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
   }
 
   p {
-    font-size: $font-size-p-xs;
-    line-height: $line-height-p-xs;
     margin-bottom: $margin-p-xs;
   }
-
-  a, button {
-    font-size: $font-size-a-button-xs;
-  }
 }
 
-@include small-screen {
-  :root {
-    --current-font-size-p: #{$font-size-p-small};
-  }
-
-  h3, h4, h5, h6 {
-    margin-bottom: $margin-small;
-  }
-
+@include s-screen {
   h1 {
-    font-size: $font-size-h1-small;
-    margin-bottom: $margin-h1-small;
+    font-size: $font-size-h1-s;
+    margin-bottom: $margin-h1-s;
   }
 
   h2 {
-    font-size: $font-size-h2-small;
-    margin-bottom: $margin-h2-small;
+    font-size: $font-size-h2-s;
+    margin-bottom: $margin-h2-s;
   }
 
   h3 {
-    font-size: $font-size-h3-small;
+    font-size: $font-size-h3-s;
+    margin-bottom: $margin-h3-s;
+  }
+
+  p, div, span, a, button {
+    font-size: $font-size-s;
+    line-height: $line-height-s;
   }
 
   p {
-    font-size: $font-size-p-small;
-    line-height: $line-height-p-small;
-    margin-bottom: $margin-p-small;
-  }
-
-  a, button {
-    font-size: $font-size-a-button-small;
+    margin-bottom: $margin-p-s;
   }
 }
 
-@include medium-screen {
-  :root {
-    --current-font-size-p: #{$font-size-p-medium};
-  }
-
-  h3, h4, h5, h6 {
-    margin-bottom: $margin-medium;
-  }
-
+@include m-screen {
   h1 {
-    font-size: $font-size-h1-medium;
-    margin-bottom: $margin-h1-medium;
+    font-size: $font-size-h1-m;
+    margin-bottom: $margin-h1-m;
   }
 
   h2 {
-    font-size: $font-size-h2-medium;
-    margin-bottom: $margin-h2-medium;
+    font-size: $font-size-h2-m;
+    margin-bottom: $margin-h2-m;
   }
 
   h3 {
-    font-size: $font-size-h3-medium;
+    font-size: $font-size-h3-m;
+    margin-bottom: $margin-h3-m;
+  }
+
+  p, div, span, a, button {
+    font-size: $font-size-m;
+    line-height: $line-height-m;
   }
 
   p {
-    font-size: $font-size-p-medium;
-    line-height: $line-height-p-medium;
-    margin-bottom: $margin-p-medium;
-  }
-
-  a, button {
-    font-size: $font-size-a-button-medium;
+    margin-bottom: $margin-p-m;
   }
 }
 
-@include large-screen {
-  :root {
-    --current-font-size-p: #{$font-size-p-large};
-  }
-
-  h3, h4, h5, h6 {
-    margin-bottom: $margin-large;
-  }
-
+@include l-screen {
   h1 {
-    font-size: $font-size-h1-large;
-    margin-bottom: $margin-h1-large;
+    font-size: $font-size-h1-l;
+    margin-bottom: $margin-h1-l;
   }
 
   h2 {
-    font-size: $font-size-h2-large;
-    margin-bottom: $margin-h2-large;
+    font-size: $font-size-h2-l;
+    margin-bottom: $margin-h2-l;
   }
 
   h3 {
-    font-size: $font-size-h3-large;
+    font-size: $font-size-h3-l;
+    margin-bottom: $margin-h3-l;
+  }
+
+  p, div, span, a, button {
+    font-size: $font-size-l;
+    line-height: $line-height-l;
   }
 
   p {
-    font-size: $font-size-p-large;
-    line-height: $line-height-p-large;
-    margin-bottom: $margin-p-large;
-  }
-
-  a, button {
-    font-size: $font-size-a-button-large;
+    margin-bottom: $margin-p-l;
   }
 }
 
 @include xl-screen {
-  :root {
-    --current-font-size-p: #{$font-size-p-xl};
-  }
-
-  h3, h4, h5, h6 {
-    margin-bottom: $margin-xl;
-  }
-
   h1 {
     font-size: $font-size-h1-xl;
     margin-bottom: $margin-h1-xl;
@@ -244,15 +193,41 @@ p, a, button, div, span {
 
   h3 {
     font-size: $font-size-h3-xl;
+    margin-bottom: $margin-h3-xl;
+  }
+
+  p, div, span, a, button {
+    font-size: $font-size-xl;
+    line-height: $line-height-xl;
   }
 
   p {
-    font-size: $font-size-p-xl;
-    line-height: $line-height-p-xl;
     margin-bottom: $margin-p-xl;
   }
+}
 
-  a, button {
-    font-size: $font-size-a-button-xl;
+@include xxl-screen {
+  h1 {
+    font-size: $font-size-h1-xxl;
+    margin-bottom: $margin-h1-xxl;
+  }
+
+  h2 {
+    font-size: $font-size-h2-xxl;
+    margin-bottom: $margin-h2-xxl;
+  }
+
+  h3 {
+    font-size: $font-size-h3-xxl;
+    margin-bottom: $margin-h3-xxl;
+  }
+
+  p, div, span, a, button {
+    font-size: $font-size-xxl;
+    line-height: $line-height-xxl;
+  }
+
+  p {
+    margin-bottom: $margin-p-xxl;
   }
 }

@@ -42,7 +42,6 @@ img {
 h1, h2 {
   margin-bottom: 0;
   color: var(--col-primary-text);
-  text-align: center;
 }
 
 .btn-container {
@@ -61,7 +60,7 @@ a {
   justify-content: center;
 }
 
-@include medium-screen {
+@include m-screen {
   .btn-container {
     display: flex;
     flex-direction: row;

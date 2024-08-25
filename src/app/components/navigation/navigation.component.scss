@@ -33,7 +33,7 @@ app-menu-list.active {
   right: 0;
 }
 
-@include small-screen {
+@include s-screen {
   .navbar {
     column-gap: rem(20);
   }
@@ -43,7 +43,7 @@ app-menu-list.active {
   }
 }
 
-@include large-screen {
+@include l-screen {
   app-nav-mobile-icon {
     display: none;
   }

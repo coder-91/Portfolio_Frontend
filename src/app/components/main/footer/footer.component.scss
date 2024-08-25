@@ -45,7 +45,7 @@ app-logo {
   justify-self: center;
 }
 
-@include large-screen {
+@include l-screen {
   .inner-footer {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:

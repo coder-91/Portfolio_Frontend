@@ -1,0 +1,20 @@
+@import '../../../../styles/_main';
+
+:host {
+  background-color: inherit;
+  color: inherit;
+}
+
+section {
+  margin-top: $nav-height;
+  background-color: inherit;
+  color: inherit;
+}
+
+h1 {
+  text-align: start;
+}
+
+.bold {
+  font-weight: bold;
+}

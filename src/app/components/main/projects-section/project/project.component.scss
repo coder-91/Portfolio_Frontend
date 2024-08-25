@@ -6,7 +6,7 @@
   grid-template-areas:
     "project-image"
     "project";
-  row-gap: $margin-large;
+  row-gap: $gap-l;
   align-items: flex-end;
 
   .project-img {
@@ -41,7 +41,7 @@
   }
 }
 
-@include medium-screen {
+@include m-screen {
   .btn-container {
     flex-direction: row;
     gap: 0 rem(15);
@@ -57,7 +57,7 @@
 @include xl-screen {
   .project-container {
     grid-template-rows: auto;
-    column-gap: $margin-3xl;
+    column-gap: rem(50);
 
     .project-img {
       align-self: flex-end;

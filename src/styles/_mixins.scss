@@ -23,6 +23,6 @@
 }
 
 @mixin headline($color) {
-  font-family: var(--font-headline);
+  font-family: var(--font-family);
   color: $color;
 }

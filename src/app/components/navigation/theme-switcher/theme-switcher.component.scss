@@ -96,6 +96,6 @@ $transition-ease: ease-in-out;
   @include responsive-toggle-container(24px);
 }
 
-@include small-screen {
+@include s-screen {
   @include responsive-toggle-container(24px);
 }

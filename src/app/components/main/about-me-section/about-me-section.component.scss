@@ -45,14 +45,14 @@ a.btn {
   justify-self: start;
 }
 
-@include medium-screen {
+@include m-screen {
   .content-container .img-container {
     width: rem(400);
     height: rem(400);
   }
 }
 
-@include large-screen {
+@include l-screen {
   .content-container {
     grid-template-columns: 1fr auto;
     column-gap: rem(30);
