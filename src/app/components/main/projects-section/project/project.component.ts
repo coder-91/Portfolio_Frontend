@@ -1,12 +1,10 @@
 import {Component, Input} from '@angular/core';
-import {BtnLinkComponent} from "../../../../shared/components/buttons/btn-link/btn-link.component";
 import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-project',
   standalone: true,
   imports: [
-    BtnLinkComponent,
     NgClass
   ],
   templateUrl: './project.component.html',
