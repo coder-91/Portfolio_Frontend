@@ -4,6 +4,8 @@ import {InputComponent} from "../../../shared/components/input/input.component";
 import {TextareaComponent} from "../../../shared/components/textarea/textarea.component";
 import {CheckboxPrivacyPolicyComponent} from "./checkbox-privacy-policy/checkbox-privacy-policy.component";
 import {NgClass} from "@angular/common";
+import {MessageService} from "../../../services/messageService/message.service";
+import {ContactFormData} from "../../../models/contact-form-data";
 
 @Component({
   selector: 'app-contact-section',
@@ -21,20 +23,21 @@ import {NgClass} from "@angular/common";
 export class ContactSectionComponent implements OnInit {
   contactForm: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       message: new FormControl('', [Validators.required]),
-      privacyPolicy: new FormControl(false, [Validators.requiredTrue])
+      isPrivacyPolicyAccepted: new FormControl(false, [Validators.requiredTrue])
     });
   }
 
   public onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log('Form Submitted', this.contactForm.value);
+      const contactFormData: ContactFormData = this.contactForm.value;
+      this.messageService.sendMessage(contactFormData);
       this.contactForm.reset();
     }
   }
