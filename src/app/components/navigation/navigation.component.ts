@@ -1,4 +1,13 @@
-import {AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
 import {Theme} from "../../models/theme";
 import {TranslateModule} from "@ngx-translate/core";
 import {ThemeSwitcherComponent} from "./theme-switcher/theme-switcher.component";
@@ -9,6 +18,7 @@ import {NgClass} from "@angular/common";
 import {NavMobileIconComponent} from "./nav-mobile-icon/nav-mobile-icon.component";
 import {MenuListComponent} from "./menu-list/menu-list.component";
 import {NavigationService} from "../../services/navigationService/navigation.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-navigation',
@@ -17,19 +27,21 @@ import {NavigationService} from "../../services/navigationService/navigation.ser
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })
-export class NavigationComponent implements OnInit, AfterViewInit {
+export class NavigationComponent implements OnInit, AfterViewInit, OnDestroy {
   currentTheme: Theme;
   isMobileMenuActive = false;
   @ViewChild('nav') nav: ElementRef;
+  private currentThemeSubscription = new Subscription();
+  private navHeightSubscription = new Subscription();
 
   constructor(private themeService: ThemeService, private navigationService: NavigationService, private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    this.themeService.currentTheme$.subscribe(theme => {
+    this.currentThemeSubscription = this.themeService.currentTheme$.subscribe(theme => {
       this.currentTheme = theme;
     })
 
-    this.navigationService.navHeight$.subscribe(height => {
+    this.navHeightSubscription = this.navigationService.navHeight$.subscribe(height => {
       const mobileMenuListElement = document.querySelector('.menu-mobile');
       this.renderer.setStyle(mobileMenuListElement, 'top', `${height}px`);
     });
@@ -54,5 +66,10 @@ export class NavigationComponent implements OnInit, AfterViewInit {
       !this.nav.nativeElement.contains(target)) {
       this.closeMobileMenu();
     }
+  }
+
+  ngOnDestroy() {
+    this.currentThemeSubscription.unsubscribe();
+    this.navHeightSubscription.unsubscribe();
   }
 }

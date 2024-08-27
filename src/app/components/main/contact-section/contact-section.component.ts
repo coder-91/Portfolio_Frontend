@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {InputComponent} from "../../../shared/components/input/input.component";
 import {TextareaComponent} from "../../../shared/components/textarea/textarea.component";
@@ -6,6 +6,7 @@ import {CheckboxPrivacyPolicyComponent} from "./checkbox-privacy-policy/checkbox
 import {NgClass} from "@angular/common";
 import {MessageService} from "../../../services/messageService/message.service";
 import {ContactFormData} from "../../../models/contact-form-data";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-contact-section',
@@ -20,9 +21,9 @@ import {ContactFormData} from "../../../models/contact-form-data";
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'
 })
-export class ContactSectionComponent implements OnInit {
+export class ContactSectionComponent implements OnInit, OnDestroy {
   contactForm: FormGroup = new FormGroup({});
-
+  private sendMessageSubscription = new Subscription();
   constructor(private fb: FormBuilder, private messageService: MessageService) {}
 
   ngOnInit(): void {
@@ -39,11 +40,15 @@ export class ContactSectionComponent implements OnInit {
     if (this.contactForm.valid) {
       const contactFormData: ContactFormData = this.contactForm.value;
 
-      this.messageService.sendMessage(contactFormData).subscribe({
+      this.sendMessageSubscription = this.messageService.sendMessage(contactFormData).subscribe({
         next: () => {
           this.contactForm.reset();
         }
       });
     }
+  }
+
+  ngOnDestroy(): void {
+    this.sendMessageSubscription.unsubscribe();
   }
 }

@@ -22,12 +22,13 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   currentTheme: Theme;
   @ViewChild('snackbar') snackbar: SnackbarComponent;
   private messageResultSubscription: Subscription = new Subscription();
+  private currentThemeSubscription: Subscription = new Subscription();
   isLoadingSpinnerVisible = this.loadingSpinnerService.isLoadingSpinnerVisible$;
 
   constructor(private themeService: ThemeService, private messageService: MessageService, private loadingSpinnerService: LoadingSpinnerService) {}
 
   ngOnInit(): void {
-    this.themeService.currentTheme$.subscribe(theme => {
+    this.currentThemeSubscription = this.themeService.currentTheme$.subscribe(theme => {
       this.currentTheme = theme;
     })
   }
@@ -40,5 +41,6 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     this.messageResultSubscription.unsubscribe();
+    this.currentThemeSubscription.unsubscribe();
   }
 }

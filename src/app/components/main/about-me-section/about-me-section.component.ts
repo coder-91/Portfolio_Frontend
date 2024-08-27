@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Theme} from "../../../models/theme";
 import {ThemeService} from "../../../services/themeService/theme.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-about-me-section',
@@ -9,15 +10,20 @@ import {ThemeService} from "../../../services/themeService/theme.service";
   templateUrl: './about-me-section.component.html',
   styleUrl: './about-me-section.component.scss'
 })
-export class AboutMeSectionComponent implements OnInit {
+export class AboutMeSectionComponent implements OnInit, OnDestroy {
   protected readonly Theme = Theme;
   currentTheme: Theme;
+  private currentThemeSubscription = new Subscription();
 
   constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {
-    this.themeService.currentTheme$.subscribe( currentTheme=> {
+    this.currentThemeSubscription = this.themeService.currentTheme$.subscribe( currentTheme=> {
       this.currentTheme = currentTheme;
     })
+  }
+
+  ngOnDestroy(): void {
+    this.currentThemeSubscription.unsubscribe()
   }
 }
