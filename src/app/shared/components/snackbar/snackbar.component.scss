@@ -1,0 +1,29 @@
+@import '../../../../styles/_main';
+
+.snackbar {
+  visibility: visible;
+  width: max-content;
+  min-width: 250px;
+  background-color: var(--col-success);
+  color: var(--col-primary-text);
+  border-radius: rem(15);
+  padding: rem(15);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: rem(30);
+  font-size: rem(16);
+  z-index: 1000;
+}
+
+.error {
+  background-color: var(--col-warn);
+}
+
+.snackbar button {
+  background: none;
+  border: none;
+  color: inherit;
+  margin-left: rem(55);
+  cursor: pointer;
+}

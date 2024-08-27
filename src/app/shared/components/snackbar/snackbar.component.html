@@ -1,0 +1,6 @@
+@if(isVisible) {
+  <div class="snackbar" [ngClass]="{'error': hasError}">
+    <span>{{ message }}</span>
+    <button (click)="close()">OK</button>
+  </div>
+}
