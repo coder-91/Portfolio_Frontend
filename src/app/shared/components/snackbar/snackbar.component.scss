@@ -1,9 +1,14 @@
 @import '../../../../styles/_main';
 
 .snackbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: rem(55);
   visibility: visible;
   width: max-content;
   min-width: 250px;
+  max-width: 100%;
   background-color: var(--col-success);
   color: var(--col-primary-text);
   border-radius: rem(15);
@@ -16,14 +21,13 @@
   z-index: 1000;
 }
 
-.error {
-  background-color: var(--col-warn);
-}
-
 .snackbar button {
   background: none;
   border: none;
   color: inherit;
-  margin-left: rem(55);
   cursor: pointer;
+}
+
+.error {
+  background-color: var(--col-warn);
 }
