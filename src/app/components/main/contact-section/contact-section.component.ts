@@ -29,6 +29,7 @@ export class ContactSectionComponent implements OnInit {
     this.contactForm = this.fb.group({
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
+      subject: new FormControl('', [Validators.required]),
       message: new FormControl('', [Validators.required]),
       isPrivacyPolicyAccepted: new FormControl(false, [Validators.requiredTrue])
     });
