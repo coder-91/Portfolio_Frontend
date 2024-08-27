@@ -1,4 +1,12 @@
 <app-navigation></app-navigation>
-<router-outlet></router-outlet>
 <app-snackbar #snackbar></app-snackbar>
+<router-outlet></router-outlet>
+
+@if(isLoadingSpinnerVisible | async) {
+  <ng-container>
+    <div class="overlay">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+  </ng-container>
+}
 

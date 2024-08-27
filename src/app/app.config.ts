@@ -5,7 +5,8 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {TranslateModule} from "@ngx-translate/core";
 import {provideTranslation} from "./config/i18n/translate-loader.config";
-import {provideHttpClient} from "@angular/common/http";
+import {provideHttpClient, withInterceptors} from "@angular/common/http";
+import {networkInterceptorFn} from "./interceptors/network-interceptor/network-interceptor";
 
 
 export const appConfig: ApplicationConfig = {
@@ -13,6 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     importProvidersFrom(TranslateModule.forRoot(provideTranslation())),
     provideHttpClient(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withInterceptors([networkInterceptorFn]))
   ]
 };
