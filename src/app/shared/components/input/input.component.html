@@ -6,9 +6,9 @@
     @if(control?.touched && control?.invalid) {
       @switch (true) {
         @case (control?.hasError('required'))
-          { This field is required }
+          { {{ 'contact.required' | translate }} }
         @case (control?.hasError('email'))
-          { Please enter a valid email }
+          { {{ 'contact.email_valid' | translate }} }
       }
     }
   </span>

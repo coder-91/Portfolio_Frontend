@@ -1,11 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {NgClass} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-snackbar',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    TranslateModule
   ],
   templateUrl: './snackbar.component.html',
   styleUrl: './snackbar.component.scss'

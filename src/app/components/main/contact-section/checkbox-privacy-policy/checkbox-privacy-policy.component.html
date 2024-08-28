@@ -4,9 +4,9 @@
   </label>
 
   <span>
-    I've read the
-    <a  (click)="navigateToPrivacyPolicy()">privacy policy </a>
-    <span>and agree to the processing of my data as outlined</span>
+    {{ 'contact.privacy_policy.content1' | translate }}
+    <a (click)="navigateToPrivacyPolicy()">{{ 'contact.privacy_policy.content2' | translate }}</a>
+    <span>{{ 'contact.privacy_policy.content3' | translate }}</span>
   </span>
 </div>
 

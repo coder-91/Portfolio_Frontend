@@ -23,26 +23,48 @@
   "about-me": {
     "title": "About",
     "content1":{
-      "sub1": "I'm a Fullstack Developer based in Aalen, Germany. I enjoy helping designers and companies bring their ideas into real life. I'm looking forward to continuing my developer career with a job in a web developer position. My ability to ",
-      "sub2": "solve complex problems ",
-      "sub3": "and my ",
+      "sub1": "As a Fullstack Developer from Aalen (Germany), I am excited to bring innovative ideas and projects to life. My goal is to further advance my career as a web developer. With my ability to solve ",
+      "sub2": "complex problems ",
+      "sub3": "and a strong ",
       "sub4": "passion ",
-      "sub5": "for programming make me a valuable member for your team."
+      "sub5": "for programming, I am confident that I can make a valuable contribution to your team."
     },
     "content2": "If you think I’d be a good match for your projects, contact me!",
     "btn": "Contact Me"
   },
   "skills": {
-    "headline": "My Skills"
+    "title": "My Skills"
   },
   "projects": {
-    "headline": "My Projects"
+    "title": "My Projects",
+    "join": {
+      "description": "A Kanban-based task management system that allows you to create and manage tasks. With an intuitive drag-and-drop interface, tasks can be easily moved. The system includes user login and registration features, and tasks can be assigned to individual users"
+    },
+    "videoflix": {
+      "description": "A video streaming service with a viewing experience similar to Netflix"
+    }
   },
   "contact": {
-    "headline": "Contact"
+    "title1": "Contact",
+    "title2": "Want to discuss a new project?",
+    "content": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Your message...",
+    "required": "This field is required",
+    "email_valid": "Please enter a valid email",
+    "privacy_policy": {
+      "content1": "I've read the ",
+      "content2": "privacy policy ",
+      "content3": "and agree to the processing of my data as outlined"
+    },
+    "submit_btn": "Send Message",
+    "submit_success": "Message sent successfully",
+    "submit_error": "Failed to send your message"
   },
   "footer": {
-    "headline": ""
+    "imprint": "Imprint"
   },
   "imprint": {
     "headline": "Imprint",

@@ -1,11 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-input',
   standalone: true,
   imports: [
     ReactiveFormsModule,
+    TranslateModule,
   ],
   templateUrl: './input.component.html',
   styleUrl: './input.component.scss'

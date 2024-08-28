@@ -1,14 +1,16 @@
 import {Component, Input} from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {Router} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-checkbox-privacy-policy',
   standalone: true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        TranslateModule
+    ],
   templateUrl: './checkbox-privacy-policy.component.html',
   styleUrl: './checkbox-privacy-policy.component.scss'
 })

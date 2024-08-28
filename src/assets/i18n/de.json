@@ -23,26 +23,48 @@
   "about-me": {
     "title": "Über mich",
     "content1":{
-      "sub1": "Ich bin Fullstack Entwickler aus Aalen und freue mich darauf, Designern und Unternehmen bei der Umsetzung ihrer Ideen zu unterstützen. Mein Ziel ist es, meine Karriere als Web-Entwickler weiter auszubauen. Durch meine Fähigkeit, ",
+      "sub1": "Als Fullstack Entwickler aus Aalen freue ich mich darauf, innovative Ideen und Projekte zu realisieren. Mein Ziel ist es, meine Karriere als Web Entwickler weiter auszubauen. Durch meine Fähigkeit, ",
       "sub2": "komplexe Probleme zu lösen ",
       "sub3": "und mein ",
       "sub4": "großes Interesse ",
-      "sub5": "an Programmierung bin ich überzeugt, dass ich einen wertvollen Beitrag zu Ihrem Team leisten kann. "
+      "sub5": "an Programmierung bin ich überzeugt, einen wertvollen Beitrag zu deinem Team leisten zu können."
     },
-    "content2": "Kontaktieren Sie mich, wenn Sie mich für Ihre Projekte geeignet finden!",
+    "content2": "Melde dich, wenn du denkst, dass ich gut für deine Projekte geeignet bin!",
     "btn": "Kontakt"
   },
   "skills": {
-    "headline": "Meine Skills"
+    "title": "Meine Skills"
   },
   "projects": {
-    "headline": "Meine Projekte"
+    "title": "Meine Projekte",
+    "join": {
+      "description": "Ein Kanban-basiertes Task-Management-System, das die Erstellung und Verwaltung von Tasks ermöglicht. Mit einer intuitiven Drag-and-Drop-Oberfläche können Aufgaben einfach verschoben werden. Das System bietet Funktionen für Benutzeranmeldung und -registrierung sowie die Möglichkeit, Aufgaben einzelnen Benutzern zuzuweisen"
+    },
+    "videoflix": {
+      "description": "Ein Video-Streaming-Dienst mit einem Seherlebnis ähnlich wie bei Netflix"
+    }
   },
   "contact": {
-    "headline": "Kontakt"
+    "title1": "Kontakt",
+    "title2": "Neues Projekt besprechen?",
+    "content": "Verwende dieses Formular, um Kontakt aufzunehmen. Ich freue mich darauf, von dir zu hören, deine Ideen zu erfahren und mit meiner Arbeit zu deinen Projekten beizutragen",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Deine Nachricht...",
+    "required": "Pflichtfeld",
+    "email_valid": "Gültige E-Mail-Adresse erforderlich",
+    "privacy_policy": {
+      "content1": "Ich habe die ",
+      "content2": "Datenschutzerklärung ",
+      "content3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu"
+    },
+    "submit_btn": "Senden",
+    "submit_success": "Nachricht erfolgreich gesendet",
+    "submit_error": "Nachricht konnte nicht gesendet werden"
   },
   "footer": {
-    "headline": ""
+    "imprint": "Impressum"
   },
   "imprint": {
     "headline": "Impressum",

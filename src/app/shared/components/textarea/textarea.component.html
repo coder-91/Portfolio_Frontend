@@ -1,10 +1,10 @@
 <div class="textarea-container">
-  <textarea [formControl]="control" placeholder="Your message..."></textarea>
+  <textarea [formControl]="control" [placeholder]="'contact.message' | translate"></textarea>
   <div class="control-error">
     @if(control?.touched && control?.invalid) {
       @switch (true) {
         @case (control?.hasError('required'))
-          { This field is required }
+          { {{ 'contact.required' | translate }} }
       }
     }
   </div>

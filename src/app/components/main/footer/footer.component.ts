@@ -4,13 +4,15 @@ import {Theme} from "../../../models/theme";
 import {ThemeService} from "../../../services/themeService/theme.service";
 import {Router, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [
     LogoComponent,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

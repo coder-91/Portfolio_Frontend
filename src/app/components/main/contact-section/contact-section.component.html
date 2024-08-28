@@ -1,13 +1,13 @@
 <section id="contact">
   <div class="contact-inner max-width">
-    <h1 class="center">Contact</h1>
-    <h2 class="center">Want to discuss a new project?</h2>
-    <p class="center">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+    <h1 class="center">{{ 'contact.title1' | translate }}</h1>
+    <h2 class="center">{{ 'contact.title2' | translate }}</h2>
+    <p class="center">{{ 'contact.content' | translate }}</p>
 
     <form [formGroup]="contactForm" autocomplete="off">
-      <app-input [form]="contactForm" [id]="'name'" [type]="'text'" [label]="'Name'"></app-input>
-      <app-input [form]="contactForm" [id]="'email'" [type]="'email'" [label]="'Email'"></app-input>
-      <app-input [form]="contactForm" [id]="'subject'" [type]="'text'" [label]="'Subject'"></app-input>
+      <app-input [form]="contactForm" [id]="'name'" [type]="'text'" [label]="'contact.name' | translate"></app-input>
+      <app-input [form]="contactForm" [id]="'email'" [type]="'email'" [label]="'contact.email' | translate"></app-input>
+      <app-input [form]="contactForm" [id]="'subject'" [type]="'text'" [label]="'contact.subject' | translate"></app-input>
       <app-textarea [form]="contactForm" [id]="'message'"></app-textarea>
       <app-checkbox-privacy-policy [form]="contactForm" [id]="'isPrivacyPolicyAccepted'"></app-checkbox-privacy-policy>
       <button
@@ -16,7 +16,7 @@
         [ngClass]="{'disabled': !contactForm.valid}"
         [disabled]="!contactForm.valid"
         (click)="onSubmit()">
-        Send Message
+        {{ 'contact.submit_btn' | translate }}
       </button>
     </form>
   </div>

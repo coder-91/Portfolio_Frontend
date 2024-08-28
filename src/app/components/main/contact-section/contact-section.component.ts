@@ -7,6 +7,7 @@ import {NgClass} from "@angular/common";
 import {MessageService} from "../../../services/messageService/message.service";
 import {ContactFormData} from "../../../models/contact-form-data";
 import {Subscription} from "rxjs";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-contact-section',
@@ -16,7 +17,8 @@ import {Subscription} from "rxjs";
     InputComponent,
     TextareaComponent,
     CheckboxPrivacyPolicyComponent,
-    NgClass
+    NgClass,
+    TranslateModule
   ],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'

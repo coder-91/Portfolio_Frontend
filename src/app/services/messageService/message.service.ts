@@ -20,10 +20,10 @@ export class MessageService {
     return this.messageHttpService.sendMessage(contactFormData).pipe(
       tap({
         next: () => {
-          this._messageResult$.next({ message: 'Message erfolgreich gesendet', hasError: false });
+          this._messageResult$.next({ message: 'contact.submit_success', hasError: false });
         },
         error: () => {
-          this._messageResult$.next({ message: 'Message konnte nicht gesendet werden', hasError: true });
+          this._messageResult$.next({ message: 'contact.submit_error', hasError: true });
         }
       })
     );

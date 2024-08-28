@@ -1,6 +1,6 @@
 <section id="projects">
   <div class="inner-project max-width">
-    <h1 class="center">My Projects</h1>
+    <h1 class="center">{{ 'projects.title' | translate }} </h1>
 
     @for (project of projects; track project) {
       <app-project
@@ -8,7 +8,7 @@
         [hrefProjectImage]="project.hrefProjectImage"
         [title]="project.title"
         [technologies]="project.technologies"
-        [description]="project.description"
+        [description]="project.description | translate"
         [hrefLiveTest]="project.hrefLiveTest"
         [hrefFrontend]="project.hrefFrontend"
         [hrefBackend]="project.hrefBackend">
