@@ -1,38 +1,41 @@
 <section>
-  <h2 class="bold">{{ 'imprint.headline' | translate }}</h2>
+  <div class="max-width">
+    <h2 class="bold">{{ 'imprint.headline' | translate }}</h2>
 
-  <p>{{ 'imprint.legal_info' | translate }}</p>
+    <p>{{ 'imprint.legal_info' | translate }}</p>
 
-  <div>{{ 'imprint.name' | translate }}</div>
-  <div>{{ 'imprint.address_line1' | translate }}</div>
-  <div>{{ 'imprint.address_line2' | translate }}</div>
-  <br>
+    <div>{{ 'imprint.name' | translate }}</div>
+    <div>{{ 'imprint.address_line1' | translate }}</div>
+    <div>{{ 'imprint.address_line2' | translate }}</div>
+    <br>
 
-  <div class="bold">{{ 'imprint.represented_by' | translate }}</div>
-  <div>{{ 'imprint.representative_name' | translate }}</div>
-  <br>
+    <div class="bold">{{ 'imprint.represented_by' | translate }}</div>
+    <div>{{ 'imprint.representative_name' | translate }}</div>
+    <br>
 
-  <div class="bold">{{ 'imprint.contact' | translate }}</div>
-  <div>{{ 'imprint.phone' | translate }}</div>
-  <div>
-    {{ 'imprint.email' | translate }}
-    <a href="mailto:veysel-karaali@outlook.de" class="highlight">veysel-karaali&#64;outlook.de</a>
+    <div class="bold">{{ 'imprint.contact' | translate }}</div>
+    <div>{{ 'imprint.phone' | translate }}</div>
+    <div>
+      {{ 'imprint.email' | translate }}
+      <a href="mailto:veysel-karaali@outlook.de" class="highlight">veysel-karaali&#64;outlook.de</a>
+    </div>
+    <br>
+
+    <h3 class="bold">{{ 'imprint.liability_content' | translate }}</h3>
+    <p>{{ 'imprint.liability_content_text' | translate }}</p>
+    <br>
+
+    <h3 class="bold">{{ 'imprint.liability_links' | translate }}</h3>
+    <p>{{ 'imprint.liability_links_text' | translate }}</p>
+    <br>
+
+    <h3 class="bold">{{ 'imprint.copyright' | translate }}</h3>
+    <p>{{ 'imprint.copyright_text' | translate }}</p>
+    <br>
+
+    <p>{{ 'imprint.source' | translate }} <a href="https://www.impressum-generator.de" class="highlight" target="_blank">{{ 'imprint.generator' | translate }}</a> {{ 'imprint.of' | translate }} <a href="https://www.kanzlei-hasselbach.de/standorte/bonn/" rel="nofollow" class="highlight" target="_blank">Kanzlei Hasselbach, Bonn</a>
+    </p>
   </div>
-  <br>
-
-  <h3 class="bold">{{ 'imprint.liability_content' | translate }}</h3>
-  <p>{{ 'imprint.liability_content_text' | translate }}</p>
-  <br>
-
-  <h3 class="bold">{{ 'imprint.liability_links' | translate }}</h3>
-  <p>{{ 'imprint.liability_links_text' | translate }}</p>
-  <br>
-
-  <h3 class="bold">{{ 'imprint.copyright' | translate }}</h3>
-  <p>{{ 'imprint.copyright_text' | translate }}</p>
-  <br>
-
-  <p>{{ 'imprint.source' | translate }} <a href="https://www.impressum-generator.de" class="highlight" target="_blank">{{ 'imprint.generator' | translate }}</a> {{ 'imprint.of' | translate }} <a href="https://www.kanzlei-hasselbach.de/standorte/bonn/" rel="nofollow" class="highlight" target="_blank">Kanzlei Hasselbach, Bonn</a></p>
 </section>
 <app-footer></app-footer>
 
