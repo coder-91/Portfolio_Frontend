@@ -1,6 +1,6 @@
 <section id="about-me">
   <div class="about-me-inner max-width">
-    <h1 class="center">About</h1>
+    <h1 class="center">{{ 'about-me.title' | translate }}</h1>
 
     <div class="content-container">
       <div class="img-container">
@@ -9,16 +9,12 @@
 
       <div class="text-container">
         <p>
-          I'm a Fullstack Developer based in Aalen, Germany.
-          I enjoy helping designers and companies bring their ideas into real life.
-          I'm looking forward to continuing my developer career with a job in a web developer position.
-          My ability to <span class="highlight">solve complex problems</span> and my <span class="highlight">passion</span> for programming make me a
-          valuable member for your team.
+          {{ 'about-me.content1.sub1' | translate }}<span class="highlight">{{ 'about-me.content1.sub2' | translate }}</span>{{ 'about-me.content1.sub3' | translate }}<span class="highlight">{{ 'about-me.content1.sub4' | translate }}</span> {{ 'about-me.content1.sub5' | translate }}
         </p>
-        <p>If you think I’d be a good match for your projects, contact me!</p>
+        <p>{{ 'about-me.content2' | translate }}</p>
       </div>
 
-      <a class="btn">Contact Me</a>
+      <a class="btn">{{ 'about-me.btn' | translate }}</a>
     </div>
   </div>
 </section>

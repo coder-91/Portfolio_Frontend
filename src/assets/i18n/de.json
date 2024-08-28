@@ -15,10 +15,22 @@
     "logo_v1_dark": "assets/logos/logo_v1_dark.svg"
   },
   "home": {
-    "headline": ""
+    "title1": "Veysel Karaali",
+    "title2": "Fullstack Developer",
+    "btn1": "Mehr über mich",
+    "btn2": "Meine Projekte"
   },
   "about-me": {
-    "headline": "Über mich"
+    "title": "Über mich",
+    "content1":{
+      "sub1": "Ich bin Fullstack Entwickler aus Aalen und freue mich darauf, Designern und Unternehmen bei der Umsetzung ihrer Ideen zu unterstützen. Mein Ziel ist es, meine Karriere als Web-Entwickler weiter auszubauen. Durch meine Fähigkeit, ",
+      "sub2": "komplexe Probleme zu lösen ",
+      "sub3": "und mein ",
+      "sub4": "großes Interesse ",
+      "sub5": "an Programmierung bin ich überzeugt, dass ich einen wertvollen Beitrag zu Ihrem Team leisten kann. "
+    },
+    "content2": "Kontaktieren Sie mich, wenn Sie mich für Ihre Projekte geeignet finden!",
+    "btn": "Kontakt"
   },
   "skills": {
     "headline": "Meine Skills"
@@ -52,8 +64,6 @@
     "source": "Impressum vom",
     "generator": "Impressum Generator",
     "of": "der"
-  },
-  "privacy-policy": {
-    "headline": "Datenschutz"
   }
+
 }

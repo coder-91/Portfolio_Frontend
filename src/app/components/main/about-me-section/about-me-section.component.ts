@@ -2,11 +2,14 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Theme} from "../../../models/theme";
 import {ThemeService} from "../../../services/themeService/theme.service";
 import {Subscription} from "rxjs";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about-me-section',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslateModule
+  ],
   templateUrl: './about-me-section.component.html',
   styleUrl: './about-me-section.component.scss'
 })

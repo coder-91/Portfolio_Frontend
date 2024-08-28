@@ -15,10 +15,22 @@
     "logo_v1_dark": "assets/logos/logo_v1_dark.svg"
   },
   "home": {
-    "headline": ""
+    "title1": "Veysel Karaali",
+    "title2": "I'm a Fullstack Developer",
+    "btn1": "More about me",
+    "btn2": "View my work"
   },
   "about-me": {
-    "headline": "About"
+    "title": "About",
+    "content1":{
+      "sub1": "I'm a Fullstack Developer based in Aalen, Germany. I enjoy helping designers and companies bring their ideas into real life. I'm looking forward to continuing my developer career with a job in a web developer position. My ability to ",
+      "sub2": "solve complex problems ",
+      "sub3": "and my ",
+      "sub4": "passion ",
+      "sub5": "for programming make me a valuable member for your team."
+    },
+    "content2": "If you think I’d be a good match for your projects, contact me!",
+    "btn": "Contact Me"
   },
   "skills": {
     "headline": "My Skills"
@@ -52,8 +64,5 @@
     "source": "Imprint from the",
     "generator": "Imprint Generator",
     "of": "of the"
-  },
-  "privacy-policy": {
-    "headline": "Data Policy"
   }
 }
