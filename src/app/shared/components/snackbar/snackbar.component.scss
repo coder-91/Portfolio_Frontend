@@ -8,7 +8,7 @@
   visibility: visible;
   width: max-content;
   min-width: 250px;
-  max-width: 100%;
+  max-width: calc(100% - 20px);
   background-color: var(--col-success);
   color: var(--col-primary-text);
   border-radius: rem(15);
