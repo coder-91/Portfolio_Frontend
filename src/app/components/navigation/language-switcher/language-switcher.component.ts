@@ -1,5 +1,4 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {LANGUAGES} from "../../../consts/const";
 import {Language} from "../../../models/language";
 import {LanguageService} from "../../../services/languageService/language.service";
 import {NgClass} from "@angular/common";
@@ -15,12 +14,10 @@ import {Subscription} from "rxjs";
   styleUrl: './language-switcher.component.scss'
 })
 export class LanguageSwitcherComponent implements OnInit, OnDestroy {
-  protected readonly LANGUAGES = LANGUAGES;
-  protected readonly Object = Object;
-  selectedLanguage: Language = LANGUAGES['GB_EN'];
+  selectedLanguage: Language = this.languageService.getSupportedLanguages()['en'];
   private currentLanguageSubscription = new Subscription();
 
-  constructor(private languageService: LanguageService) {}
+  constructor(public languageService: LanguageService) {}
 
   ngOnInit(): void {
     this.currentLanguageSubscription = this.languageService.currentLanguage$.subscribe((selectedLanguage)=> {

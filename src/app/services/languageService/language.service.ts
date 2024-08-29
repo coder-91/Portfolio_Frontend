@@ -1,19 +1,34 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable} from "rxjs";
 import {Language} from "../../models/language";
-import {LANGUAGES} from "../../consts/const";
 import {TranslateService} from "@ngx-translate/core";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LanguageService {
+  private readonly supportedLanguages: { [key: string]: Language } = {
+    en: {
+      code: 'en',
+      languageShort: 'EN',
+      language: 'English'
+    },
+    de: {
+      code: 'de',
+      languageShort: 'DE',
+      language: 'Deutsch',
+    }
+  };
   private _currentLanguage$: BehaviorSubject<Language>;
 
   constructor(private translateService: TranslateService) {
-    const savedLanguage = this.loadLanguageFromLocalStorage() || LANGUAGES['en'];
+    const savedLanguage = this.loadLanguageFromLocalStorage() || this.supportedLanguages['en'];
     this._currentLanguage$ = new BehaviorSubject<Language>(savedLanguage);
     this.translateService.use(savedLanguage.code);
+  }
+
+  public getSupportedLanguages(): Language[] {
+    return Object.values(this.supportedLanguages);
   }
 
   public get currentLanguage$(): Observable<Language> {
@@ -32,8 +47,8 @@ export class LanguageService {
 
   private loadLanguageFromLocalStorage(): Language | null {
     const storedLanguageCode = localStorage.getItem('languageCode');
-    if (storedLanguageCode && LANGUAGES[storedLanguageCode]) {
-      return LANGUAGES[storedLanguageCode];
+    if (storedLanguageCode && this.supportedLanguages[storedLanguageCode]) {
+      return this.supportedLanguages[storedLanguageCode];
     }
     return null;
   }
