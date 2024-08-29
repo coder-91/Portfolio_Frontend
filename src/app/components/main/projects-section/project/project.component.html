@@ -11,11 +11,11 @@
     <div class="btn-container">
       <a class="btn" href="{{hrefLiveTest}}" target="_blank">Live Test</a>
       <a class="btn" href="{{hrefFrontend}}" target="_blank">
-        <img src="assets/icons/github.svg" alt="">
+        <div class="icon-container" [innerHTML]="svgContent"></div>
         <span>Frontend</span>
       </a>
       <a class="btn" href="{{hrefBackend}}" target="_blank">
-        <img src="assets/icons/github.svg" alt="">
+        <div class="icon-container" [innerHTML]="svgContent"></div>
         <span>Backend</span>
       </a>
     </div>

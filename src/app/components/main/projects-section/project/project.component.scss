@@ -36,8 +36,9 @@
     column-gap: rem(10);
   }
 
-  img {
-    height: rem(20);
+  .icon-container {
+    display: flex;
+    align-items: center;
   }
 }
 
