@@ -3,7 +3,6 @@ import {Theme} from '../../../models/theme';
 import {ThemeService} from "../../../services/themeService/theme.service";
 import {NgClass} from "@angular/common";
 import {SafeHtml} from "@angular/platform-browser";
-import {forkJoin, map} from "rxjs";
 import {SvgLoaderService} from "../../../services/svgLoaderService/svg-loader.service";
 
 @Component({
@@ -29,15 +28,8 @@ export class ThemeSwitcherComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLightTheme = !!this.currentTheme;
-
-    const svgRequests = Object.entries(this.iconsToLoad).map(([key, path]) => {
-      return this.svgLoaderService.loadSvg(path).pipe(map(svg => ({ [key]: svg })));
-    });
-
-    forkJoin(svgRequests).subscribe(results => {
-      results.forEach(result => {
-        this.svgIcons = { ...this.svgIcons, ...result };
-      });
+    this.svgLoaderService.loadAllIcons(this.iconsToLoad).subscribe(icons => {
+      this.svgIcons = icons;
     });
   }
 

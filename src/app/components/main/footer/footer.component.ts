@@ -3,7 +3,7 @@ import {LogoComponent} from "../../../shared/components/logo/logo.component";
 import {Theme} from "../../../models/theme";
 import {ThemeService} from "../../../services/themeService/theme.service";
 import {Router, RouterLink} from "@angular/router";
-import {forkJoin, map, Subscription} from "rxjs";
+import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";
 import {SafeHtml} from "@angular/platform-browser";
 import {SvgLoaderService} from "../../../services/svgLoaderService/svg-loader.service";
@@ -38,14 +38,8 @@ export class FooterComponent implements OnInit, OnDestroy {
       this.currentTheme = theme;
     })
 
-    const svgRequests = Object.entries(this.iconsToLoad).map(([key, path]) => {
-      return this.svgLoaderService.loadSvg(path).pipe(map(svg => ({ [key]: svg })));
-    });
-
-    forkJoin(svgRequests).subscribe(results => {
-      results.forEach(result => {
-        this.svgIcons = { ...this.svgIcons, ...result };
-      });
+    this.svgLoaderService.loadAllIcons(this.iconsToLoad).subscribe(icons => {
+      this.svgIcons = icons;
     });
   }
 
