@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {InputComponent} from "../../../shared/components/input/input.component";
-import {TextareaComponent} from "../../../shared/components/textarea/textarea.component";
+import {InputComponent} from "../../shared/input/input.component";
+import {TextareaComponent} from "../../shared/textarea/textarea.component";
 import {CheckboxPrivacyPolicyComponent} from "./checkbox-privacy-policy/checkbox-privacy-policy.component";
 import {NgClass} from "@angular/common";
 import {MessageService} from "../../../services/messageService/message.service";

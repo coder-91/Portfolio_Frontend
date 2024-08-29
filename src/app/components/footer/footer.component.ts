@@ -1,12 +1,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {LogoComponent} from "../../../shared/components/logo/logo.component";
-import {Theme} from "../../../models/theme";
-import {ThemeService} from "../../../services/themeService/theme.service";
+import {Theme} from "../../models/theme";
+import {ThemeService} from "../../services/themeService/theme.service";
 import {Router, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";
 import {SafeHtml} from "@angular/platform-browser";
-import {SvgLoaderService} from "../../../services/svgLoaderService/svg-loader.service";
+import {SvgLoaderService} from "../../services/svgLoaderService/svg-loader.service";
+import {LogoComponent} from "../shared/logo/logo.component";
 
 @Component({
   selector: 'app-footer',

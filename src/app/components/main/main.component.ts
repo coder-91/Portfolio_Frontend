@@ -4,8 +4,8 @@ import {AboutMeSectionComponent} from "./about-me-section/about-me-section.compo
 import {SkillsSectionComponent} from "./skills-section/skills-section.component";
 import {ProjectsSectionComponent} from "./projects-section/projects-section.component";
 import {ContactSectionComponent} from "./contact-section/contact-section.component";
-import {FooterComponent} from "./footer/footer.component";
-import {ImprintComponent} from "./imprint/imprint.component";
+import {FooterComponent} from "../footer/footer.component";
+import {ImprintSectionComponent} from "./imprint-section/imprint-section.component";
 
 @Component({
   selector: 'app-main',
@@ -17,7 +17,7 @@ import {ImprintComponent} from "./imprint/imprint.component";
     ProjectsSectionComponent,
     ContactSectionComponent,
     FooterComponent,
-    ImprintComponent
+    ImprintSectionComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

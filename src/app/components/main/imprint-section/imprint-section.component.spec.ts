@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImprintComponent } from './imprint.component';
+import { ImprintSectionComponent } from './imprint-section.component';
 
-describe('ImprintComponent', () => {
-  let component: ImprintComponent;
-  let fixture: ComponentFixture<ImprintComponent>;
+describe('ImprintSectionComponent', () => {
+  let component: ImprintSectionComponent;
+  let fixture: ComponentFixture<ImprintSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImprintComponent]
+      imports: [ImprintSectionComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(ImprintComponent);
+
+    fixture = TestBed.createComponent(ImprintSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

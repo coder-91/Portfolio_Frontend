@@ -11,7 +11,7 @@ import {
 import {Theme} from "../../models/theme";
 import {TranslateModule} from "@ngx-translate/core";
 import {ThemeSwitcherComponent} from "./theme-switcher/theme-switcher.component";
-import {LogoComponent} from "../../shared/components/logo/logo.component";
+import {LogoComponent} from "../shared/logo/logo.component";
 import {ThemeService} from "../../services/themeService/theme.service";
 import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.component";
 import {NgClass} from "@angular/common";

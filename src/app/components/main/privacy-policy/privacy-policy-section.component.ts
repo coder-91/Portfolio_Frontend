@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FooterComponent} from "../footer/footer.component";
+import {FooterComponent} from "../../footer/footer.component";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
@@ -9,9 +9,9 @@ import {TranslateModule} from "@ngx-translate/core";
     FooterComponent,
     TranslateModule
   ],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+  templateUrl: './privacy-policy-section.component.html',
+  styleUrl: './privacy-policy-section.component.scss'
 })
-export class PrivacyPolicyComponent {
+export class PrivacyPolicySectionComponent {
 
 }

@@ -3,12 +3,12 @@ import {Theme} from "./models/theme";
 import {ThemeService} from "./services/themeService/theme.service";
 import {NavigationComponent} from "./components/navigation/navigation.component";
 import {RouterOutlet} from "@angular/router";
-import {SnackbarComponent} from "./shared/components/snackbar/snackbar.component";
 import {Subscription} from "rxjs";
 import {MessageService} from "./services/messageService/message.service";
-import {LoadingSpinnerComponent} from "./shared/components/loading-spinner/loading-spinner.component";
 import {LoadingSpinnerService} from "./services/loadingSpinnerService/loading-spinner.service";
 import {AsyncPipe} from "@angular/common";
+import {SnackbarComponent} from "./components/shared/snackbar/snackbar.component";
+import {LoadingSpinnerComponent} from "./components/shared/loading-spinner/loading-spinner.component";
 
 @Component({
   selector: 'app-root',
