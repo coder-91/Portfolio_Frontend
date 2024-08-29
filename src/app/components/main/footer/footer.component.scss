@@ -38,6 +38,11 @@ app-logo {
   grid-area: icon;
   display: flex;
   column-gap: rem(10);
+
+  a, .icon {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .imprint {

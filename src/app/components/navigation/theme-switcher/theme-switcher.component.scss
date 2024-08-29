@@ -11,7 +11,7 @@ $transition-ease: ease-in-out;
 
 
 .toggle-container {
-  background-color: var(--col-accent);
+  background-color: pink;
   padding: 4px;
   position: relative;
   border-radius: $border-radius;
@@ -21,7 +21,7 @@ $transition-ease: ease-in-out;
   transition: background-color $transition-duration $transition-ease;
 
   &.dark {
-    background-color: var(--col-primary-bg);;
+    background-color: green;
   }
 
   button {
@@ -62,6 +62,20 @@ $transition-ease: ease-in-out;
   transition-property: background-color, border-color, color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: var(--col-highlight)
+}
+
+.light-icon {
+  color: red;
+}
+
+.dark-icon {
+  color: blue;
 }
 
 @mixin responsive-toggle-container($size) {
