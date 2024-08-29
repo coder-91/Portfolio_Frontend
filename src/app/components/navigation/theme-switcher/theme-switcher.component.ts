@@ -28,7 +28,7 @@ export class ThemeSwitcherComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLightTheme = !!this.currentTheme;
-    this.svgLoaderService.loadAllIcons(this.iconsToLoad).subscribe(icons => {
+    this.svgLoaderService.loadAllSvgs(this.iconsToLoad).subscribe(icons => {
       this.svgIcons = icons;
     });
   }

@@ -1,18 +1,14 @@
 {
   "general": {
-    "logo_v1_light": "assets/logos/logo_v1_light.svg",
-    "logo_v1_dark": "assets/logos/logo_v1_dark.svg",
-    "logo_v2_light": "assets/logos/logo_v2_light_en.svg",
-    "logo_v2_dark": "assets/logos/logo_v2_dark_en.svg"
+    "logo_v1_en": "assets/logos/logo_v1_en.svg",
+    "logo_v2_en": "assets/logos/logo_v2_en.svg"
   },
   "nav": {
     "home": "Home",
     "about-me": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact",
-    "logo_v1_light": "assets/logos/logo_v1_light.svg",
-    "logo_v1_dark": "assets/logos/logo_v1_dark.svg"
+    "contact": "Contact"
   },
   "home": {
     "title1": "Veysel Karaali",

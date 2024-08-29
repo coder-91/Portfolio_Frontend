@@ -16,7 +16,7 @@ export class SvgLoaderService {
       );
   }
 
-  public loadAllIcons(iconsToLoad: { key: string, path: string }[]): Observable<{ [key: string]: SafeHtml }> {
+  public loadAllSvgs(iconsToLoad: { key: string, path: string }[]): Observable<{ [key: string]: SafeHtml }> {
     const svgRequests = iconsToLoad.map(icon =>
       this.loadSvg(icon.path).pipe(map(svg => ({ [icon.key]: svg })))
     );

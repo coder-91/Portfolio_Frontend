@@ -38,7 +38,7 @@ export class FooterComponent implements OnInit, OnDestroy {
       this.currentTheme = theme;
     })
 
-    this.svgLoaderService.loadAllIcons(this.iconsToLoad).subscribe(icons => {
+    this.svgLoaderService.loadAllSvgs(this.iconsToLoad).subscribe(icons => {
       this.svgIcons = icons;
     });
   }

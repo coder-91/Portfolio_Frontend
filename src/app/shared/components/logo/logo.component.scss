@@ -1,12 +1,15 @@
 @import '../../../../styles/_main';
 
-img {
-  height: auto;
-  min-width: rem(50);
+:host ::ng-deep svg.v1,
+:host ::ng-deep svg.v2 {
+  color: var(--col-highlight);
 }
 
-@include l-screen {
-  img {
-    width: rem(75);
-  }
+:host ::ng-deep svg.v1 {
+  width: 75px;
+}
+
+:host ::ng-deep svg.v2 {
+  width: 120px;
+  height: 120px;
 }
