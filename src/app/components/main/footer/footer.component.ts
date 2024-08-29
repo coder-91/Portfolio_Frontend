@@ -24,11 +24,11 @@ export class FooterComponent implements OnInit, OnDestroy {
   currentYear: number;
   private currentThemeSubscription = new Subscription();
   svgIcons: { [key: string]: SafeHtml } = {};
-  readonly iconsToLoad = {
-    github: 'assets/icons/github.svg',
-    email: 'assets/icons/email.svg',
-    linkedin: 'assets/icons/linkedin.svg',
-  };
+  iconsToLoad = [
+    { key: 'github', path: 'assets/icons/github.svg', href:"https://github.com/coder-91" },
+    { key: 'email', path: 'assets/icons/email.svg', href:"mailto:veysel-karaali@outlook.de" },
+    { key: 'linkedin', path: 'assets/icons/linkedin.svg', href:"https://www.linkedin.com/in/veysel-karaali-4206a124b/" }
+  ];
 
   constructor(private themeService: ThemeService, private router: Router, private svgLoaderService: SvgLoaderService) {
     this.currentYear = new Date().getFullYear();

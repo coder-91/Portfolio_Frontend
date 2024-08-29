@@ -19,10 +19,10 @@ export class ThemeSwitcherComponent implements OnInit {
   @Input() currentTheme: Theme;
   isLightTheme:boolean;
   svgIcons: { [key: string]: SafeHtml } = {};
-  readonly iconsToLoad = {
-    light_mode: 'assets/icons/light_mode.svg',
-    dark_mode: 'assets/icons/dark_mode.svg'
-  };
+  iconsToLoad = [
+    { key: 'light_mode', path: 'assets/icons/light_mode.svg' },
+    { key: 'dark_mode', path: 'assets/icons/dark_mode.svg' }
+  ];
 
   constructor(private themeService: ThemeService, private svgLoaderService: SvgLoaderService) {}
 

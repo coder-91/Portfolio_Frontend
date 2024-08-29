@@ -3,19 +3,18 @@
        'dark': currentTheme === Theme.DARK_THEME,
        'light': currentTheme === Theme.LIGHT_THEME
      }" (click)="onChangeTheme()">
-  <button type="button" class="transition-colors sun-btn">
-    <div
-      class="icon"
-      [ngClass]="{ 'light-icon': currentTheme === Theme.LIGHT_THEME}"
-      [innerHTML]="svgIcons['light_mode']">
-    </div>
-  </button>
 
-  <button type="button" class="transition-colors moon-btn">
-    <div
-      class="icon"
-      [ngClass]="{ 'dark-icon': currentTheme === Theme.DARK_THEME}"
-      [innerHTML]="svgIcons['dark_mode']">
-    </div>
-  </button>
+  @for(iconToLoad of iconsToLoad; track iconsToLoad) {
+    <button type="button" class="transition-colors"
+            [ngClass]="{ 'sun-btn': iconToLoad.key === 'light_mode', 'moon-btn': iconToLoad.key === 'dark_mode' }">
+      <div
+        class="icon"
+        [ngClass]="{
+          'light-icon': currentTheme === Theme.LIGHT_THEME && iconToLoad.key === 'light_mode',
+          'dark-icon': currentTheme === Theme.DARK_THEME && iconToLoad.key === 'dark_mode'
+        }"
+        [innerHTML]="svgIcons[iconToLoad.key]">
+      </div>
+    </button>
+  }
 </div>

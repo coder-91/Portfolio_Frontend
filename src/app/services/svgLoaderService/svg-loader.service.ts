@@ -7,7 +7,6 @@ import {forkJoin, map, Observable} from "rxjs";
   providedIn: 'root'
 })
 export class SvgLoaderService {
-  private svgIcons: { [key: string]: SafeHtml } = {};
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
 
   public loadSvg(path: string): Observable<SafeHtml> {
@@ -17,17 +16,14 @@ export class SvgLoaderService {
       );
   }
 
-  public loadAllIcons(iconsToLoad: { [key: string]: string }): Observable<{ [key: string]: SafeHtml }> {
-    const svgRequests = Object.entries(iconsToLoad).map(([key, path]) => {
-      return this.loadSvg(path).pipe(map(svg => ({ [key]: svg })));
-    });
+  public loadAllIcons(iconsToLoad: { key: string, path: string }[]): Observable<{ [key: string]: SafeHtml }> {
+    const svgRequests = iconsToLoad.map(icon =>
+      this.loadSvg(icon.path).pipe(map(svg => ({ [icon.key]: svg })))
+    );
 
     return forkJoin(svgRequests).pipe(
       map(results => {
-        results.forEach(result => {
-          this.svgIcons = { ...this.svgIcons, ...result };
-        });
-        return this.svgIcons;
+        return results.reduce((acc, result) => ({ ...acc, ...result }), {});
       })
     );
   }
