@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
+import {SafeHtml} from "@angular/platform-browser";
+import {SvgLoaderService} from "../../../../services/svgLoaderService/svg-loader.service";
 
 @Component({
   selector: 'app-skill',
@@ -13,16 +13,11 @@ export class SkillComponent implements OnInit {
   @Input() imageName: string = '';
   @Input() skillName: string = '';
   public svgContent: SafeHtml;
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
+  constructor(private svgLoaderService: SvgLoaderService) {}
 
   ngOnInit() {
-    this.loadSvg();
-  }
-
-  public loadSvg() {
-    this.http.get('./assets/skills/'+ this.imageName, { responseType: 'text' })
-      .subscribe(data => {
-        this.svgContent = this.sanitizer.bypassSecurityTrustHtml(data);
-      });
+    this.svgLoaderService.loadSvg(`./assets/skills/${this.imageName}`).subscribe(svgContent => {
+      this.svgContent = svgContent;
+    })
   }
 }
