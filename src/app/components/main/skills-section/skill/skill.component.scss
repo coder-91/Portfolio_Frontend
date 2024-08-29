@@ -22,7 +22,11 @@
   height: 100%;
 }
 
-img {
+.img-container {
+  color: var(--col-primary-text);
+}
+
+svg {
   width: 75px;
   height: auto;
 }
