@@ -3,3 +3,11 @@
   display: block;
   height: 100%;
 }
+
+:host > *:nth-child(odd) {
+  background-color: var(--col-primary);
+}
+
+:host > *:nth-child(even) {
+  background-color: var(--col-secondary);
+}

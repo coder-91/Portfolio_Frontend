@@ -1,7 +1,7 @@
 @import '../../../../styles/_main';
 
 section {
-  background-color: var(--col-primary);
+  background-color: inherit;
   margin-top: $nav-height;
   height: calc(100% - $nav-height);
   padding: 0;
