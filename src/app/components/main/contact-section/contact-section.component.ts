@@ -4,7 +4,7 @@ import {InputComponent} from "../../shared/input/input.component";
 import {TextareaComponent} from "../../shared/textarea/textarea.component";
 import {CheckboxPrivacyPolicyComponent} from "./checkbox-privacy-policy/checkbox-privacy-policy.component";
 import {NgClass} from "@angular/common";
-import {MessageService} from "../../../services/messageService/message.service";
+import {ContactFormService} from "../../../services/contactFormService/contact-form.service";
 import {ContactFormData} from "../../../models/contact-form-data";
 import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";
@@ -25,8 +25,8 @@ import {TranslateModule} from "@ngx-translate/core";
 })
 export class ContactSectionComponent implements OnInit, OnDestroy {
   contactForm: FormGroup = new FormGroup({});
-  private sendMessageSubscription = new Subscription();
-  constructor(private fb: FormBuilder, private messageService: MessageService) {}
+  private sendEmailSubscription = new Subscription();
+  constructor(private fb: FormBuilder, private contactFormService: ContactFormService) {}
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -42,7 +42,7 @@ export class ContactSectionComponent implements OnInit, OnDestroy {
     if (this.contactForm.valid) {
       const contactFormData: ContactFormData = this.contactForm.value;
 
-      this.sendMessageSubscription = this.messageService.sendMessage(contactFormData).subscribe({
+      this.sendEmailSubscription = this.contactFormService.sendEmail(contactFormData).subscribe({
         next: () => {
           this.contactForm.reset();
         }
@@ -51,6 +51,6 @@ export class ContactSectionComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.sendMessageSubscription.unsubscribe();
+    this.sendEmailSubscription.unsubscribe();
   }
 }

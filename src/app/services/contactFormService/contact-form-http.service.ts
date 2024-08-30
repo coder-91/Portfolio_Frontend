@@ -7,11 +7,11 @@ import {environment} from "../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
-export class MessageHttpService {
+export class ContactFormHttpService {
   constructor(private httpClient: HttpClient,) { }
 
-  public sendMessage(contactFormData: ContactFormData):Observable<void> {
-    const url = environment.baseUrl + `/api/message/`;
+  public sendEmail(contactFormData: ContactFormData):Observable<void> {
+    const url = environment.baseUrl + `/api/email/`;
     return this.httpClient.post<void>(url, contactFormData);
   }
 }

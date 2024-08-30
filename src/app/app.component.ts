@@ -3,7 +3,7 @@ import {Theme, ThemeService} from "./services/themeService/theme.service";
 import {NavigationComponent} from "./components/navigation/navigation.component";
 import {RouterOutlet} from "@angular/router";
 import {Subscription} from "rxjs";
-import {MessageService} from "./services/messageService/message.service";
+import {ContactFormService} from "./services/contactFormService/contact-form.service";
 import {LoadingSpinnerService} from "./services/loadingSpinnerService/loading-spinner.service";
 import {AsyncPipe} from "@angular/common";
 import {SnackbarComponent} from "./components/shared/snackbar/snackbar.component";
@@ -20,11 +20,11 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'Veysel Karaali | Fullstack Developer';
   currentTheme: Theme;
   @ViewChild('snackbar') snackbar: SnackbarComponent;
-  private messageResultSubscription: Subscription = new Subscription();
+  private contactFormResultSubscription: Subscription = new Subscription();
   private currentThemeSubscription: Subscription = new Subscription();
   isLoadingSpinnerVisible = this.loadingSpinnerService.isLoadingSpinnerVisible$;
 
-  constructor(private themeService: ThemeService, private messageService: MessageService, private loadingSpinnerService: LoadingSpinnerService) {}
+  constructor(private themeService: ThemeService, private contactFormService: ContactFormService, private loadingSpinnerService: LoadingSpinnerService) {}
 
   ngOnInit(): void {
     this.currentThemeSubscription = this.themeService.currentTheme$.subscribe(theme => {
@@ -33,13 +33,13 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.messageResultSubscription = this.messageService.messageResult$.subscribe(messageResult => {
-      this.snackbar.show(messageResult.message, messageResult.hasError);
+    this.contactFormResultSubscription = this.contactFormService.contactFormResult$.subscribe(contactFormResult => {
+      this.snackbar.show(contactFormResult.notification, contactFormResult.hasError);
     });
   }
 
   ngOnDestroy() {
-    this.messageResultSubscription.unsubscribe();
+    this.contactFormResultSubscription.unsubscribe();
     this.currentThemeSubscription.unsubscribe();
   }
 }

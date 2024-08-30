@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
