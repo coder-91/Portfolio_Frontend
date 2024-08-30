@@ -1,26 +1,27 @@
 @import '../../../../styles/_main';
 
 :host {
-  // Change only icon-size to resize theme-switcher
-  --icon-size: 24px;
+  --theme-switcher-width: 70px; // Basiswert
+  --button-size: calc(var(--theme-switcher-width) / 2.357);
+  --theme-switcher-height: calc(var(--button-size) + 5px);
+  --icon-size: calc(var(--theme-switcher-width) / 2.75);
+  --offset: calc(var(--icon-size) / 6);
+  --transition-default: 0.3s ease-in-out;
+
+  display: block;
+  width: var(--theme-switcher-width);
 }
-
-
-$offset: calc(var(--icon-size) / 6);
-$button-size: calc(var(--icon-size) + $offset);
-$theme-switcher-width: calc(2.75 * var(--icon-size));
-$transition-default: 0.3s ease-in-out;
 
 div.theme-switcher {
   background-color: pink;
-  width: $theme-switcher-width;
-  height: calc($button-size + 5px);
+  width: var(--theme-switcher-width);
+  height: var(--theme-switcher-height);
   position: relative;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: background-color $transition-default;
+  transition: background-color var(--transition-default);
 
   &.light {
     background-color: blue;
@@ -32,20 +33,20 @@ div.theme-switcher {
 
   & button {
     background-color: orange;
-    width: $button-size;
-    height: $button-size;
+    width: var(--button-size);
+    height: var(--button-size);
     border-radius: 50%;
     position: absolute;
     left: 0;
-    transition: transform $transition-default;
+    transition: transform var(--transition-default);
   }
 
   &.light button {
-    left: $offset;
+    left: var(--offset);
   }
 
   &.dark button {
-    transform: translateX(calc($theme-switcher-width - $button-size - $offset ));
+    transform: translateX(calc(var(--theme-switcher-width) - var(--button-size) - var(--offset)));
   }
 
   &.light app-sun-icon {
@@ -64,12 +65,13 @@ div.theme-switcher {
   }
 
   app-sun-icon {
-    left: calc(($button-size - var(--icon-size)) / 2 + $offset);
+    left: calc((var(--button-size) - var(--icon-size)) / 2 + var(--offset));
   }
 
   app-moon-icon {
-    right: calc(($button-size - var(--icon-size)) / 2 + $offset);
+    right: calc((var(--button-size) - var(--icon-size)) / 2 + var(--offset));
   }
 }
+
 
 

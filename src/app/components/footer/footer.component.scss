@@ -1,7 +1,6 @@
 @import '../../../styles/_main';
 
 footer {
-  --icon-size: 40px;
   background-color: var(--col-secondary-bg);
   color: var(--col-primary-text);
 }
@@ -29,6 +28,7 @@ footer {
 
 app-logo-v2 {
   grid-area: logo-v2;
+  width: 120px;
 }
 
 .copyright {
@@ -40,7 +40,11 @@ app-logo-v2 {
   display: flex;
   column-gap: rem(10);
 
-  a, .icon {
+  a > * {
+    width: 40px;
+  }
+
+  a, {
     display: flex;
     align-items: center;
   }
