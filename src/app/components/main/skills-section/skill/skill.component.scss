@@ -8,7 +8,7 @@
   background-color: var(--col-accent);
   border-radius: 10px;
   transition: background-color 0.25s ease;
-  color: var(--col-tertiary);
+  color: inherit;
 
   &:hover {
     background-color: var(--col-highlight);

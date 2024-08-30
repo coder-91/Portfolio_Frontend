@@ -1,9 +1,9 @@
 @import '../styles/_main';
 
 :host {
+  position: relative;
   background-color: var(--col-primary);
   color: var(--col-tertiary);
-  position: relative;
 }
 
 app-navigation {
@@ -14,6 +14,7 @@ app-navigation {
   z-index: 100;
   height: $nav-height;
   background-color: var(--col-accent);
+  color: var(--col-tertiary);
 }
 
 .overlay {

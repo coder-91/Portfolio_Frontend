@@ -1,8 +1,12 @@
 @import '../../../styles/_main';
 
+:host {
+  background-color: inherit;
+}
+
 footer {
   background-color: inherit;
-  color: var(--col-tertiary);
+  color: inherit;
 }
 
 .inner-footer {
