@@ -1,6 +1,6 @@
 <div class="textarea-container">
   <textarea [formControl]="control" [placeholder]="'contact.message' | translate"></textarea>
-  <div class="control-error">
+  <div class="validation-error">
     @if(control?.touched && control?.invalid) {
       @switch (true) {
         @case (control?.hasError('required'))
