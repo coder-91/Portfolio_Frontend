@@ -7,11 +7,11 @@
 .floating-label input {
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--col-primary-text);
+  border: 1px solid var(--col-tertiary);
   border-radius: 5px;
   font-size: rem(16);
-  background-color: var(--col-primary-bg);
-  color: var(--col-primary-text);
+  background-color: var(--col-primary);
+  color: var(--col-tertiary);
   transition: border-color 0.25s, box-shadow 0.25s;
 }
 
@@ -19,11 +19,11 @@
   position: absolute;
   top: rem(10);
   left: 12px;
-  color: var(--col-disabled);
+  color: var(--col-tertiary);
   font-size: rem(16);
   pointer-events: none;
   transition: all 0.25s ease;
-  background-color: var(--col-primary-bg);
+  background-color: var(--col-primary);
   padding: 0 5px;
 }
 
@@ -43,9 +43,9 @@
 }
 
 .floating-label input:-webkit-autofill {
-  background-color: var(--col-primary-bg) !important;
+  background-color: var(--col-primary) !important;
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0 1000px var(--col-primary-bg) inset !important;
-  box-shadow: 0 0 0 1000px var(--col-primary-bg) inset !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--col-primary) inset !important;
+  box-shadow: 0 0 0 1000px var(--col-primary) inset !important;
   transition: background-color 5000s ease-in-out 0s;
 }

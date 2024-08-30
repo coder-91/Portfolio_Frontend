@@ -1,7 +1,7 @@
 @import '../../../../styles/_main';
 
 section {
-  background-color: var(--col-primary-bg);
+  background-color: var(--col-primary);
   margin-top: $nav-height;
   height: calc(100% - $nav-height);
   padding: 0;
@@ -41,7 +41,7 @@ img {
 
 h1, h2 {
   margin-bottom: 0;
-  color: var(--col-primary-text);
+  color: var(--col-tertiary);
 }
 
 .btn-container {

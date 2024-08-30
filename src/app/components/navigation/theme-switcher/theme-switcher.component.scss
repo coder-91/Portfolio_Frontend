@@ -1,7 +1,7 @@
 @import '../../../../styles/_main';
 
 :host {
-  --theme-switcher-width: 70px; // Basiswert
+  --theme-switcher-width: 70px;
   --button-size: calc(var(--theme-switcher-width) / 2.357);
   --theme-switcher-height: calc(var(--button-size) + 5px);
   --icon-size: calc(var(--theme-switcher-width) / 2.75);
@@ -13,7 +13,7 @@
 }
 
 div.theme-switcher {
-  background-color: pink;
+  background-color: var(--col-settings);
   width: var(--theme-switcher-width);
   height: var(--theme-switcher-height);
   position: relative;
@@ -23,16 +23,8 @@ div.theme-switcher {
   cursor: pointer;
   transition: background-color var(--transition-default);
 
-  &.light {
-    background-color: blue;
-  }
-
-  &.dark {
-    background-color: green;
-  }
-
   & button {
-    background-color: orange;
+    background-color: var(--col-icon-selected);
     width: var(--button-size);
     height: var(--button-size);
     border-radius: 50%;
@@ -50,11 +42,11 @@ div.theme-switcher {
   }
 
   &.light app-sun-icon {
-    color: brown;
+    color: var(--col-icon-active);
   }
 
   &.dark app-moon-icon {
-    color: yellow;
+    color: var(--col-icon-active);
   }
 
   app-sun-icon,
@@ -62,6 +54,7 @@ div.theme-switcher {
     position: absolute;
     width: var(--icon-size);
     height: var(--icon-size);
+    color: var(--col-icon-inactive);
   }
 
   app-sun-icon {

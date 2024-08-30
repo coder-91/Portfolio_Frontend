@@ -1,31 +1,31 @@
 :root {
-  --col-primary-bg: #34353a;
-  --col-secondary-bg: #31333b;
-
-  --col-primary-text: #f9f9f9;
-  --col-secondary-text: #868788;
-
+  --col-primary: #31333b;
+  --col-secondary: #3d3e42;
+  --col-tertiary: #f9f9f9;
   --col-highlight: #ffc86b;
-  --col-accent: #3D3E42;
-  --col-shadow: #0000004D;
-
-  --col-warn: #e61c40;
-  --col-success: #70e61c;
+  --col-accent: #3d3e42;
+  --col-warn: #ff4d4d;
+  --col-success: #4caf50;
+  --col-shadow: #0000004d;
   --col-disabled: #888888;
+  --col-settings: #4B4B4B;
+  --col-icon-active: #374151;
+  --col-icon-inactive: #afafaf;
+  --col-icon-selected: #fff;
 }
 
 .light {
-  --col-primary-bg: #ffffff;
-  --col-secondary-bg: #f0f0f0;
-
-  --col-primary-text: #333333;
-  --col-secondary-text: #666666;
-
-  --col-highlight: #ff8c00;
-  --col-accent: rgba(0, 0, 0, 0.07);
-  --col-shadow: #0000004D;
-
-  --col-warn: #e61c40;
-  --col-success: #70e61c;
-  --col-disabled: #888888;
+  --col-primary: #ffffff;
+  --col-secondary: #f1f1f1;
+  --col-tertiary: #31333b;
+  --col-highlight: #ff9900;
+  --col-accent: #e0e0e0;
+  --col-warn: #ff4d4d;
+  --col-success: #4caf50;
+  --col-shadow: #00000033;
+  --col-disabled: #cccccc;
+  --col-settings: #cacaca;
+  --col-icon-active: #374151;
+  --col-icon-inactive: #afafaf;
+  --col-icon-selected: #fff;
 }
