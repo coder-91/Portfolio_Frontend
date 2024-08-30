@@ -1,20 +1,11 @@
-<div class="toggle-container"
-     [ngClass]="{
-       'dark': currentTheme === Theme.DARK_THEME,
-       'light': currentTheme === Theme.LIGHT_THEME
-     }" (click)="onChangeTheme()">
+<div
+  class="theme-switcher"
+  [ngClass]="{
+  'dark': currentTheme === Theme.DARK_THEME,
+  'light': currentTheme === Theme.LIGHT_THEME}"
+  (click)="onChangeTheme()">
 
-  @for(iconToLoad of iconsToLoad; track iconsToLoad) {
-    <button type="button" class="transition-colors"
-            [ngClass]="{ 'sun-btn': iconToLoad.key === 'light_mode', 'moon-btn': iconToLoad.key === 'dark_mode' }">
-      <div
-        class="icon"
-        [ngClass]="{
-          'light-icon': currentTheme === Theme.LIGHT_THEME && iconToLoad.key === 'light_mode',
-          'dark-icon': currentTheme === Theme.DARK_THEME && iconToLoad.key === 'dark_mode'
-        }"
-        [innerHTML]="svgIcons[iconToLoad.key]">
-      </div>
-    </button>
-  }
+  <button type="button" class="transition-colors"></button>
+  <app-sun-icon></app-sun-icon>
+  <app-moon-icon></app-moon-icon>
 </div>

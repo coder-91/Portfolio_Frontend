@@ -1,115 +1,71 @@
 @import '../../../../styles/_main';
 
-$container-bg-col-theme-light: rgba(0, 0, 0, 0.07);
-$container-bg-col-theme-dark: rgba(255, 255, 255, 0.11);
-$color-shadow-1: rgba(0, 34, 255, 0.08);
-$color-shadow-2: rgba(0, 11, 80, 0.12);
-$toggle-btn-width: 24px;
-$border-radius: 9999px;
-$transition-duration: 0.2s;
-$transition-ease: ease-in-out;
+// Change only icon-size to resize theme-switcher
+$icon-size: 24px;
+$offset: calc($icon-size / 6);
+$button-size: calc($icon-size + $offset);
+$theme-switcher-width: calc(2.75 * $icon-size);
+$transition-default: 0.3s ease-in-out;
 
-
-.toggle-container {
+div.theme-switcher {
   background-color: pink;
-  padding: 4px;
+  width: $theme-switcher-width;
+  height: calc($button-size + 5px);
   position: relative;
-  border-radius: $border-radius;
+  border-radius: 9999px;
+  display: flex;
   align-items: center;
   cursor: pointer;
-  display: flex;
-  transition: background-color $transition-duration $transition-ease;
+  transition: background-color $transition-default;
+
+  &.light {
+    background-color: blue;
+  }
 
   &.dark {
     background-color: green;
   }
 
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 20;
-    position: relative;
-    width: $toggle-btn-width;
-    height: $toggle-btn-width;
-  }
-
-  &:after {
-    transition: transform $transition-duration $transition-ease;
-    will-change: transform;
-    width: $toggle-btn-width;
-    height: calc(100% - 8px);
+  & button {
+    background-color: orange;
+    width: $button-size;
+    height: $button-size;
+    border-radius: 50%;
     position: absolute;
-    left: 4px;
-    top: 4px;
-    display: block;
-    border-radius: $border-radius;
-    content: "";
-    background-color: #fff;
-    box-shadow: 0 2px 8px 0 $color-shadow-1, 0 2px 8px 0 $color-shadow-2;
+    left: 0;
+    transition: transform $transition-default;
   }
 
-  &.dark:after {
-    transform: translateX($toggle-btn-width);
+  &.light button {
+    left: $offset;
   }
 
-  &.light:after {
-    transform: translateX(0);
-  }
-}
-
-.transition-colors {
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  color: var(--col-highlight)
-}
-
-.light-icon {
-  color: red;
-}
-
-.dark-icon {
-  color: blue;
-}
-
-@mixin responsive-toggle-container($size) {
-  .toggle-container {
-    padding: 3px;
-    border-radius: $border-radius;
-
-    button {
-      width: $size;
-      height: $size;
-    }
-
-    &:after {
-      width: $size;
-      height: calc(100% - 6px);
-      left: 3px;
-      top: 3px;
-    }
-
-    &.active:after {
-      transform: translateX($size);
-    }
+  &.dark button {
+    transform: translateX(calc($theme-switcher-width - $button-size - $offset ));
   }
 
-  img {
-    width: calc($size / 1.5);
-    height: auto;
+  &.light app-sun-icon {
+    color: brown;
+  }
+
+  &.dark app-moon-icon {
+    color: yellow;
+  }
+
+  app-sun-icon,
+  app-moon-icon {
+    position: absolute;
+    width: $icon-size;
+    height: $icon-size;
+  }
+
+  app-sun-icon {
+    left: calc(($button-size - $icon-size) / 2 + $offset);
+  }
+
+  app-moon-icon {
+    right: calc(($button-size - $icon-size) / 2 + $offset);
   }
 }
 
-@include xs-screen {
-  @include responsive-toggle-container(24px);
-}
 
-@include s-screen {
-  @include responsive-toggle-container(24px);
-}
