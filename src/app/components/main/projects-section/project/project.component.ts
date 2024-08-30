@@ -2,12 +2,14 @@ import {Component, Input, OnInit} from '@angular/core';
 import {NgClass} from "@angular/common";
 import {SvgLoaderService} from "../../../../services/svgLoaderService/svg-loader.service";
 import {SafeHtml} from "@angular/platform-browser";
+import {GithubIconComponent} from "../../../shared/icons/github-icon/github-icon.component";
 
 @Component({
   selector: 'app-project',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    GithubIconComponent
   ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
