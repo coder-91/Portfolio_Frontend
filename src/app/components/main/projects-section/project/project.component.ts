@@ -1,7 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgClass} from "@angular/common";
-import {SvgLoaderService} from "../../../../services/svgLoaderService/svg-loader.service";
-import {SafeHtml} from "@angular/platform-browser";
 import {GithubIconComponent} from "../../../shared/icons/github-icon/github-icon.component";
 
 @Component({
@@ -14,7 +12,7 @@ import {GithubIconComponent} from "../../../shared/icons/github-icon/github-icon
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
   @Input() isImageFirst = true;
   @Input() hrefProjectImage= "";
   @Input() title= "";
@@ -23,13 +21,4 @@ export class ProjectComponent implements OnInit {
   @Input() hrefLiveTest= "";
   @Input() hrefFrontend= "";
   @Input() hrefBackend= "";
-  svgContent: SafeHtml;
-
-  constructor(private svgLoaderService: SvgLoaderService) {}
-
-  ngOnInit(): void {
-    this.svgLoaderService.loadSvg("assets/icons/github.svg").subscribe(svgContent => {
-      this.svgContent = svgContent;
-    })
-  }
 }

@@ -1,23 +1,13 @@
-<div [ngClass]="{
-  'project-container-image-left': isImageFirst,
-  'project-container-image-right': !isImageFirst
-}" class="project-container">
+<div [ngClass]="{'project-container-image-left': isImageFirst, 'project-container-image-right': !isImageFirst}" class="project-container">
   <img class="project-img" [src]="'./assets/projects/' + hrefProjectImage" alt="">
-
   <div class="project">
     <h2>{{ title }}</h2>
     <p>{{ technologies.join(' | ') }}</p>
     <p>{{description}}</p>
     <div class="btn-container">
       <a class="btn" href="{{hrefLiveTest}}" target="_blank">Live Test</a>
-      <a class="btn" href="{{hrefFrontend}}" target="_blank">
-        <app-github-icon></app-github-icon>
-        <span>Frontend</span>
-      </a>
-      <a class="btn" href="{{hrefBackend}}" target="_blank">
-        <app-github-icon></app-github-icon>
-        <span>Backend</span>
-      </a>
+      <a class="btn" href="{{hrefFrontend}}" target="_blank"><app-github-icon></app-github-icon><span>Frontend</span></a>
+      <a class="btn" href="{{hrefBackend}}" target="_blank"><app-github-icon></app-github-icon><span>Backend</span></a>
     </div>
   </div>
 </div>
