@@ -6,15 +6,15 @@ import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";
 import {SafeHtml} from "@angular/platform-browser";
 import {SvgLoaderService} from "../../services/svgLoaderService/svg-loader.service";
-import {LogoComponent} from "../shared/logo/logo.component";
+import {LogoV2Component} from "./logo-v2/logo-v2.component";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [
-    LogoComponent,
     RouterLink,
-    TranslateModule
+    TranslateModule,
+    LogoV2Component
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

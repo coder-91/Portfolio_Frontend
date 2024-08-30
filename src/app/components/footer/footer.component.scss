@@ -10,7 +10,7 @@ footer {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "logo"
+    "logo-v2"
     "copyright"
     "icon"
     "imprint";
@@ -26,8 +26,8 @@ footer {
   }
 }
 
-app-logo {
-  grid-area: logo;
+app-logo-v2 {
+  grid-area: logo-v2;
 }
 
 .copyright {
@@ -54,7 +54,7 @@ app-logo {
   .inner-footer {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
-      "logo copyright icon"
+      "logo-v2 copyright icon"
       ". imprint .";
     align-items: center;
   }

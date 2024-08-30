@@ -11,7 +11,6 @@ import {
 import {Theme} from "../../models/theme";
 import {TranslateModule} from "@ngx-translate/core";
 import {ThemeSwitcherComponent} from "./theme-switcher/theme-switcher.component";
-import {LogoComponent} from "../shared/logo/logo.component";
 import {ThemeService} from "../../services/themeService/theme.service";
 import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.component";
 import {NgClass} from "@angular/common";
@@ -19,11 +18,12 @@ import {NavMobileIconComponent} from "./nav-mobile-icon/nav-mobile-icon.componen
 import {MenuListComponent} from "./menu-list/menu-list.component";
 import {NavigationService} from "../../services/navigationService/navigation.service";
 import {Subscription} from "rxjs";
+import {LogoV1Component} from "./logo-v1/logo-v1.component";
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [TranslateModule, ThemeSwitcherComponent, LogoComponent, LanguageSwitcherComponent, NgClass, NavMobileIconComponent, MenuListComponent],
+  imports: [TranslateModule, ThemeSwitcherComponent, LanguageSwitcherComponent, NgClass, NavMobileIconComponent, MenuListComponent, LogoV1Component],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })
