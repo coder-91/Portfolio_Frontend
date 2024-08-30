@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Theme} from "../../../models/theme";
 import {SkillComponent} from "./skill/skill.component";
 import {TranslateModule} from "@ngx-translate/core";
 
@@ -13,6 +12,4 @@ import {TranslateModule} from "@ngx-translate/core";
   templateUrl: './skills-section.component.html',
   styleUrl: './skills-section.component.scss'
 })
-export class SkillsSectionComponent {
-  protected readonly Theme = Theme;
-}
+export class SkillsSectionComponent {}

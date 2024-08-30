@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Theme} from "../../models/theme";
-import {ThemeService} from "../../services/themeService/theme.service";
+import {Theme, ThemeService} from "../../services/themeService/theme.service";
 import {Router, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";

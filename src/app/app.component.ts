@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {Theme} from "./models/theme";
-import {ThemeService} from "./services/themeService/theme.service";
+import {Theme, ThemeService} from "./services/themeService/theme.service";
 import {NavigationComponent} from "./components/navigation/navigation.component";
 import {RouterOutlet} from "@angular/router";
 import {Subscription} from "rxjs";

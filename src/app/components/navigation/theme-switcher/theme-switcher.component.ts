@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Theme} from '../../../models/theme';
-import {ThemeService} from "../../../services/themeService/theme.service";
+import {Theme, ThemeService} from "../../../services/themeService/theme.service";
 import {NgClass} from "@angular/common";
 import {SunIconComponent} from "./sun-icon/sun-icon.component";
 import {MoonIconComponent} from "./moon-icon/moon-icon.component";
@@ -29,7 +28,7 @@ export class ThemeSwitcherComponent implements OnInit {
 
   public onChangeTheme() {
     this.isLightTheme = !this.isLightTheme;
-    const newTheme: Theme = this.currentTheme === Theme.DARK_THEME ? Theme.LIGHT_THEME : Theme.DARK_THEME;
+    const newTheme: Theme = this.currentTheme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
     this.themeService.changeTheme(newTheme);
   }
 }

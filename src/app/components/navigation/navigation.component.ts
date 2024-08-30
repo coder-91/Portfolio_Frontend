@@ -8,10 +8,9 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
-import {Theme} from "../../models/theme";
 import {TranslateModule} from "@ngx-translate/core";
 import {ThemeSwitcherComponent} from "./theme-switcher/theme-switcher.component";
-import {ThemeService} from "../../services/themeService/theme.service";
+import {Theme, ThemeService} from "../../services/themeService/theme.service";
 import {LanguageSwitcherComponent} from "./language-switcher/language-switcher.component";
 import {NgClass} from "@angular/common";
 import {NavMobileIconComponent} from "./nav-mobile-icon/nav-mobile-icon.component";
