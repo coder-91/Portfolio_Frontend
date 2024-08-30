@@ -6,9 +6,9 @@ import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";
 import {SvgLoaderService} from "../../services/svgLoaderService/svg-loader.service";
 import {LogoV2Component} from "./logo-v2/logo-v2.component";
-import {GithubIconComponent} from "./github-icon/github-icon.component";
-import {EmailIconComponent} from "./email-icon/email-icon.component";
-import {LinkedinIconComponent} from "./linkedin-icon/linkedin-icon.component";
+import {GithubIconComponent} from "../shared/icons/github-icon/github-icon.component";
+import {EmailIconComponent} from "../shared/icons/email-icon/email-icon.component";
+import {LinkedinIconComponent} from "../shared/icons/linkedin-icon/linkedin-icon.component";
 
 @Component({
   selector: 'app-footer',

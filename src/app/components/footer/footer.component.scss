@@ -1,6 +1,7 @@
 @import '../../../styles/_main';
 
 footer {
+  --icon-size: 40px;
   background-color: var(--col-secondary-bg);
   color: var(--col-primary-text);
 }

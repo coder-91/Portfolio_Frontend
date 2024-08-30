@@ -1,7 +1,8 @@
 :host {
-  --size: 120px;
-  width: var(--size);
-  height: var(--size);
+  display: grid;
+  place-items: center;
+  width: 120px;
+  aspect-ratio: 1 / 1;
 }
 
 svg {

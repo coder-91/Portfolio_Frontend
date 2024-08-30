@@ -1,10 +1,10 @@
 @import '../../../../styles/_main';
 
 :host {
-  --width: 75px;
-  --ratio: 2.29;
-  width: var(--width);
-  height: calc(var(--width) / var(--ratio));
+  display: grid;
+  place-items: center;
+  width: 100px;
+  aspect-ratio: 2.29 / 1;
 }
 
 svg {

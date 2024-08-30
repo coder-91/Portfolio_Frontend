@@ -1,10 +1,14 @@
 @import '../../../../styles/_main';
 
-// Change only icon-size to resize theme-switcher
-$icon-size: 24px;
-$offset: calc($icon-size / 6);
-$button-size: calc($icon-size + $offset);
-$theme-switcher-width: calc(2.75 * $icon-size);
+:host {
+  // Change only icon-size to resize theme-switcher
+  --icon-size: 24px;
+}
+
+
+$offset: calc(var(--icon-size) / 6);
+$button-size: calc(var(--icon-size) + $offset);
+$theme-switcher-width: calc(2.75 * var(--icon-size));
 $transition-default: 0.3s ease-in-out;
 
 div.theme-switcher {
@@ -55,16 +59,16 @@ div.theme-switcher {
   app-sun-icon,
   app-moon-icon {
     position: absolute;
-    width: $icon-size;
-    height: $icon-size;
+    width: var(--icon-size);
+    height: var(--icon-size);
   }
 
   app-sun-icon {
-    left: calc(($button-size - $icon-size) / 2 + $offset);
+    left: calc(($button-size - var(--icon-size)) / 2 + $offset);
   }
 
   app-moon-icon {
-    right: calc(($button-size - $icon-size) / 2 + $offset);
+    right: calc(($button-size - var(--icon-size)) / 2 + $offset);
   }
 }
 
