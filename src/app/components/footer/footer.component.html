@@ -4,9 +4,9 @@
     <p class="copyright">&copy; Veysel Karaali {{ currentYear }}</p>
 
     <div class="icon-container">
-      @for(iconToLoad of iconsToLoad; track iconToLoad) {
-        <a href="{{iconToLoad.href}}" target="_blank"><div class="icon" [innerHTML]="svgIcons[iconToLoad.key]"></div></a>
-      }
+      <a href="https://github.com/coder-91" target="_blank"><app-github-icon></app-github-icon></a>
+      <a href="mailto:veysel-karaali@outlook.de" target="_blank"><app-email-icon></app-email-icon></a>
+      <a href="https://www.linkedin.com/in/veysel-karaali-4206a124b/" target="_blank"><app-linkedin-icon></app-linkedin-icon></a>
     </div>
 
     <a class="imprint" (click)="navigateToImprint()">{{ 'footer.imprint' | translate }} </a>
