@@ -10,8 +10,8 @@ import {environment} from "../../environments/environment";
 export class ContactFormHttpService {
   constructor(private httpClient: HttpClient,) { }
 
-  public sendEmail(contactFormData: ContactFormData):Observable<void> {
-    const url = environment.baseUrl + `/api/email/`;
+  public sendMessage(contactFormData: ContactFormData):Observable<void> {
+    const url = environment.baseUrl + `/api/contact-form/`;
     return this.httpClient.post<void>(url, contactFormData);
   }
 }

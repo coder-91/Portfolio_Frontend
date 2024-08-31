@@ -16,8 +16,8 @@ export class ContactFormService {
     return this._contactFormResult$.asObservable();
   }
 
-  public sendEmail(contactFormData: ContactFormData): Observable<void> {
-    return this.contactFormHttpService.sendEmail(contactFormData).pipe(
+  public sendMessage(contactFormData: ContactFormData): Observable<void> {
+    return this.contactFormHttpService.sendMessage(contactFormData).pipe(
       tap({
         next: () => {
           this._contactFormResult$.next({ notification: 'contact.submit_success', hasError: false });
