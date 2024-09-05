@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ProjectComponent} from "./project/project.component";
 import {TranslateModule} from "@ngx-translate/core";
+import {IMAGE_PATHS} from "./projects-config";
 
 @Component({
   selector: 'app-projects-section',
@@ -15,7 +16,7 @@ import {TranslateModule} from "@ngx-translate/core";
 export class ProjectsSectionComponent {
   projects = [
     {
-      hrefProjectImage: 'project_1.png',
+      projectImagesPath: IMAGE_PATHS.join.images,
       title: 'Join',
       technologies: ['Angular', 'TypeScript', 'RxJS', 'CSS', 'HTML', 'Material Design', 'Python', 'Django', 'API', 'Git'],
       description: 'projects.join.description',
@@ -24,7 +25,7 @@ export class ProjectsSectionComponent {
       hrefBackend: 'https://github.com/coder-91/Join_Backend'
     },
     {
-      hrefProjectImage: 'project_2.png',
+      projectImagesPath: IMAGE_PATHS.videoflix.images,
       title: 'Videoflix',
       technologies: ['Angular', 'TypeScript', 'RxJS', 'CSS', 'HTML', 'Python', 'Django', 'API', 'Redis', 'Git'],
       description: 'projects.videoflix.description',

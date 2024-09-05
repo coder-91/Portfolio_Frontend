@@ -5,7 +5,7 @@
     @for (project of projects; track project) {
       <app-project
         [isImageFirst]="isImageFirst($index)"
-        [hrefProjectImage]="project.hrefProjectImage"
+        [projectImagesPath]="project.projectImagesPath"
         [title]="project.title"
         [technologies]="project.technologies"
         [description]="project.description | translate"
