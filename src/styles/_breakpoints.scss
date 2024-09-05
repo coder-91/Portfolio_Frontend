@@ -5,7 +5,7 @@ $l-screen-max: 1024px;
 $xl-screen-max: 1200px;
 
 @mixin xs-screen {
-  @media (max-width: $xs-screen-max) {
+  @media (min-width: 1px) {
     @content;
   }
 }
