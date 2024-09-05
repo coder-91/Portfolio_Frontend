@@ -1,0 +1,21 @@
+<div class="slider-container">
+  <div class="slider">
+    <div
+      class="slide"
+      *ngFor="let image of projectImagesPath; let i = index"
+      [ngClass]="{'active': i === currentIndex, 'prev': i === (currentIndex - 1 + projectImagesPath.length) % projectImagesPath.length}">
+      <img [src]="image" alt="Image {{ i + 1 }}" />
+    </div>
+
+    <div class="nav prev" (click)="prevSlide()">&#10094;</div>
+    <div class="nav next" (click)="nextSlide()">&#10095;</div>
+  </div>
+
+  <div class="indicators">
+    <span
+      class="dot"
+      *ngFor="let image of projectImagesPath; let i = index"
+      [ngClass]="{'active': i === currentIndex}">
+    </span>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+@import '../../../../styles/_main';
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  display: flex;
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+    display: flex;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &.active {
+      opacity: 1;
+      left: 0;
+    }
+
+    &.prev {
+      left: -100%;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+
+    &.prev,
+    &.next {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &.prev {
+      left: 0;
+    }
+
+    &.next {
+      right: 0;
+    }
+  }
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 11;
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+    &.active {
+      background-color: #007bff;
+    }
+
+    &:hover {
+      cursor: auto;
+      //background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+@include xs-screen {
+  .slider-container {
+    .slider .nav {
+      font-size: 20px;
+      padding: 6px;
+    }
+    .indicators {
+      bottom: 10px;
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 3px;
+      }
+    }
+  }
+}
+
+@include m-screen {
+  .slider-container {
+    .slider .nav {
+      font-size: 22px;
+      padding: 7px;
+    }
+    .indicators {
+      bottom: 15px;
+
+      .dot {
+        height: 14px;
+        width: 14px;
+        margin: 0 4px;
+      }
+    }
+  }
+}
+
+@include l-screen {
+  .slider-container {
+    .slider .nav {
+      font-size: 24px;
+      padding: 8px;
+    }
+    .indicators {
+      bottom: 20px;
+
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+      }
+    }
+  }
+}
