@@ -1,4 +1,4 @@
-const BASE_PATH = '/assets/projects/';
+const BASE_PATH = '/assets/images/projects/';
 
 export const IMAGE_PATHS = {
   join: {

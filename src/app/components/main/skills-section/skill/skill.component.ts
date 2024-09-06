@@ -16,7 +16,7 @@ export class SkillComponent implements OnInit {
   constructor(private svgLoaderService: SvgLoaderService) {}
 
   ngOnInit() {
-    this.svgLoaderService.loadSvg(`./assets/skills/${this.imageName}`).subscribe(svgContent => {
+    this.svgLoaderService.loadSvg(`./assets/images/skills/${this.imageName}`).subscribe(svgContent => {
       this.svgContent = svgContent;
     })
   }
