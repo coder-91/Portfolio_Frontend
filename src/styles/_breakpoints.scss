@@ -3,7 +3,9 @@ $s-screen-max: 480px;
 $m-screen-max: 768px;
 $l-screen-max: 1024px;
 $xl-screen-max: 1200px;
+$xxl-screen-max: 1440px;
 
+// TODO rename to screen-xs, screen-s, ...
 @mixin xs-screen {
   @media (min-width: 1px) {
     @content;
@@ -36,6 +38,12 @@ $xl-screen-max: 1200px;
 
 @mixin xxl-screen {
   @media (min-width: $xl-screen-max + 1px) {
+    @content;
+  }
+}
+
+@mixin screen-3xl {
+  @media (min-width: $xxl-screen-max + 1px) {
     @content;
   }
 }

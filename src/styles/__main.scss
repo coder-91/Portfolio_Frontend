@@ -201,6 +201,14 @@ $gap-l: rem(60);
 $gap-xl: rem(75);
 $gap-xxl: rem(90);
 
+// $xxl-screen-max: 1440px;
+// font-size: calc([min-font-size] + ([max-font-size] - [min-font-size]) * ((100vw - [min-viewport]) / ([max-viewport] - [min-viewport])));
+// line-height: calc([min-line-height] + ([max-line-height] - [min-line-height]) * ((100vw - [min-viewport]) / ([max-viewport] - [min-viewport])));
+// margin-bottom: calc([min-margin] + ([max-margin] - [min-margin]) * ((100vw - [min-viewport]) / ([max-viewport] - [min-viewport])));
+// letter-spacing: calc([min-letter-spacing] + ([max-letter-spacing] - [min-letter-spacing]) * ((100vw - [min-viewport]) / ([max-viewport] - [min-viewport])));
+// padding: calc([min-padding] + ([max-padding] - [min-padding]) * ((100vw - [min-viewport]) / ([max-viewport] - [min-viewport])));
+// gap: calc([min-gap] + ([max-gap] - [min-gap]) * ((100vw - [min-viewport]) / ([max-viewport] - [min-viewport])));
+
 :root {
   --font-size-base: 1rem;
   --font-family: 'Karla', sans-serif;
