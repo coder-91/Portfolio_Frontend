@@ -6,7 +6,7 @@
   grid-template-areas:
     "project-image"
     "project";
-  row-gap: $gap-l;
+  row-gap: calc(rem(40) + (60 - 40) * ((100vw - $xs-screen-max * rem(1)) / ($max-width - $xs-screen-max)));
   align-items: flex-end;
 
   .project-img {
@@ -58,7 +58,7 @@
 @include xl-screen {
   .project-container {
     grid-template-rows: auto;
-    column-gap: rem(50);
+    column-gap: calc(rem(40) + (50 - 40) * ((100vw - $xs-screen-max * rem(1)) / ($max-width - $xs-screen-max)));
 
     .project-img {
       align-self: flex-end;
