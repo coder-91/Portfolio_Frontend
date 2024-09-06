@@ -1,0 +1,50 @@
+@import './functions';
+
+
+.validation-error {
+  display: flex;
+  align-items: center;
+  height: rem(16);
+  color: var(--col-warn);
+  font-size: rem(14);
+  margin-top: 5px;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--col-highlight);
+  border-radius: 5px;
+  height: rem(40);
+  padding: 5px 7px;
+  cursor: pointer;
+  color: var(--col-highlight);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3),
+  -2px -2px 4px rgba(255, 255, 255, 0.1);
+  transition: width 0.4s ease;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--col-highlight);
+  z-index: -1;
+  transition: all 0.8s ease;
+}
+
+.btn:hover::before {
+  width: 100%;
+  background-color: var(--col-highlight);
+}
+
+.btn:hover {
+  color: var(--col-tertiary);
+}

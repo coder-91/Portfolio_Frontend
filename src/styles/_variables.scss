@@ -1,3 +1,17 @@
+@import './functions';
+
+$nav-height: rem(65);
+
+// Breakpoints
+$xs-screen-max: 320;
+$s-screen-max: 480;
+$m-screen-max: 768;
+$l-screen-max: 1024;
+$xl-screen-max: 1200;
+$max-width: 1440;
+
+
+// Theme
 :root {
   --col-primary: #31333b;
   --col-secondary: #3d3e42;
