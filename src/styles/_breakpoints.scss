@@ -1,49 +1,39 @@
-$xs-screen-max: 320px;
-$s-screen-max: 480px;
-$m-screen-max: 768px;
-$l-screen-max: 1024px;
-$xl-screen-max: 1200px;
-$xxl-screen-max: 1440px;
+@import './functions';
+@import './variables';
 
-// TODO rename to screen-xs, screen-s, ...
+
 @mixin xs-screen {
-  @media (min-width: 1px) {
+  @media (min-width: rem(1)) {
     @content;
   }
 }
 
 @mixin s-screen {
-  @media (min-width: $xs-screen-max + 1px) {
+  @media (min-width: $xs-screen-max + rem(1)) {
     @content;
   }
 }
 
 @mixin m-screen {
-  @media (min-width: $s-screen-max + 1px) {
+  @media (min-width: $s-screen-max + rem(1)) {
     @content;
   }
 }
 
 @mixin l-screen {
-  @media (min-width: $m-screen-max + 1px) {
+  @media (min-width: $m-screen-max + rem(1)) {
     @content;
   }
 }
 
 @mixin xl-screen {
-  @media (min-width: $l-screen-max + 1px) {
+  @media (min-width: $l-screen-max + rem(1)) {
     @content;
   }
 }
 
 @mixin xxl-screen {
-  @media (min-width: $xl-screen-max + 1px) {
-    @content;
-  }
-}
-
-@mixin screen-3xl {
-  @media (min-width: $xxl-screen-max + 1px) {
+  @media (min-width: $xl-screen-max + rem(1)) {
     @content;
   }
 }
