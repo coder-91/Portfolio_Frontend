@@ -9,31 +9,31 @@
 }
 
 @mixin s-screen {
-  @media (min-width: $xs-screen-max + rem(1)) {
+  @media (min-width: calc(rem($xs-screen-max) + rem(1))) {
     @content;
   }
 }
 
 @mixin m-screen {
-  @media (min-width: $s-screen-max + rem(1)) {
+  @media (min-width: calc(rem($s-screen-max) + rem(1))) {
     @content;
   }
 }
 
 @mixin l-screen {
-  @media (min-width: $m-screen-max + rem(1)) {
+  @media (min-width: calc(rem($m-screen-max) + rem(1))) {
     @content;
   }
 }
 
 @mixin xl-screen {
-  @media (min-width: $l-screen-max + rem(1)) {
+  @media (min-width: calc(rem($l-screen-max) + rem(1))) {
     @content;
   }
 }
 
 @mixin xxl-screen {
-  @media (min-width: $xl-screen-max + rem(1)) {
+  @media (min-width: calc(rem($xl-screen-max) + rem(1))) {
     @content;
   }
 }
