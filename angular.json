@@ -48,7 +48,21 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.json",
+                  "with": "src/environments/environment.prod.json"
+                }
+              ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.json",
+                  "with": "src/environments/environment.staging.json"
+                }
+              ]
             },
             "development": {
               "optimization": false,
