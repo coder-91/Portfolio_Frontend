@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {ContactFormData} from "../../models/contact-form-data";
 import {ContactFormHttpService} from "./contact-form-http.service";
-import {Observable, Subject, tap} from "rxjs";
+import {BehaviorSubject, Observable, Subject, tap} from "rxjs";
 import {ContactFormResult} from "../../models/contact-form-result";
 
 @Injectable({
@@ -9,6 +9,7 @@ import {ContactFormResult} from "../../models/contact-form-result";
 })
 export class ContactFormService {
   private _contactFormResult$ = new Subject<ContactFormResult>();
+  private _formData$ = new BehaviorSubject<ContactFormData | null>(null);
 
   constructor(private contactFormHttpService: ContactFormHttpService) { }
 
@@ -27,5 +28,13 @@ export class ContactFormService {
         }
       })
     );
+  }
+
+  public saveFormData(contactFormData: ContactFormData): void {
+    this._formData$.next(contactFormData);
+  }
+
+  public getFormData(): ContactFormData | null {
+    return this._formData$.value;
   }
 }

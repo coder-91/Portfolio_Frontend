@@ -25,6 +25,7 @@ import {TranslateModule} from "@ngx-translate/core";
 })
 export class ContactSectionComponent implements OnInit, OnDestroy {
   contactForm: FormGroup = new FormGroup({});
+  private formValueChangesSubscription: Subscription;
   private sendMessageSubscription = new Subscription();
   constructor(private fb: FormBuilder, private contactFormService: ContactFormService) {}
 
@@ -36,6 +37,20 @@ export class ContactSectionComponent implements OnInit, OnDestroy {
       message: new FormControl('', [Validators.required]),
       isPrivacyPolicyAccepted: new FormControl(false, [Validators.requiredTrue])
     });
+
+    const savedFormData: ContactFormData | null = this.contactFormService.getFormData();
+    if (savedFormData) {
+      this.contactForm.patchValue(savedFormData);
+    }
+
+    this.formValueChangesSubscription = this.contactForm.valueChanges.subscribe(() => {
+      this.onFormChange();
+    });
+  }
+
+  onFormChange(): void {
+    const formData: ContactFormData = this.contactForm.value;
+    this.contactFormService.saveFormData(formData);
   }
 
   public onSubmit(): void {
@@ -51,6 +66,7 @@ export class ContactSectionComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.formValueChangesSubscription.unsubscribe();
     this.sendMessageSubscription.unsubscribe();
   }
 }
