@@ -8,6 +8,7 @@ import {LoadingSpinnerService} from "./services/loadingSpinnerService/loading-sp
 import {AsyncPipe} from "@angular/common";
 import {SnackbarComponent} from "./components/shared/snackbar/snackbar.component";
 import {LoadingSpinnerComponent} from "./components/shared/loading-spinner/loading-spinner.component";
+import {FaviconService} from "./services/faviconService/favicon.service";
 
 @Component({
   selector: 'app-root',
@@ -24,11 +25,12 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   private currentThemeSubscription: Subscription = new Subscription();
   isLoadingSpinnerVisible = this.loadingSpinnerService.isLoadingSpinnerVisible$;
 
-  constructor(private themeService: ThemeService, private contactFormService: ContactFormService, private loadingSpinnerService: LoadingSpinnerService) {}
+  constructor(private themeService: ThemeService, private contactFormService: ContactFormService, private loadingSpinnerService: LoadingSpinnerService, private faviconService: FaviconService) {}
 
   ngOnInit(): void {
     this.currentThemeSubscription = this.themeService.currentTheme$.subscribe(theme => {
       this.currentTheme = theme;
+      this.faviconService.setFavicon(this.currentTheme);
     })
   }
 
