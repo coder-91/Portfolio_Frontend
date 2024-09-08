@@ -1,4 +1,5 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_functions';
+@use '../../../../styles/_screen-sizes';
 
 section {
   background-color: inherit;
@@ -9,7 +10,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  row-gap: rem(30);
+  row-gap: functions.rem(30);
   grid-template-areas:
     "img"
     "text"
@@ -17,8 +18,8 @@ section {
 
   .img-container {
     grid-area: img;
-    width: rem(300);
-    height: rem(300);
+    width: functions.rem(300);
+    height: functions.rem(300);
     overflow: hidden;
     border-radius: 50%;
     justify-self: center;
@@ -45,24 +46,24 @@ a.btn {
   justify-self: start;
 }
 
-@include m-screen {
+@include screen-sizes.m-screen {
   .content-container .img-container {
-    width: rem(400);
-    height: rem(400);
+    width: functions.rem(400);
+    height: functions.rem(400);
   }
 }
 
-@include l-screen {
+@include screen-sizes.l-screen {
   .content-container {
     grid-template-columns: 1fr auto;
-    column-gap: rem(30);
+    column-gap: functions.rem(30);
     grid-template-areas:
     "text img"
     "btn .";
 
     .img-container {
-      width: rem(300);
-      height: rem(300);
+      width: functions.rem(300);
+      height: functions.rem(300);
     }
 
     .text-container, .img-container {
@@ -71,9 +72,9 @@ a.btn {
   }
 }
 
-@include xl-screen {
+@include screen-sizes.xl-screen {
   .content-container .img-container {
-    width: rem(400);
-    height: rem(400);
+    width: functions.rem(400);
+    height: functions.rem(400);
   }
 }

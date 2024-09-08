@@ -1,10 +1,11 @@
-@import './common';
-@import './functions';
-@import './mixins';
-@import './reset';
-@import './screen-sizes';
-@import './typography';
-@import './variables';
+@use './reset';
+@use './variables';
+@use './functions';
+@use './mixins';
+@use './screen-sizes';
+@use './typography';
+@use './common';
+
 
 html,
 body {
@@ -13,8 +14,8 @@ body {
 }
 
 body {
-  font-size: $font-size-base;
-  font-family: $font-family;
+  font-size: variables.$font-size-base;
+  font-family: variables.$font-family;
 }
 
 .pointer, button, a {
@@ -34,6 +35,6 @@ body {
 }
 
 .max-width {
-  max-width: calc($max-width * rem(1));
+  max-width: calc(#{variables.$max-width} * #{functions.rem(1)});
   margin: 0 auto;
 }

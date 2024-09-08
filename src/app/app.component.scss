@@ -1,4 +1,5 @@
-@import '../styles/_main';
+@use '../styles/_functions';
+@use '../styles/_variables';
 
 :host {
   position: relative;
@@ -12,7 +13,7 @@ app-navigation {
   left: 0;
   right: 0;
   z-index: 100;
-  height: $nav-height;
+  height: functions.rem(variables.$nav-height);
   background-color: var(--col-accent);
   color: var(--col-tertiary);
 }

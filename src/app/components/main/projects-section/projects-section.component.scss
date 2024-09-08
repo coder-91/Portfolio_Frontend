@@ -1,4 +1,5 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_functions';
+@use '../../../../styles/_screen-sizes';
 
 section {
   background-color: inherit;
@@ -10,11 +11,11 @@ app-project {
 }
 
 app-project:not(:last-child) {
-  margin-bottom: rem(50);
+  margin-bottom: functions.rem(50);
 }
 
-@include m-screen {
+@include screen-sizes.m-screen {
   app-project:not(:last-child) {
-    margin-bottom: rem(75);
+    margin-bottom: functions.rem(75);
   }
 }

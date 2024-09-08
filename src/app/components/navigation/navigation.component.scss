@@ -1,4 +1,6 @@
-@import '../../../styles/_main';
+@use '../../../styles/_functions';
+@use '../../../styles/_screen-sizes';
+@use '../../../styles/_mixins';
 
 nav {
   height: 100%;
@@ -10,10 +12,10 @@ nav {
 }
 
 .navbar {
-  @include flex-basic(row, space-between, center);
+  @include mixins.flex-basic(row, space-between, center);
   width: 100%;
   box-shadow: 0 4px 10px var(--col-shadow);
-  border-radius: rem(5);
+  border-radius: functions.rem(5);
   height: 100%;
   background-color: var(--col-accent);
 }
@@ -37,9 +39,9 @@ app-menu-list.active {
   right: 0;
 }
 
-@include s-screen {
+@include screen-sizes.s-screen {
   .navbar {
-    column-gap: rem(20);
+    column-gap: functions.rem(20);
   }
 
   app-logo {
@@ -47,7 +49,7 @@ app-menu-list.active {
   }
 }
 
-@include l-screen {
+@include screen-sizes.l-screen {
   app-nav-mobile-icon {
     display: none;
   }
@@ -61,7 +63,7 @@ app-menu-list.active {
   }
 
   app-logo {
-    margin-right: rem(30);
+    margin-right: functions.rem(30);
   }
 
   app-menu-list {

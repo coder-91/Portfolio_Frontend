@@ -1,23 +1,23 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_functions';
 
 .snackbar {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  column-gap: rem(55);
+  column-gap: functions.rem(55);
   visibility: visible;
   width: max-content;
   min-width: 250px;
   max-width: calc(100% - 20px);
   background-color: var(--col-success);
   color: var(--col-tertiary);
-  border-radius: rem(15);
-  padding: rem(15);
+  border-radius: functions.rem(15);
+  padding: functions.rem(15);
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: rem(30);
-  font-size: rem(16);
+  bottom: functions.rem(30);
+  font-size: functions.rem(16);
   z-index: 1000;
 }
 

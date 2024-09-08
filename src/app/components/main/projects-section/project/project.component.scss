@@ -1,4 +1,5 @@
-@import '../../../../../styles/_main';
+@use '../../../../../styles/_functions';
+@use '../../../../../styles/_screen-sizes';
 
 .project-container {
   display: grid;
@@ -6,7 +7,7 @@
   grid-template-areas:
     "project-image"
     "project";
-  row-gap: calc(rem(40) + (60 - 40) * ((100vw - $xs-screen-max * rem(1)) / ($max-width - $xs-screen-max)));
+  row-gap: functions.scale-between(40, 60);
   align-items: flex-end;
 
   .project-img {
@@ -25,7 +26,7 @@
 .btn-container {
   display: flex;
   flex-direction: column;
-  row-gap: rem(15);
+  row-gap: functions.rem(15);
   width: 100%;
   text-align: center;
 
@@ -33,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: rem(10);
+    column-gap: functions.rem(10);
   }
 
   .icon-container {
@@ -42,23 +43,23 @@
   }
 }
 
-@include m-screen {
+@include screen-sizes.m-screen {
   .btn-container {
     flex-direction: row;
-    gap: 0 rem(15);
+    gap: 0 functions.rem(15);
     width: auto;
     align-self: flex-start;
   }
 
   .project-img {
-    max-width: rem(600);
+    max-width: functions.rem(600);
   }
 }
 
-@include xl-screen {
+@include screen-sizes.xl-screen {
   .project-container {
     grid-template-rows: auto;
-    column-gap: calc(rem(40) + (50 - 40) * ((100vw - $xs-screen-max * rem(1)) / ($max-width - $xs-screen-max)));
+    column-gap: functions.scale-between(40, 50);
 
     .project-img {
       align-self: flex-end;

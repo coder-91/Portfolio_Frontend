@@ -1,4 +1,4 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_functions';
 
 .textarea-container {
   border-radius: 5px;
@@ -11,7 +11,7 @@ textarea {
   border-radius: 5px;
   border: 1px solid var(--col-tertiary);
   padding: 12px;
-  font-size: rem(16);
+  font-size: functions.rem(16);
   resize: none;
 }
 

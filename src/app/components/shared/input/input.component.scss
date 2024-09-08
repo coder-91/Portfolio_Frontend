@@ -1,4 +1,4 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_functions';
 
 .floating-label {
   position: relative;
@@ -9,7 +9,7 @@
   padding: 10px;
   border: 1px solid var(--col-tertiary);
   border-radius: 5px;
-  font-size: rem(16);
+  font-size: functions.rem(16);
   background-color: var(--col-primary);
   color: var(--col-tertiary);
   transition: border-color 0.25s, box-shadow 0.25s;
@@ -17,10 +17,10 @@
 
 .floating-label label {
   position: absolute;
-  top: rem(10);
+  top: functions.rem(10);
   left: 12px;
   color: var(--col-tertiary);
-  font-size: rem(16);
+  font-size: functions.rem(16);
   pointer-events: none;
   transition: all 0.25s ease;
   background-color: var(--col-primary);
@@ -37,7 +37,7 @@
 .floating-label input:not(:placeholder-shown) + label {
   top: -0.5rem;
   left: 10px;
-  font-size: rem(12);
+  font-size: functions.rem(12);
   color: var(--col-highlight);
   z-index: 100;
 }

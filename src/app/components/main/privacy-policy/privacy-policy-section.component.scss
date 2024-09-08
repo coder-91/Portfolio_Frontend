@@ -1,4 +1,5 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_variables';
+@use '../../../../styles/_functions';
 
 :host {
   background-color: inherit;
@@ -6,7 +7,7 @@
 }
 
 section {
-  margin-top: $nav-height;
+  margin-top: functions.rem(variables.$nav-height);
   background-color: inherit;
   color: inherit;
 }

@@ -1,4 +1,4 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_screen-sizes';
 
 section {
   background-color: inherit;
@@ -41,7 +41,7 @@ button {
   border: 2px solid var(--col-disabled)
 }
 
-@include l-screen {
+@include screen-sizes.l-screen {
   app-input:nth-child(1),
   app-input:nth-child(2) {
     grid-column: span 1;
