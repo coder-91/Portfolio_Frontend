@@ -1,6 +1,6 @@
 <div class="skill-container">
   <div class="skill">
-    <div [innerHTML]="svgContent"></div>
+    <div [innerHTML]="svgContent$ | async"></div>
     <p>{{skillName}}</p>
   </div>
 </div>
