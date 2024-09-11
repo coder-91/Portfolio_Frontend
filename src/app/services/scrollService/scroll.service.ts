@@ -11,8 +11,11 @@ export class ScrollService {
 
   public scrollToAnchor(anchor: string) {
     const scrollOffset = this.navigationService.navHeight;
-    this.viewportScroller.setHistoryScrollRestoration('auto');
     this.viewportScroller.setOffset([0, scrollOffset]);
-    this.viewportScroller.scrollToAnchor(anchor);
+    const element = document.getElementById(anchor);
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }

@@ -26,7 +26,7 @@ export class CheckboxPrivacyPolicyComponent {
 
   public navigateToPrivacyPolicy(): void {
     this.router.navigate(['/privacy-policy']).then(() => {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0});
     });
   }
 }

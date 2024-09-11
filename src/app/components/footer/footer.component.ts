@@ -39,7 +39,7 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   public navigateToImprint(): void {
     this.router.navigate(['/imprint']).then(() => {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0});
     });
   }
 
