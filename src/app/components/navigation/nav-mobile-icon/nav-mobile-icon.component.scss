@@ -1,8 +1,18 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_functions';
+
+:host {
+  // Just change the width to control the size of the mobile menu
+  --width: #{functions.scale-between(30, 40)};
+  --height: calc(var(--width) / 1.33);
+  --line-height: calc(var(--height) / 5);
+  --line-two: calc(var(--line-height) * 2);
+  --line-three: calc(var(--line-height) * 4);
+}
+
 
 #nav-icon {
-  width: 30px;
-  height: 22.5px;
+  width: var(--width);
+  height: var(--height);
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
@@ -12,10 +22,10 @@
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 4.5px;
+  height: var(--line-height);
   width: 100%;
   background: var(--col-tertiary);
-  border-radius: 4.5px;
+  border-radius: var(--line-height);
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -27,15 +37,15 @@
 }
 
 #nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
-  top: 9px;
+  top: var(--line-two);
 }
 
 #nav-icon span:nth-child(4) {
-  top: 18px;
+  top: var(--line-three);
 }
 
 #nav-icon.open span:nth-child(1) {
-  top: 9px;
+  top: var(--line-two);
   width: 0;
   left: 50%;
 }
@@ -49,7 +59,7 @@
 }
 
 #nav-icon.open span:nth-child(4) {
-  top: 9px;
+  top: var(--line-two);
   width: 0;
   left: 50%;
 }
