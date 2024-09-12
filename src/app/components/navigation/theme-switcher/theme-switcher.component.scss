@@ -1,7 +1,8 @@
-@import '../../../../styles/_main';
+@use '../../../../styles/_functions';
 
 :host {
-  --theme-switcher-width: 70px;
+  // Just change the theme-switcher-width to control the size of the theme switcher
+  --theme-switcher-width: #{functions.scale-between(50, 70)};;
   --button-size: calc(var(--theme-switcher-width) / 2.357);
   --theme-switcher-height: calc(var(--button-size) + 5px);
   --icon-size: calc(var(--theme-switcher-width) / 2.75);
