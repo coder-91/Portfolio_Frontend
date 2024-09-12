@@ -18,8 +18,8 @@ $font-size: functions.rem(16);
       margin: 0 3px;
     }
 
-    &.active {
-      color: var(--col-tertiary);
+    &.inactive {
+      color: var(--col-inactive);
     }
 
     &:not(:last-child) .divider {
