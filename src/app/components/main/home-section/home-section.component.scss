@@ -1,13 +1,11 @@
-@use '../../../../styles/_variables';
 @use '../../../../styles/_functions';
 @use '../../../../styles/_screen-sizes';
 
 :host {
   display: inline-block;
   width: 100%;
-  height: calc(100% - #{functions.rem(variables.$nav-height)});
+  height: 100%;
   background-color: inherit;
-  margin-top: functions.rem(variables.$nav-height);
 }
 
 section {

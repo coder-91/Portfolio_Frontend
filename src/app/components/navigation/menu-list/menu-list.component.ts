@@ -22,7 +22,6 @@ export class MenuListComponent {
   constructor(private scrollService: ScrollService) {}
 
   menuItems = [
-    { id: 'home', path: '/home'},
     { id: 'about-me', path: '/about-me' },
     { id: 'skills', path: '/skills' },
     { id: 'projects', path: '/projects' },

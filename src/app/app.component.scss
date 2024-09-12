@@ -13,8 +13,7 @@ app-navigation {
   left: 0;
   right: 0;
   z-index: 100;
-  height: functions.rem(variables.$nav-height);
-  background-color: var(--col-accent);
+  height: functions.scale-between(variables.$nav-height-min, variables.$nav-height-max);
   color: var(--col-tertiary);
 }
 

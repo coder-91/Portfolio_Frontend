@@ -18,11 +18,13 @@ import {MenuListComponent} from "./menu-list/menu-list.component";
 import {NavigationService} from "../../services/navigationService/navigation.service";
 import {Subscription} from "rxjs";
 import {LogoV1Component} from "./logo-v1/logo-v1.component";
+import {ScrollService} from "../../services/scrollService/scroll.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [TranslateModule, ThemeSwitcherComponent, LanguageSwitcherComponent, NgClass, NavMobileIconComponent, MenuListComponent, LogoV1Component],
+  imports: [TranslateModule, ThemeSwitcherComponent, LanguageSwitcherComponent, NgClass, NavMobileIconComponent, MenuListComponent, LogoV1Component, RouterLink],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })
@@ -33,7 +35,7 @@ export class NavigationComponent implements OnInit, AfterViewInit, OnDestroy {
   private currentThemeSubscription = new Subscription();
   private navHeightSubscription = new Subscription();
 
-  constructor(private themeService: ThemeService, private navigationService: NavigationService, private renderer: Renderer2) {}
+  constructor(private scrollService: ScrollService, private themeService: ThemeService, private navigationService: NavigationService, private renderer: Renderer2) {}
 
   ngOnInit(): void {
     this.currentThemeSubscription = this.themeService.currentTheme$.subscribe(theme => {
@@ -65,6 +67,10 @@ export class NavigationComponent implements OnInit, AfterViewInit, OnDestroy {
       !this.nav.nativeElement.contains(target)) {
       this.closeMobileMenu();
     }
+  }
+
+  public scrollToHome() {
+    this.scrollService.scrollToAnchor("home");
   }
 
   ngOnDestroy() {

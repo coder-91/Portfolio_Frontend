@@ -7,7 +7,10 @@
 }
 
 section {
-  margin-top: functions.rem(variables.$nav-height);
+  padding-top: functions.scale-between(
+      variables.$nav-height-min + variables.$padding-vertical-min,
+      variables.$nav-height-max + variables.$padding-vertical-max
+  );
   background-color: inherit;
   color: inherit;
 }
