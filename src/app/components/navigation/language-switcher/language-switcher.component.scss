@@ -14,8 +14,9 @@ $font-size: functions.rem(16);
     cursor: pointer;
     transition: all 0.25s ;
 
-    & > span {
-      margin: 0 3px;
+    &:not(:last-child) > span,
+    &:not(:last-child) .divider {
+      margin-right: 3px;
     }
 
     &.inactive {

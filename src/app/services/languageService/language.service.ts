@@ -9,7 +9,7 @@ import {TranslateService} from "@ngx-translate/core";
 export class LanguageService {
   private supportedLanguages: { [key: string]: Language } = {
     en: {code: 'en', languageShort: 'EN', language: 'English'},
-    de: {code: 'de', languageShort: 'DE', language: 'Deutsch',}
+    de: {code: 'de', languageShort: 'DE', language: 'Deutsch'}
   };
   private _currentLanguage$: BehaviorSubject<Language>;
 
