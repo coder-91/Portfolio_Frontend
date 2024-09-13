@@ -61,7 +61,7 @@ footer {
     functions.scale-between(variables.$padding-horizontal-min, variables.$padding-horizontal-max);
 }
 
-#navbar {
+nav {
   padding:
     0
     functions.scale-between(variables.$padding-horizontal-min, variables.$padding-horizontal-max);

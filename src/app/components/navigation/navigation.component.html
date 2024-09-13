@@ -1,5 +1,5 @@
-<nav #nav class="max-width">
-  <div id="navbar" class="navbar">
+<nav #nav>
+  <div id="navbar" class="navbar max-width">
     <app-logo-v1 class="pointer" (click)="scrollToHome()" [routerLink]="'.'" [fragment]="'home'"></app-logo-v1>
     <app-menu-list class="menu-desktop"></app-menu-list>
     <app-theme-switcher [currentTheme]="currentTheme"></app-theme-switcher>

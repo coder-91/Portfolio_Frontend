@@ -1,26 +1,31 @@
+@use '../../../styles/_variables';
 @use '../../../styles/_functions';
 @use '../../../styles/_screen-sizes';
 @use '../../../styles/_mixins';
 
 nav {
   height: 100%;
-  background-color: inherit;
+  background-color: var(--col-accent);
   color: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 0 4px 10px var(--col-shadow);
 }
 
 .navbar {
   @include mixins.flex-basic(row, space-between, center);
   width: 100%;
-  box-shadow: 0 4px 10px var(--col-shadow);
   height: 100%;
-  background-color: var(--col-accent);
+  background-color: inherit;
 }
 
 .menu-desktop {
   display: none;
+}
+
+.menu-mobile {
+  top: functions.scale-between(variables.$nav-height-min, variables.$nav-height-max);
 }
 
 app-menu-list {
