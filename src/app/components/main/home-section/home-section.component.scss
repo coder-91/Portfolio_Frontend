@@ -1,3 +1,4 @@
+@use '../../../../styles/_variables';
 @use '../../../../styles/_functions';
 @use '../../../../styles/_screen-sizes';
 
@@ -9,49 +10,66 @@
 }
 
 section {
-  display: grid;
-  place-items: center;
-  position: relative;
+  height: 100%;
+  padding-top: functions.scale-between(variables.$nav-height-min + variables.$padding-vertical-min, variables.$nav-height-max + variables.$padding-vertical-max);
+  align-content: center;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-areas:
+    "img"
+    "title-1"
+    "title-2"
+    "description";
   background-color: inherit;
-  height: 100%;
-  padding: 0;
-  overflow: hidden;
-}
-
-img {
-  position: absolute;
-  width: 150%;
-  height: 100%;
-  top: 0;
-  left: -50%;
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-  opacity: 0.25;
-  z-index: 0;
-}
-
-.intro-container {
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-container {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: functions.rem(15);
   text-align: center;
 }
 
-@include screen-sizes.m-screen {
-  .btn-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    row-gap: 0;
-    column-gap: functions.rem(15);
-    padding: 0;
+h1.title-1 {
+  grid-area: title-1;
+}
+
+h1.title-2 {
+  grid-area: title-2;
+}
+
+p {
+  grid-area: description;
+  margin-bottom: 0;
+}
+
+.img-container {
+  $size: functions.scale-between(175, 350);
+  grid-area: img;
+  width: $size;
+  height: $size;
+  margin-bottom: functions.scale-between(20, 40);
+  overflow: hidden;
+  border-radius: 50%;
+  justify-self: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-position: top;
+    object-fit: cover;
+  }
+}
+
+@include screen-sizes.l-screen {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+    "title-1 img"
+    "title-2 img"
+    "description img";
+    text-align: start;
+    column-gap: functions.scale-between(20, 40);
+  }
+
+  .img-container {
+    align-self: center;
+    margin-bottom: 0;
   }
 }

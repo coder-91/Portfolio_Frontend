@@ -10,10 +10,9 @@
     "contact": "Kontakt"
   },
   "home": {
-    "title1": "Veysel Karaali",
-    "title2": "Fullstack Developer",
-    "btn1": "Mehr über mich",
-    "btn2": "Meine Projekte"
+    "title1": "Hallo, ich bin Veysel",
+    "title2": "Softwareentwickler",
+    "description": "Ich entwickle intuitive Softwarelösungen mit Fachkenntnissen im Frontend und Backend. Ich bin leidenschaftlich daran interessiert, skalierbare, leistungsstarke Anwendungen zu erstellen, mit starkem Fokus auf Qualität und Präzision. Mein Ziel ist es, Lösungen zu entwickeln, die wirklich einen Unterschied machen."
   },
   "about-me": {
     "title": "Über mich",
