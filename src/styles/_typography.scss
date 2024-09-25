@@ -2,7 +2,7 @@
 @use './variables';
 
 
-p, div, span, a, button {
+p, div, a, button {
   font-size: functions.scale-between(variables.$font-size-min, variables.$font-size-max);
   line-height: variables.$line-height;
   letter-spacing: functions.scale-between(variables.$letter-spacing-min, variables.$letter-spacing-max);
