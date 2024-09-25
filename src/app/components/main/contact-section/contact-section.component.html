@@ -1,9 +1,6 @@
 <section id="contact">
-  <div class="contact-inner max-width">
+  <div class="contact-container">
     <h1 class="center">{{ 'contact.title1' | translate }}</h1>
-    <h2 class="center">{{ 'contact.title2' | translate }}</h2>
-    <p class="center">{{ 'contact.content' | translate }}</p>
-
     <form [formGroup]="contactForm" autocomplete="off">
       <app-input [form]="contactForm" [id]="'name'" [type]="'text'" [label]="'contact.name' | translate"></app-input>
       <app-input [form]="contactForm" [id]="'email'" [type]="'email'" [label]="'contact.email' | translate"></app-input>
