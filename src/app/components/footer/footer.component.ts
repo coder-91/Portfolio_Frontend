@@ -4,10 +4,11 @@ import {Router, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";
 import {SvgLoaderService} from "../../services/svgLoaderService/svg-loader.service";
-import {LogoV2Component} from "./logo-v2/logo-v2.component";
+import {LogoV2Component} from "../shared/logos/logo-v2/logo-v2.component";
 import {GithubIconComponent} from "../shared/icons/github-icon/github-icon.component";
 import {EmailIconComponent} from "../shared/icons/email-icon/email-icon.component";
 import {LinkedinIconComponent} from "../shared/icons/linkedin-icon/linkedin-icon.component";
+import {LogoV1Component} from "../shared/logos/logo-v1/logo-v1.component";
 
 @Component({
   selector: 'app-footer',
@@ -18,7 +19,8 @@ import {LinkedinIconComponent} from "../shared/icons/linkedin-icon/linkedin-icon
     LogoV2Component,
     GithubIconComponent,
     EmailIconComponent,
-    LinkedinIconComponent
+    LinkedinIconComponent,
+    LogoV1Component
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

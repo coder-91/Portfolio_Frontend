@@ -1,7 +1,8 @@
+@use '../../../../../styles/_functions';
 .form-control-container {
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
+  font-size: functions.scale-between(12, 14);
   column-gap: 10px;
 
   a {

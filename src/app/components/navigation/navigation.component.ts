@@ -16,7 +16,7 @@ import {NavMobileIconComponent} from "./nav-mobile-icon/nav-mobile-icon.componen
 import {MenuListComponent} from "./menu-list/menu-list.component";
 import {NavigationService} from "../../services/navigationService/navigation.service";
 import {Subscription} from "rxjs";
-import {LogoV1Component} from "./logo-v1/logo-v1.component";
+import {LogoV1Component} from "../shared/logos/logo-v1/logo-v1.component";
 import {ScrollService} from "../../services/scrollService/scroll.service";
 import {RouterLink} from "@angular/router";
 

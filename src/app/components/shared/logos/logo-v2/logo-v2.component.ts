@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Language} from "../../../models/language";
+import {Language} from "../../../../models/language";
 import {Subscription} from "rxjs";
-import {LanguageService} from "../../../services/languageService/language.service";
+import {LanguageService} from "../../../../services/languageService/language.service";
 
 @Component({
   selector: 'app-logo-v2',
