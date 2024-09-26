@@ -1,6 +1,6 @@
 <footer>
   <div class="inner-footer max-width">
-    <app-logo-v1></app-logo-v1>
+    <app-logo-v1 (click)="scrollToHome()" [routerLink]="'.'" [fragment]="'home'"></app-logo-v1>
     <p class="copyright">&copy; Veysel Karaali {{ currentYear }}</p>
 
     <div class="icon-container">
