@@ -116,6 +116,7 @@
           "title": "All-Inkl",
           "text1": "Anbieter ist die ALL-INKL.COM - Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf (nachfolgend All-Inkl). Details entnehmen Sie der Datenschutzerklärung von All-Inkl:",
           "link": "https://all-inkl.com/datenschutzinformationen/",
+          "linkText": "All-Inkl Datenschutzinformationen",
           "text2": "Die Verwendung von All-Inkl erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar."
         }
       },
@@ -168,7 +169,7 @@
       },
       "disagreement": {
         "title": "Recht auf Datenübertragbarkeit",
-        "text1": "Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist."
+        "text": "Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist."
       },
       "complaint_right": {
         "title": "Auskunft, Berichtigung und Löschung",
@@ -222,14 +223,18 @@
         "text3": "Wenn Ihr Browser Google Fonts nicht unterstützt, wird eine Standardschrift von Ihrem Computer genutzt.",
         "text4": "Weitere Informationen zu Google Fonts finden Sie unte",
         "link1": "https://developers.google.com/fonts/faq",
+        "link1Text": "Google Fonts",
         "text5": "und in der Datenschutzerklärung von Google:",
         "link2": "https://policies.google.com/privacy?hl=de",
+        "link2Text": "Google Datenschutzrichtlinie",
         "text6": "Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF). Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link:",
-        "link3": "https://www.dataprivacyframework.gov/participant/5780"
+        "link3": "https://www.dataprivacyframework.gov/participant/5780",
+        "link3Text": "Data Privacy Framework"
       },
       "source": {
         "text": "Quelle:",
-        "link": "https://www.e-recht24.de"
+        "link": "https://www.e-recht24.de",
+        "linkText": "e-recht24"
       }
     }
   }

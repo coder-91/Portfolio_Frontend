@@ -116,6 +116,7 @@
           "title": "All-Inkl",
           "text1": "The provider is ALL-INKL.COM - Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf (hereinafter referred to as All-Inkl). For more details, refer to the privacy policy of All-Inkl:",
           "link": "https://all-inkl.com/datenschutzinformationen/",
+          "linkText": "All-Inkl Privacy Notice",
           "text2": "The use of All-Inkl is based on Art. 6 para. 1 lit. f GDPR. We have a legitimate interest in ensuring the most reliable presentation of our website. If consent has been requested, processing is carried out exclusively on the basis of Art. 6 para. 1 lit. a GDPR and § 25 para. 1 TDDDG, insofar as the consent includes the storage of cookies or access to information on the user’s device (e.g., device fingerprinting) within the meaning of the TDDDG. Consent can be revoked at any time."
         }
       },
@@ -222,14 +223,18 @@
         "text3": "If your browser does not support Google Fonts, a standard font from your computer will be used.",
         "text4": "For more information on Google Fonts, see",
         "link1": "https://developers.google.com/fonts/faq",
+        "link1Text": "Google Fonts",
         "text5": "and in Google's privacy policy:",
         "link2": "https://policies.google.com/privacy?hl=en",
+        "link2Text": "Google Privacy Policy",
         "text6": "The company is certified under the 'EU-US Data Privacy Framework' (DPF). The DPF is an agreement between the European Union and the USA intended to ensure that European data protection standards are maintained for data processing in the USA. Every company certified under the DPF commits to adhering to these data protection standards. Further information can be found from the provider at the following link:",
-        "link3": "https://www.dataprivacyframework.gov/participant/5780"
+        "link3": "https://www.dataprivacyframework.gov/participant/5780",
+        "link3Text": "Data Privacy Framework"
       },
       "source": {
         "text": "Source:",
-        "link": "https://www.e-recht24.de"
+        "link": "https://www.e-recht24.de",
+        "linkText": "e-recht24"
       }
     }
   }
