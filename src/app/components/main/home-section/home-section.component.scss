@@ -5,37 +5,37 @@
 :host {
   display: inline-block;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  height: auto;
   background-color: inherit;
 }
 
 section {
-  height: 100%;
+  display: flex;
+  min-height: 100vh;
+  height: auto;
   padding-top: functions.scale-between(variables.$nav-height-min + variables.$padding-vertical-min, variables.$nav-height-max + variables.$padding-vertical-max);
   align-content: center;
 }
 
-.grid-container {
+.home-container {
   display: inline-grid;
   grid-template-areas:
     "img"
-    "title-1"
-    "title-2"
-    "description";
+    "text";
   background-color: inherit;
   text-align: center;
 }
 
-h1.title-1 {
-  grid-area: title-1;
-}
+.text-container {
+  grid-area: text;
 
-h1.title-2 {
-  grid-area: title-2;
+  h1, h2 {
+    margin-bottom: functions.scale-between(8, 16);
+  }
 }
 
 p {
-  grid-area: description;
   margin-bottom: 0;
 }
 
@@ -59,14 +59,13 @@ p {
 }
 
 @include screen-sizes.l-screen {
-  .grid-container {
-    display: grid;
+  .home-container {
     grid-template-areas:
-    "title-1 img"
-    "title-2 img"
-    "description img";
+    "text img";
+    justify-content: space-between;
     text-align: start;
-    column-gap: functions.scale-between(20, 40);
+    align-items: center;
+    column-gap: functions.scale-between(20, 30);
   }
 
   .img-container {

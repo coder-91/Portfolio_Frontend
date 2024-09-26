@@ -1,10 +1,12 @@
 <section id="home">
-  <div class="grid-container max-width">
+  <div class="home-container max-width">
     <div class="img-container">
       <img [src]="currentTheme === Theme.DARK ? './assets/images/me/me_dark.png' : './assets/images/me/me_light.png'" alt="">
     </div>
-    <h1 class="title-1">{{'home.title1' | translate}}</h1>
-    <h1 class="title-2 highlight">{{'home.title2' | translate}}</h1>
-    <p>{{'home.description' | translate}}</p>
+    <div class="text-container">
+      <h1>{{'home.title1' | translate}}</h1>
+      <h2 class="highlight">{{'home.title2' | translate}}</h2>
+      <p>{{'home.description' | translate}}</p>
+    </div>
   </div>
 </section>
