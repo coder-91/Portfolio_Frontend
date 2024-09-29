@@ -19,7 +19,7 @@ import {NavigationScrollService} from "./services/navigationScrollService/naviga
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
-  title = 'Veysel Karaali | Fullstack Developer';
+  title = 'Veysel Karaali | Software Developer';
   currentTheme: Theme;
   @ViewChild('snackbar') snackbar: SnackbarComponent;
   private contactFormResultSubscription: Subscription = new Subscription();
