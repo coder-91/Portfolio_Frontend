@@ -1,6 +1,4 @@
 <div class="skill-container">
-  <div class="skill">
-    <div [innerHTML]="svgContent$ | async"></div>
-    <p>{{skillName}}</p>
-  </div>
+  <img [src]="'/assets/images/skills/dark/' + skillId + '.png'" alt="">
+  <div class="skill-name center">{{skillName}}</div>
 </div>
