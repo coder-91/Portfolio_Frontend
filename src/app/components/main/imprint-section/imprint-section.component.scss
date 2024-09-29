@@ -11,6 +11,10 @@ section {
       variables.$nav-height-min + variables.$padding-vertical-min,
       variables.$nav-height-max + variables.$padding-vertical-max
   );
-  background-color: inherit;
+  background-color: var(--col-primary);
   color: inherit;
+}
+
+app-footer {
+  background-color: var(--col-secondary);
 }
