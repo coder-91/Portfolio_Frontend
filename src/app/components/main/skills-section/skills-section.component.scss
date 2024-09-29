@@ -1,8 +1,11 @@
 section {
   background-color: inherit;
   color: inherit;
+  display: flex;
+  justify-content: center;
 
   .skill-list {
+    max-width: 680px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
