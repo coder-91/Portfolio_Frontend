@@ -1,4 +1,4 @@
 <div class="skill-container">
-  <img [src]="'/assets/images/skills/dark/' + skillId + '.png'" alt="">
+  <img [src]="currentTheme === Theme.DARK ? '/assets/images/skills/dark/' + skillId + '.png' : '/assets/images/skills/light/' + skillId + '.png'" alt="">
   <div class="skill-name center">{{skillName}}</div>
 </div>
