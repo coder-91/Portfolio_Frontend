@@ -1,3 +1,6 @@
+@use './variables';
+
+
 @mixin flex-basic($flex-direction: row, $justify-content: flex-start, $align-items: stretch) {
   display: flex;
   flex-direction: $flex-direction;
@@ -13,4 +16,52 @@
 @mixin flex-wrap-with-gap($flex-direction: row, $justify-content: flex-start, $align-items: stretch, $gap: 0, $flex-wrap: nowrap) {
   @include flex-with-gap($flex-direction, $justify-content, $align-items, $gap);
   flex-wrap: $flex-wrap;
+}
+
+@mixin hover-color() {
+  transition: color variables.$transition-time ease;
+  &:hover {
+    color: var(--col-highlight);
+  }
+}
+
+@mixin hover-underline-nav() {
+  span {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--col-highlight);
+      transition: width variables.$transition-time ease;
+    }
+  }
+
+  &:hover span::after {
+    width: 100%;
+  }
+}
+
+@mixin hover-underline() {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--col-highlight);
+    transition: width variables.$transition-time ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 }

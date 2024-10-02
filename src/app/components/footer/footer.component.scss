@@ -1,5 +1,6 @@
 @use '../../../styles/_functions';
 @use '../../../styles/_screen-sizes';
+@use '../../../styles/_mixins';
 
 :host {
   background-color: inherit;
@@ -52,17 +53,15 @@ app-logo-v1 {
   a {
     display: flex;
     align-items: center;
-
-    :hover {
-      transition: all 0.25s;
-      color: var(--col-highlight);
-    }
+    @include mixins.hover-color();
   }
 }
 
 .imprint {
   grid-area: imprint;
   justify-self: center;
+  @include mixins.hover-color();
+  @include mixins.hover-underline();
 }
 
 @include screen-sizes.l-screen {

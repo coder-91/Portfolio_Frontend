@@ -45,7 +45,7 @@
     "name": "Name",
     "email": "E-Mail",
     "subject": "Betreff",
-    "message": "Deine Nachricht...",
+    "message": "Deine Nachricht ...",
     "required": "Pflichtfeld",
     "email_valid": "Gültige E-Mail-Adresse erforderlich",
     "privacy_policy": {

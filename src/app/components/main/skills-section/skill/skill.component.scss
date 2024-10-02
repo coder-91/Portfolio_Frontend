@@ -12,10 +12,6 @@
   border-radius: 10px;
   transition: background-color 0.25s ease;
   color: var(--col-secondary-text);
-
-  &:hover {
-    background-color: var(--col-highlight);
-  }
 }
 
 img {

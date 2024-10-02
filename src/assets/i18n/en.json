@@ -45,7 +45,7 @@
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
-    "message": "Your message...",
+    "message": "Your message ...",
     "required": "This field is required",
     "email_valid": "Please enter a valid email",
     "privacy_policy": {
