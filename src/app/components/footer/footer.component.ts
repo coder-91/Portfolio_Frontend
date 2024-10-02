@@ -8,7 +8,6 @@ import {GithubIconComponent} from "../shared/icons/github-icon/github-icon.compo
 import {EmailIconComponent} from "../shared/icons/email-icon/email-icon.component";
 import {LinkedinIconComponent} from "../shared/icons/linkedin-icon/linkedin-icon.component";
 import {LogoV1Component} from "../shared/logos/logo-v1/logo-v1.component";
-import {ScrollService} from "../../services/scrollService/scroll.service";
 
 @Component({
   selector: 'app-footer',
@@ -30,7 +29,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   currentYear: number;
   private currentThemeSubscription = new Subscription();
 
-  constructor(private themeService: ThemeService, private router: Router, private scrollService: ScrollService) {
+  constructor(private themeService: ThemeService, private router: Router) {
     this.currentYear = new Date().getFullYear();
   }
   ngOnInit(): void {
@@ -46,7 +45,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   }
 
   public scrollToHome() {
-    this.scrollService.scrollToAnchor("home");
+    this.router.navigateByUrl("home").then(r => {});
   }
 
   ngOnDestroy(): void {
