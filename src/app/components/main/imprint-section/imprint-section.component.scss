@@ -12,9 +12,10 @@ section {
       variables.$nav-height-max + variables.$padding-vertical-max
   );
   background-color: var(--col-primary);
-  color: inherit;
+  color: var(--col-primary-text);
 }
 
 app-footer {
   background-color: var(--col-secondary);
+  color: var(--col-primary-text);
 }
