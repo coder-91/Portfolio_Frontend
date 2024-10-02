@@ -11,7 +11,7 @@
   background-color: var(--col-accent);
   border-radius: 10px;
   transition: background-color 0.25s ease;
-  color: inherit;
+  color: var(--col-secondary-text);
 
   &:hover {
     background-color: var(--col-highlight);

@@ -9,14 +9,14 @@ textarea {
   height: 150px;
   color: var(--col-tertiary);
   border-radius: 5px;
-  border: 1px solid var(--col-tertiary);
+  border: 1px solid var(--col-highlight);
   padding: 12px;
   font-size: functions.rem(16);
   resize: none;
 }
 
 textarea::placeholder {
-  color: var(--col-tertiary);
+  color: var(--col-inactive);
 }
 
 textarea:focus {

@@ -5,8 +5,8 @@
 
 nav {
   height: 100%;
-  background-color: var(--col-accent);
-  color: inherit;
+  background-color: var(--col-nav-bg);
+  color: var(--col-primary-text);
   display: flex;
   flex-direction: column;
   justify-content: center;

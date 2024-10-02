@@ -1,7 +1,7 @@
 <div class="language-container">
   @for (language of this.languageService.getSupportedLanguages(); track language.code) {
     <div (click)="onChangeLanguage(language)" [ngClass]="{'inactive': language.code !== selectedLanguage.code}" class="language">
-      <span>{{language.languageShort}}</span>
+      <span class="pointer">{{language.languageShort}}</span>
       <div class="divider"></div>
     </div>
   }

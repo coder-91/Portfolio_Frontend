@@ -6,12 +6,11 @@ $font-size: functions.rem(16);
   display: flex;
   align-items: center;
   font-size: $font-size;
-  color: var(--col-tertiary);
+  color: var(--col-highlight);
 
   .language {
     display: flex;
     align-items: center;
-    cursor: pointer;
     transition: all 0.25s ;
 
     &:not(:last-child) > span,
@@ -26,7 +25,7 @@ $font-size: functions.rem(16);
     &:not(:last-child) .divider {
       width: 2px;
       height: $font-size;
-      background-color: var(--col-tertiary);
+      background-color: var(--col-primary-text);
     }
   }
 }

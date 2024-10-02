@@ -3,7 +3,6 @@
 
 :host {
   background-color: inherit;
-  cursor: pointer;
 }
 
 footer {
@@ -16,7 +15,7 @@ footer {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "logo-v2"
+    "logo-v1"
     "copyright"
     "icon"
     "imprint";
@@ -32,9 +31,9 @@ footer {
   }
 }
 
-app-logo-v2 {
-  grid-area: logo-v2;
-  width: 120px;
+app-logo-v1 {
+  grid-area: logo-v1;
+  cursor: pointer;
 }
 
 .copyright {
@@ -50,9 +49,14 @@ app-logo-v2 {
     width: 40px;
   }
 
-  a, {
+  a {
     display: flex;
     align-items: center;
+
+    :hover {
+      transition: all 0.25s;
+      color: var(--col-highlight);
+    }
   }
 }
 
@@ -65,7 +69,7 @@ app-logo-v2 {
   .inner-footer {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
-      "logo-v2 copyright icon"
+      "logo-v1 copyright icon"
       ". imprint .";
     align-items: center;
   }

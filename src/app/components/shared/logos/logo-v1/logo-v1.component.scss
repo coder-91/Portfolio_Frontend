@@ -4,9 +4,10 @@
   display: grid;
   place-items: center;
   aspect-ratio: 2.29 / 1;
+  color: var(--col-highlight);
 }
 
 svg {
   width: functions.scale-between(60, 100);
-  color: var(--col-highlight);
 }
+

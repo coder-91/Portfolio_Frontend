@@ -14,7 +14,7 @@
 }
 
 div.theme-switcher {
-  background-color: var(--col-settings);
+  background-color: var(--col-ts-bg);
   width: var(--theme-switcher-width);
   height: var(--theme-switcher-height);
   position: relative;
@@ -25,7 +25,7 @@ div.theme-switcher {
   transition: background-color var(--transition-default);
 
   & button {
-    background-color: var(--col-icon-selected);
+    background-color: var(--col-ts-icon-selected);
     width: var(--button-size);
     height: var(--button-size);
     border-radius: 50%;
@@ -43,11 +43,11 @@ div.theme-switcher {
   }
 
   &.light app-sun-icon {
-    color: var(--col-icon-active);
+    color: var(--col-ts-icon-active);
   }
 
   &.dark app-moon-icon {
-    color: var(--col-icon-active);
+    color: var(--col-ts-icon-active);
   }
 
   app-sun-icon,
@@ -55,7 +55,7 @@ div.theme-switcher {
     position: absolute;
     width: var(--icon-size);
     height: var(--icon-size);
-    color: var(--col-icon-inactive);
+    color: var(--col-ts-icon-inactive);
   }
 
   app-sun-icon {

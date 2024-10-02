@@ -31,10 +31,9 @@ button {
 }
 
 .disabled {
-  background-color: var(--col-secondary);
-  color: var(--col-disabled);
+  color: var(--col-inactive);
   cursor: not-allowed;
   opacity: 0.6;
   pointer-events: none;
-  border: 2px solid var(--col-disabled)
+  border: 2px solid var(--col-inactive)
 }
