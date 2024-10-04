@@ -12,18 +12,13 @@
   "home": {
     "title1": "Hallo, ich bin Veysel",
     "title2": "Softwareentwickler",
-    "description": "Ich entwickle intuitive Softwarelösungen mit Fachkenntnissen im Frontend und Backend. Ich bin leidenschaftlich daran interessiert, skalierbare, leistungsstarke Anwendungen zu erstellen, mit starkem Fokus auf Qualität und Präzision. Mein Ziel ist es, Lösungen zu entwickeln, die wirklich einen Unterschied machen."
+    "description": "Als Softwareentwickler mit Erfahrung in Frontend und Backend setze ich deine Ideen um und entwickle zuverlässige, benutzerfreundliche Software. Von intuitiven Oberflächen bis hin zu leistungsstarken Backendsystemen erschaffe ich Lösungen, die mit deinen Anforderungen wachsen. Lass uns gemeinsam deine Vision in skalierbare, leistungsstarke Anwendungen verwandeln, die auf langfristigen Erfolg ausgelegt sind."
   },
   "about-me": {
     "title": "Über mich",
-    "content1":{
-      "sub1": "Als Fullstack Entwickler aus Aalen freue ich mich darauf, innovative Ideen und Projekte zu realisieren. Mein Ziel ist es, meine Karriere als Web Entwickler weiter auszubauen. Durch meine Fähigkeit, ",
-      "sub2": "komplexe Probleme zu lösen ",
-      "sub3": "und mein ",
-      "sub4": "großes Interesse ",
-      "sub5": "an Programmierung bin ich überzeugt, einen wertvollen Beitrag zu deinem Team leisten zu können."
-    },
-    "content2": "Melde dich, wenn du denkst, dass ich gut für deine Projekte geeignet bin!",
+    "content1": "Ich bin ein Softwareentwickler aus Deutschland mit starkem Fokus auf Frontend und Backend, wodurch ich Projekte von Anfang bis Ende reibungslos umsetzen kann. Im Laufe der Jahre habe ich an verschiedenen Projekten gearbeitet, von kleinen Webanwendungen bis hin zu komplexeren Lösungen. Diese Erfahrung hat meine Fähigkeit geschärft, skalierbare, effiziente und benutzerfreundliche Lösungen zu liefern.",
+    "content2": "Die Leidenschaft für die Entwicklung robuster und zuverlässiger Software treibt mich an und motiviert mich, stets dazuzulernen und mich weiterzuentwickeln. Ich habe Spaß daran, komplexe Probleme zu lösen und meine Fähigkeiten in verschiedenen Programmiersprachen und Frameworks kontinuierlich zu verbessern.",
+    "content3": "Melde dich, wenn du denkst, dass ich gut für deine Projekte geeignet bin!",
     "btn": "Kontakt"
   },
   "skills": {

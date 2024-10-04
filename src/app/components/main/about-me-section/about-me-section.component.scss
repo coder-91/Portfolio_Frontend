@@ -1,4 +1,12 @@
+@use '../../../../styles/_variables';
+
 section {
   background-color: inherit;
-  color: inherit
+  color: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-container {
+  max-width: #{variables.$m-screen-max}px;
 }

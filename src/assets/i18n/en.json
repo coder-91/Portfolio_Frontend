@@ -12,18 +12,13 @@
   "home": {
     "title1": "Hi there, I'm Veysel",
     "title2": "Software Developer",
-    "description": "I create intuitive software solutions with expertise in frontend and backend. I am passionate about building scalable, high performance applications with a strong emphasis on quality and precision. Dedicated to developing solutions that truly make an impact."
+    "description": "As a software developer skilled in Frontend and Backend, I bring ideas to life by building reliable, user-focused software. From intuitive user interfaces to powerful backend systems, I create solutions designed to grow with your needs. Let's turn your vision into scalable, high-performance applications that built for long-term success."
   },
   "about-me": {
     "title": "About",
-    "content1":{
-      "sub1": "As a Fullstack Developer from Aalen (Germany), I am excited to bring innovative ideas and projects to life. My goal is to further advance my career as a web developer. With my ability to solve ",
-      "sub2": "complex problems ",
-      "sub3": "and a strong ",
-      "sub4": "passion ",
-      "sub5": "for programming, I am confident that I can make a valuable contribution to your team."
-    },
-    "content2": "If you think I’d be a good match for your projects, contact me!",
+    "content1": "I'm a Software Developer from Germany with a strong focus on frontend and backend development, allowing me to manage projects from start to finish with a seamless approach. Over the years I’ve worked on diverse projects, from small web applications to more complex solutions. This experience has sharpened my ability to deliver solutions that are scalable, efficient, and user-friendly.",
+    "content2": "My passion for developing robust and reliable software drives me and motivates me to continuously learn and grow. I enjoy tackling complex problems and consistently improving my skills across various programming languages and frameworks.",
+    "content3": "If you think I’d be a good match for your projects, contact me!",
     "btn": "Contact Me"
   },
   "skills": {
