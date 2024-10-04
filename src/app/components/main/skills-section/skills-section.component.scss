@@ -1,3 +1,5 @@
+@use '../../../../styles/_variables';
+
 section {
   background-color: inherit;
   color: inherit;
@@ -5,7 +7,7 @@ section {
   justify-content: center;
 
   .skill-list {
-    max-width: 680px;
+    max-width: #{variables.$m-screen-max}px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
