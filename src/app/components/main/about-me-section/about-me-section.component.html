@@ -4,6 +4,6 @@
     <p>{{ 'about-me.content1' | translate }}</p>
     <p>{{ 'about-me.content2' | translate }}</p>
     <p>{{ 'about-me.content3' | translate }}</p>
-    <a [href]="'#contact'" class="btn">{{ 'about-me.btn' | translate }}</a>
+    <a (click)="scrollToAnchor('contact')" [routerLink]="'.'" [fragment]="'contact'" class="btn">{{ 'about-me.btn' | translate }}</a>
   </div>
 </section>
